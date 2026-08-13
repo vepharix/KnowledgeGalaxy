@@ -1,0 +1,14 @@
+# Local Codex working and delivery directories
+/work/
+/outputs/
+
+# Local environment and generated artifacts
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+coverage/
+__pycache__/
+*.py[cod]
