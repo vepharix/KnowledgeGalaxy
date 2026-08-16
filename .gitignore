@@ -3,6 +3,7 @@
 /outputs/
 
 # Local environment and generated artifacts
+.vscode/
 .DS_Store
 .env
 .env.*

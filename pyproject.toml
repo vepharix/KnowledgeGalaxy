@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "new-synapse-research"
-version = "0.1.0"
-description = "Phase 1 knowledge-model research CLI for New Synapse"
+version = "0.2.0"
+description = "Deterministic ResearchField 3D spatial experiment for New Synapse"
 requires-python = ">=3.11"
 
 [project.scripts]
