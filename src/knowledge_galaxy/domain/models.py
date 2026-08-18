@@ -10,6 +10,7 @@ class ResearchField:
     name: str
     description: str
     emergence_time: str | None = None
+    name_zh: str | None = None
 
 
 @dataclass(frozen=True)

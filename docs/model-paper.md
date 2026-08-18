@@ -4,7 +4,7 @@
 
 本文定义 Knowledge Galaxy 当前采用的三维知识空间模型。模型中的可见实体统一为 ResearchField，知识输入仅保留层级 H、方向性知识依赖 D 与对称相关性 R。H 计算领域归属、Scope 与布局后的层级密度；D 计算依赖深度与目标半径；R 直接计算节点对的目标距离和 relatedness loss 权重。D 与 R 还共同产生节点连接度，用于诊断节点大小，并预留给最终星体亮度。三维坐标由 relatedness、radial 与 repel 三项损失联合优化，不被解释为新的知识事实。
 
-当前 Python 实现采用固定随机种子和确定性 Adam 优化，读取 55 个 ResearchField 的人工策展输入，输出机器可读快照和可旋转的三维诊断页面。自动关系生成、正式 Galaxy Explorer、星云体积渲染与时间演化不属于当前实现。
+当前模型版本为 1.0。Python 实现采用固定随机种子和确定性 Adam 优化，读取 150 个 ResearchField 的人工策展输入，输出机器可读快照和可旋转的三维诊断页面。自动关系生成、正式 Galaxy Explorer、星云体积渲染与时间演化不属于当前实现。
 
 ## 一、实体的性质与关系
 
@@ -16,7 +16,7 @@ $$
 \mathcal F=\{F_1,F_2,\ldots,F_N\}.
 $$
 
-所有可见节点均为 ResearchField。Mathematics、Statistics、Machine Learning 与 Large Language Models 可以具有不同粒度，但不因此被拆成“学科”“子学科”“主题”或“研究方向”等不同实体类型。每个实体至少保存 `id`、`name` 与 `description`，并可选保存 `emergence_time`。出现时间目前只是元数据，不进入图计算或坐标优化。
+所有可见节点均为 ResearchField。Mathematics、Statistics、Machine Learning 与 Large Language Models 可以具有不同粒度，但不因此被拆成“学科”“子学科”“主题”或“研究方向”等不同实体类型。每个实体至少保存 `id`、英文 `name` 与 `description`，并可选保存 `emergence_time` 和中文显示名 `name_zh`。出现时间与本地化名称都只是元数据，不进入图计算或坐标优化。
 
 实体自身不保存基础度、中心性、重要性、学科位置或人工径向坐标。Scope、依赖深度、连接度与坐标都从关系推导，并且只写入构建结果，不写回原始领域数据。
 

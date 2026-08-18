@@ -1,291 +1,917 @@
 {
-    "metadata":  {
-                     "dataset_id":  "knowledge-galaxy-current",
-                     "display_name":  "Knowledge Galaxy current field graph",
-                     "version":  "0.2.0",
-                     "updated_at":  "2026-08-18",
-                     "curation_method":  "55 ResearchFields curated for deterministic graph construction; values remain reviewable assumptions.",
-                     "provenance_limit":  "H, D and R values are curated model inputs, not objective measurements or expert consensus."
-                 },
-    "fields":  [
-                   {
-                       "id":  "mathematics",
-                       "name":  "Mathematics",
-                       "description":  "Study of quantity, structure, space, change and formal patterns."
-                   },
-                   {
-                       "id":  "linear-algebra",
-                       "name":  "Linear Algebra",
-                       "description":  "Study of vector spaces, linear maps, matrices and related structures."
-                   },
-                   {
-                       "id":  "probability-theory",
-                       "name":  "Probability Theory",
-                       "description":  "Mathematical study of random phenomena and probability measures."
-                   },
-                   {
-                       "id":  "statistics",
-                       "name":  "Statistics",
-                       "description":  "Study of collecting, modeling and drawing conclusions from data."
-                   },
-                   {
-                       "id":  "optimization",
-                       "name":  "Optimization",
-                       "description":  "Study of selecting solutions that minimize or maximize an objective."
-                   },
-                   {
-                       "id":  "information-theory",
-                       "name":  "Information Theory",
-                       "description":  "Study of information, entropy, coding and communication limits.",
-                       "emergence_time":  "1948"
-                   },
-                   {
-                       "id":  "computer-science",
-                       "name":  "Computer Science",
-                       "description":  "Study of computation, information processes and computational systems."
-                   },
-                   {
-                       "id":  "algorithms",
-                       "name":  "Algorithms",
-                       "description":  "Study of finite procedures for solving computational problems."
-                   },
-                   {
-                       "id":  "artificial-intelligence",
-                       "name":  "Artificial Intelligence",
-                       "description":  "Study of computational systems that perform tasks associated with intelligent behavior.",
-                       "emergence_time":  "1956"
-                   },
-                   {
-                       "id":  "machine-learning",
-                       "name":  "Machine Learning",
-                       "description":  "Study of computational methods that improve behavior from data."
-                   },
-                   {
-                       "id":  "deep-learning",
-                       "name":  "Deep Learning",
-                       "description":  "Study of machine learning using multilayer representation-learning models."
-                   },
-                   {
-                       "id":  "natural-language-processing",
-                       "name":  "Natural Language Processing",
-                       "description":  "Study of computational processing and generation of human language."
-                   },
-                   {
-                       "id":  "computer-vision",
-                       "name":  "Computer Vision",
-                       "description":  "Study of computational interpretation of visual data."
-                   },
-                   {
-                       "id":  "transformer-models",
-                       "name":  "Transformer Models",
-                       "description":  "Study of neural architectures based primarily on attention mechanisms.",
-                       "emergence_time":  "2017"
-                   },
-                   {
-                       "id":  "large-language-models",
-                       "name":  "Large Language Models",
-                       "description":  "Study of large-scale language models trained on broad text corpora."
-                   },
-                   {
-                       "id":  "data-science",
-                       "name":  "Data Science",
-                       "description":  "Interdisciplinary study of extracting knowledge and decisions from data."
-                   },
-                   {
-                       "id":  "signal-processing",
-                       "name":  "Signal Processing",
-                       "description":  "Study of representation, transformation and analysis of signals."
-                   },
-                   {
-                       "id":  "physics",
-                       "name":  "Physics",
-                       "description":  "Study of matter, energy, motion and interactions in nature."
-                   },
-                   {
-                       "id":  "quantum-mechanics",
-                       "name":  "Quantum Mechanics",
-                       "description":  "Study of physical systems governed by quantum theory.",
-                       "emergence_time":  "1925"
-                   },
-                   {
-                       "id":  "biology",
-                       "name":  "Biology",
-                       "description":  "Study of living systems and biological processes."
-                   },
-                   {
-                       "id":  "neuroscience",
-                       "name":  "Neuroscience",
-                       "description":  "Study of nervous systems, cognition and neural processes."
-                   },
-                   {
-                       "id":  "economics",
-                       "name":  "Economics",
-                       "description":  "Study of production, allocation, incentives and economic behavior."
-                   },
-                   {
-                       "id":  "econometrics",
-                       "name":  "Econometrics",
-                       "description":  "Application of statistical methods to economic data and hypotheses."
-                   },
-                   {
-                       "id":  "computational-linguistics",
-                       "name":  "Computational Linguistics",
-                       "description":  "Interdisciplinary study of language using computational and formal methods."
-                   },
-                   {
-                       "id":  "mathematical-analysis",
-                       "name":  "Mathematical Analysis",
-                       "description":  "Study of limits, continuity, differentiation, integration and infinite processes."
-                   },
-                   {
-                       "id":  "geometry",
-                       "name":  "Geometry",
-                       "description":  "Study of shape, space, size and structural properties of spatial objects."
-                   },
-                   {
-                       "id":  "discrete-mathematics",
-                       "name":  "Discrete Mathematics",
-                       "description":  "Study of finite and countable mathematical structures."
-                   },
-                   {
-                       "id":  "numerical-analysis",
-                       "name":  "Numerical Analysis",
-                       "description":  "Study of algorithms for approximate numerical solutions to mathematical problems."
-                   },
-                   {
-                       "id":  "dynamical-systems",
-                       "name":  "Dynamical Systems",
-                       "description":  "Study of systems whose states evolve over time according to mathematical rules."
-                   },
-                   {
-                       "id":  "network-science",
-                       "name":  "Network Science",
-                       "description":  "Interdisciplinary study of complex systems represented as networks."
-                   },
-                   {
-                       "id":  "chemistry",
-                       "name":  "Chemistry",
-                       "description":  "Study of substances, their properties, composition and transformations."
-                   },
-                   {
-                       "id":  "materials-science",
-                       "name":  "Materials Science",
-                       "description":  "Study of relationships among the structure, properties and uses of materials."
-                   },
-                   {
-                       "id":  "thermodynamics",
-                       "name":  "Thermodynamics",
-                       "description":  "Study of heat, work, energy and macroscopic state change."
-                   },
-                   {
-                       "id":  "electromagnetism",
-                       "name":  "Electromagnetism",
-                       "description":  "Study of electric and magnetic fields, charges and radiation."
-                   },
-                   {
-                       "id":  "climate-science",
-                       "name":  "Climate Science",
-                       "description":  "Study of climate systems, variability, mechanisms and long-term change."
-                   },
-                   {
-                       "id":  "electrical-engineering",
-                       "name":  "Electrical Engineering",
-                       "description":  "Study and design of electrical, electronic and information systems."
-                   },
-                   {
-                       "id":  "control-theory",
-                       "name":  "Control Theory",
-                       "description":  "Study of regulating dynamical systems through feedback and control inputs."
-                   },
-                   {
-                       "id":  "robotics",
-                       "name":  "Robotics",
-                       "description":  "Study and engineering of sensing, planning, control and embodied machines."
-                   },
-                   {
-                       "id":  "molecular-biology",
-                       "name":  "Molecular Biology",
-                       "description":  "Study of biological processes at the molecular level."
-                   },
-                   {
-                       "id":  "genetics",
-                       "name":  "Genetics",
-                       "description":  "Study of heredity, genes and variation in living systems."
-                   },
-                   {
-                       "id":  "evolutionary-biology",
-                       "name":  "Evolutionary Biology",
-                       "description":  "Study of the evolutionary processes that shape biological diversity."
-                   },
-                   {
-                       "id":  "ecology",
-                       "name":  "Ecology",
-                       "description":  "Study of interactions among organisms and their environments."
-                   },
-                   {
-                       "id":  "biochemistry",
-                       "name":  "Biochemistry",
-                       "description":  "Study of chemical processes and substances in living systems."
-                   },
-                   {
-                       "id":  "bioinformatics",
-                       "name":  "Bioinformatics",
-                       "description":  "Use of computational and statistical methods to study biological data."
-                   },
-                   {
-                       "id":  "medicine",
-                       "name":  "Medicine",
-                       "description":  "Study and practice of health, disease, diagnosis, prevention and treatment."
-                   },
-                   {
-                       "id":  "epidemiology",
-                       "name":  "Epidemiology",
-                       "description":  "Study of the distribution and determinants of health events in populations."
-                   },
-                   {
-                       "id":  "computational-neuroscience",
-                       "name":  "Computational Neuroscience",
-                       "description":  "Study of nervous systems using mathematical and computational models."
-                   },
-                   {
-                       "id":  "psychology",
-                       "name":  "Psychology",
-                       "description":  "Study of mind, behavior and mental processes."
-                   },
-                   {
-                       "id":  "cognitive-science",
-                       "name":  "Cognitive Science",
-                       "description":  "Interdisciplinary study of cognition, intelligence and mental representation."
-                   },
-                   {
-                       "id":  "sociology",
-                       "name":  "Sociology",
-                       "description":  "Study of social relations, institutions, groups and societies."
-                   },
-                   {
-                       "id":  "political-science",
-                       "name":  "Political Science",
-                       "description":  "Study of political systems, institutions, power and collective decision-making."
-                   },
-                   {
-                       "id":  "linguistics",
-                       "name":  "Linguistics",
-                       "description":  "Scientific study of language and its structure, use and change."
-                   },
-                   {
-                       "id":  "philosophy",
-                       "name":  "Philosophy",
-                       "description":  "Study of fundamental questions concerning knowledge, reality, reasoning and value."
-                   },
-                   {
-                       "id":  "behavioral-economics",
-                       "name":  "Behavioral Economics",
-                       "description":  "Study of economic decisions using psychological and behavioral evidence."
-                   },
-                   {
-                       "id":  "computational-social-science",
-                       "name":  "Computational Social Science",
-                       "description":  "Study of social phenomena using computational models and large-scale data."
-                   }
-               ]
+  "metadata": {
+    "dataset_id": "knowledge-galaxy-model-1.0",
+    "display_name": "Knowledge Galaxy model 1.0 — 150-field graph",
+    "version": "1.0.0",
+    "updated_at": "2026-08-19",
+    "curation_method": "150 ResearchFields curated across foundational, natural, engineering, health, social and humanistic domains; values remain reviewable assumptions.",
+    "provenance_limit": "H, D and R values are curated model inputs, not objective measurements or expert consensus.",
+    "localization": "Every ResearchField includes an English name and a Chinese display name; localization metadata does not affect graph computation."
+  },
+  "fields": [
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "description": "Study of quantity, structure, space, change and formal patterns.",
+      "name_zh": "数学"
+    },
+    {
+      "id": "linear-algebra",
+      "name": "Linear Algebra",
+      "description": "Study of vector spaces, linear maps, matrices and related structures.",
+      "name_zh": "线性代数"
+    },
+    {
+      "id": "probability-theory",
+      "name": "Probability Theory",
+      "description": "Mathematical study of random phenomena and probability measures.",
+      "name_zh": "概率论"
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "description": "Study of collecting, modeling and drawing conclusions from data.",
+      "name_zh": "统计学"
+    },
+    {
+      "id": "optimization",
+      "name": "Optimization",
+      "description": "Study of selecting solutions that minimize or maximize an objective.",
+      "name_zh": "最优化"
+    },
+    {
+      "id": "information-theory",
+      "name": "Information Theory",
+      "description": "Study of information, entropy, coding and communication limits.",
+      "emergence_time": "1948",
+      "name_zh": "信息论"
+    },
+    {
+      "id": "computer-science",
+      "name": "Computer Science",
+      "description": "Study of computation, information processes and computational systems.",
+      "name_zh": "计算机科学"
+    },
+    {
+      "id": "algorithms",
+      "name": "Algorithms",
+      "description": "Study of finite procedures for solving computational problems.",
+      "name_zh": "算法"
+    },
+    {
+      "id": "artificial-intelligence",
+      "name": "Artificial Intelligence",
+      "description": "Study of computational systems that perform tasks associated with intelligent behavior.",
+      "emergence_time": "1956",
+      "name_zh": "人工智能"
+    },
+    {
+      "id": "machine-learning",
+      "name": "Machine Learning",
+      "description": "Study of computational methods that improve behavior from data.",
+      "name_zh": "机器学习"
+    },
+    {
+      "id": "deep-learning",
+      "name": "Deep Learning",
+      "description": "Study of machine learning using multilayer representation-learning models.",
+      "name_zh": "深度学习"
+    },
+    {
+      "id": "natural-language-processing",
+      "name": "Natural Language Processing",
+      "description": "Study of computational processing and generation of human language.",
+      "name_zh": "自然语言处理"
+    },
+    {
+      "id": "computer-vision",
+      "name": "Computer Vision",
+      "description": "Study of computational interpretation of visual data.",
+      "name_zh": "计算机视觉"
+    },
+    {
+      "id": "transformer-models",
+      "name": "Transformer Models",
+      "description": "Study of neural architectures based primarily on attention mechanisms.",
+      "emergence_time": "2017",
+      "name_zh": "Transformer 模型"
+    },
+    {
+      "id": "large-language-models",
+      "name": "Large Language Models",
+      "description": "Study of large-scale language models trained on broad text corpora.",
+      "name_zh": "大语言模型"
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science",
+      "description": "Interdisciplinary study of extracting knowledge and decisions from data.",
+      "name_zh": "数据科学"
+    },
+    {
+      "id": "signal-processing",
+      "name": "Signal Processing",
+      "description": "Study of representation, transformation and analysis of signals.",
+      "name_zh": "信号处理"
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "description": "Study of matter, energy, motion and interactions in nature.",
+      "name_zh": "物理学"
+    },
+    {
+      "id": "quantum-mechanics",
+      "name": "Quantum Mechanics",
+      "description": "Study of physical systems governed by quantum theory.",
+      "emergence_time": "1925",
+      "name_zh": "量子力学"
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "description": "Study of living systems and biological processes.",
+      "name_zh": "生物学"
+    },
+    {
+      "id": "neuroscience",
+      "name": "Neuroscience",
+      "description": "Study of nervous systems, cognition and neural processes.",
+      "name_zh": "神经科学"
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "description": "Study of production, allocation, incentives and economic behavior.",
+      "name_zh": "经济学"
+    },
+    {
+      "id": "econometrics",
+      "name": "Econometrics",
+      "description": "Application of statistical methods to economic data and hypotheses.",
+      "name_zh": "计量经济学"
+    },
+    {
+      "id": "computational-linguistics",
+      "name": "Computational Linguistics",
+      "description": "Interdisciplinary study of language using computational and formal methods.",
+      "name_zh": "计算语言学"
+    },
+    {
+      "id": "mathematical-analysis",
+      "name": "Mathematical Analysis",
+      "description": "Study of limits, continuity, differentiation, integration and infinite processes.",
+      "name_zh": "数学分析"
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "description": "Study of shape, space, size and structural properties of spatial objects.",
+      "name_zh": "几何学"
+    },
+    {
+      "id": "discrete-mathematics",
+      "name": "Discrete Mathematics",
+      "description": "Study of finite and countable mathematical structures.",
+      "name_zh": "离散数学"
+    },
+    {
+      "id": "numerical-analysis",
+      "name": "Numerical Analysis",
+      "description": "Study of algorithms for approximate numerical solutions to mathematical problems.",
+      "name_zh": "数值分析"
+    },
+    {
+      "id": "dynamical-systems",
+      "name": "Dynamical Systems",
+      "description": "Study of systems whose states evolve over time according to mathematical rules.",
+      "name_zh": "动力系统"
+    },
+    {
+      "id": "network-science",
+      "name": "Network Science",
+      "description": "Interdisciplinary study of complex systems represented as networks.",
+      "name_zh": "网络科学"
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "description": "Study of substances, their properties, composition and transformations.",
+      "name_zh": "化学"
+    },
+    {
+      "id": "materials-science",
+      "name": "Materials Science",
+      "description": "Study of relationships among the structure, properties and uses of materials.",
+      "name_zh": "材料科学"
+    },
+    {
+      "id": "thermodynamics",
+      "name": "Thermodynamics",
+      "description": "Study of heat, work, energy and macroscopic state change.",
+      "name_zh": "热力学"
+    },
+    {
+      "id": "electromagnetism",
+      "name": "Electromagnetism",
+      "description": "Study of electric and magnetic fields, charges and radiation.",
+      "name_zh": "电磁学"
+    },
+    {
+      "id": "climate-science",
+      "name": "Climate Science",
+      "description": "Study of climate systems, variability, mechanisms and long-term change.",
+      "name_zh": "气候科学"
+    },
+    {
+      "id": "electrical-engineering",
+      "name": "Electrical Engineering",
+      "description": "Study and design of electrical, electronic and information systems.",
+      "name_zh": "电气工程"
+    },
+    {
+      "id": "control-theory",
+      "name": "Control Theory",
+      "description": "Study of regulating dynamical systems through feedback and control inputs.",
+      "name_zh": "控制理论"
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics",
+      "description": "Study and engineering of sensing, planning, control and embodied machines.",
+      "name_zh": "机器人学"
+    },
+    {
+      "id": "molecular-biology",
+      "name": "Molecular Biology",
+      "description": "Study of biological processes at the molecular level.",
+      "name_zh": "分子生物学"
+    },
+    {
+      "id": "genetics",
+      "name": "Genetics",
+      "description": "Study of heredity, genes and variation in living systems.",
+      "name_zh": "遗传学"
+    },
+    {
+      "id": "evolutionary-biology",
+      "name": "Evolutionary Biology",
+      "description": "Study of the evolutionary processes that shape biological diversity.",
+      "name_zh": "进化生物学"
+    },
+    {
+      "id": "ecology",
+      "name": "Ecology",
+      "description": "Study of interactions among organisms and their environments.",
+      "name_zh": "生态学"
+    },
+    {
+      "id": "biochemistry",
+      "name": "Biochemistry",
+      "description": "Study of chemical processes and substances in living systems.",
+      "name_zh": "生物化学"
+    },
+    {
+      "id": "bioinformatics",
+      "name": "Bioinformatics",
+      "description": "Use of computational and statistical methods to study biological data.",
+      "name_zh": "生物信息学"
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "description": "Study and practice of health, disease, diagnosis, prevention and treatment.",
+      "name_zh": "医学"
+    },
+    {
+      "id": "epidemiology",
+      "name": "Epidemiology",
+      "description": "Study of the distribution and determinants of health events in populations.",
+      "name_zh": "流行病学"
+    },
+    {
+      "id": "computational-neuroscience",
+      "name": "Computational Neuroscience",
+      "description": "Study of nervous systems using mathematical and computational models.",
+      "name_zh": "计算神经科学"
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "description": "Study of mind, behavior and mental processes.",
+      "name_zh": "心理学"
+    },
+    {
+      "id": "cognitive-science",
+      "name": "Cognitive Science",
+      "description": "Interdisciplinary study of cognition, intelligence and mental representation.",
+      "name_zh": "认知科学"
+    },
+    {
+      "id": "sociology",
+      "name": "Sociology",
+      "description": "Study of social relations, institutions, groups and societies.",
+      "name_zh": "社会学"
+    },
+    {
+      "id": "political-science",
+      "name": "Political Science",
+      "description": "Study of political systems, institutions, power and collective decision-making.",
+      "name_zh": "政治学"
+    },
+    {
+      "id": "linguistics",
+      "name": "Linguistics",
+      "description": "Scientific study of language and its structure, use and change.",
+      "name_zh": "语言学"
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy",
+      "description": "Study of fundamental questions concerning knowledge, reality, reasoning and value.",
+      "name_zh": "哲学"
+    },
+    {
+      "id": "behavioral-economics",
+      "name": "Behavioral Economics",
+      "description": "Study of economic decisions using psychological and behavioral evidence.",
+      "name_zh": "行为经济学"
+    },
+    {
+      "id": "computational-social-science",
+      "name": "Computational Social Science",
+      "description": "Study of social phenomena using computational models and large-scale data.",
+      "name_zh": "计算社会科学"
+    },
+    {
+      "id": "formal-sciences",
+      "name": "Formal Sciences",
+      "description": "Broad study of formal systems, abstract structures and valid inference.",
+      "name_zh": "形式科学"
+    },
+    {
+      "id": "natural-sciences",
+      "name": "Natural Sciences",
+      "description": "Broad study of the physical and living world through systematic inquiry.",
+      "name_zh": "自然科学"
+    },
+    {
+      "id": "social-sciences",
+      "name": "Social Sciences",
+      "description": "Broad study of societies, institutions and collective human behavior.",
+      "name_zh": "社会科学"
+    },
+    {
+      "id": "humanities",
+      "name": "Humanities",
+      "description": "Broad study of human culture, interpretation, values and historical experience.",
+      "name_zh": "人文学科"
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "description": "Broad study and practice of designing systems, structures and technologies.",
+      "name_zh": "工程学"
+    },
+    {
+      "id": "health-sciences",
+      "name": "Health Sciences",
+      "description": "Broad study of health, disease, care and population wellbeing.",
+      "name_zh": "健康科学"
+    },
+    {
+      "id": "logic",
+      "name": "Logic",
+      "description": "Study of valid inference, formal reasoning and systems of deduction.",
+      "name_zh": "逻辑学"
+    },
+    {
+      "id": "set-theory",
+      "name": "Set Theory",
+      "description": "Study of sets, membership, infinity and foundations of mathematics.",
+      "name_zh": "集合论"
+    },
+    {
+      "id": "algebra",
+      "name": "Algebra",
+      "description": "Study of symbolic operations and abstract structures such as groups, rings and fields.",
+      "name_zh": "代数学"
+    },
+    {
+      "id": "topology",
+      "name": "Topology",
+      "description": "Study of continuity, deformation and invariant properties of spaces.",
+      "name_zh": "拓扑学"
+    },
+    {
+      "id": "number-theory",
+      "name": "Number Theory",
+      "description": "Study of integers, divisibility and arithmetic structures.",
+      "name_zh": "数论"
+    },
+    {
+      "id": "category-theory",
+      "name": "Category Theory",
+      "description": "Study of mathematical structures and transformations through objects and morphisms.",
+      "name_zh": "范畴论"
+    },
+    {
+      "id": "calculus",
+      "name": "Calculus",
+      "description": "Study of change and accumulation through differentiation and integration.",
+      "name_zh": "微积分"
+    },
+    {
+      "id": "differential-equations",
+      "name": "Differential Equations",
+      "description": "Study of equations relating functions to their rates of change.",
+      "name_zh": "微分方程"
+    },
+    {
+      "id": "astronomy",
+      "name": "Astronomy",
+      "description": "Study of celestial objects, space and the observable universe.",
+      "name_zh": "天文学"
+    },
+    {
+      "id": "cosmology",
+      "name": "Cosmology",
+      "description": "Study of the origin, structure, evolution and large-scale behavior of the universe.",
+      "name_zh": "宇宙学"
+    },
+    {
+      "id": "earth-science",
+      "name": "Earth Science",
+      "description": "Study of Earth as an interacting physical, chemical and biological system.",
+      "name_zh": "地球科学"
+    },
+    {
+      "id": "geology",
+      "name": "Geology",
+      "description": "Study of Earth's materials, structure, history and internal processes.",
+      "name_zh": "地质学"
+    },
+    {
+      "id": "oceanography",
+      "name": "Oceanography",
+      "description": "Study of oceans, marine processes and ocean–climate interactions.",
+      "name_zh": "海洋学"
+    },
+    {
+      "id": "atmospheric-science",
+      "name": "Atmospheric Science",
+      "description": "Study of atmospheres, weather, circulation and radiative processes.",
+      "name_zh": "大气科学"
+    },
+    {
+      "id": "environmental-science",
+      "name": "Environmental Science",
+      "description": "Interdisciplinary study of environmental systems and human impacts.",
+      "name_zh": "环境科学"
+    },
+    {
+      "id": "complexity-science",
+      "name": "Complexity Science",
+      "description": "Study of emergence, adaptation and collective behavior in interacting systems.",
+      "name_zh": "复杂性科学"
+    },
+    {
+      "id": "sustainability-science",
+      "name": "Sustainability Science",
+      "description": "Study of coupled human–environment systems and long-term societal viability.",
+      "name_zh": "可持续性科学"
+    },
+    {
+      "id": "mechanical-engineering",
+      "name": "Mechanical Engineering",
+      "description": "Engineering of machines, motion, forces, heat and mechanical systems.",
+      "name_zh": "机械工程"
+    },
+    {
+      "id": "civil-engineering",
+      "name": "Civil Engineering",
+      "description": "Engineering of infrastructure, buildings, transport and the built environment.",
+      "name_zh": "土木工程"
+    },
+    {
+      "id": "chemical-engineering",
+      "name": "Chemical Engineering",
+      "description": "Engineering of chemical processes, materials and large-scale transformations.",
+      "name_zh": "化学工程"
+    },
+    {
+      "id": "energy-systems",
+      "name": "Energy Systems",
+      "description": "Study and engineering of energy production, conversion, storage and distribution.",
+      "name_zh": "能源系统"
+    },
+    {
+      "id": "cell-biology",
+      "name": "Cell Biology",
+      "description": "Study of cellular structure, function, communication and organization.",
+      "name_zh": "细胞生物学"
+    },
+    {
+      "id": "microbiology",
+      "name": "Microbiology",
+      "description": "Study of microorganisms and their biological and ecological roles.",
+      "name_zh": "微生物学"
+    },
+    {
+      "id": "immunology",
+      "name": "Immunology",
+      "description": "Study of immune systems, host defense and immune-mediated disease.",
+      "name_zh": "免疫学"
+    },
+    {
+      "id": "physiology",
+      "name": "Physiology",
+      "description": "Study of functions and mechanisms in living organisms.",
+      "name_zh": "生理学"
+    },
+    {
+      "id": "pharmacology",
+      "name": "Pharmacology",
+      "description": "Study of drugs, biological targets and therapeutic effects.",
+      "name_zh": "药理学"
+    },
+    {
+      "id": "public-health",
+      "name": "Public Health",
+      "description": "Study and practice of protecting and improving population health.",
+      "name_zh": "公共卫生"
+    },
+    {
+      "id": "systems-biology",
+      "name": "Systems Biology",
+      "description": "Study of biological organization through interacting components and system-level models.",
+      "name_zh": "系统生物学"
+    },
+    {
+      "id": "anthropology",
+      "name": "Anthropology",
+      "description": "Study of humans, cultures, societies and biological variation across time and space.",
+      "name_zh": "人类学"
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "description": "Study and interpretation of past human events, institutions and transformations.",
+      "name_zh": "历史学"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "description": "Study of learning, teaching, institutions and the development of knowledge.",
+      "name_zh": "教育学"
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "description": "Study of legal systems, norms, institutions and their interpretation.",
+      "name_zh": "法学"
+    },
+    {
+      "id": "ethics",
+      "name": "Ethics",
+      "description": "Study of moral reasoning, values, duties and good action.",
+      "name_zh": "伦理学"
+    },
+    {
+      "id": "epistemology",
+      "name": "Epistemology",
+      "description": "Study of knowledge, evidence, justification and belief.",
+      "name_zh": "认识论"
+    },
+    {
+      "id": "metaphysics",
+      "name": "Metaphysics",
+      "description": "Study of existence, reality, causation and fundamental categories.",
+      "name_zh": "形而上学"
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "description": "Study of places, spatial processes and relationships between people and environments.",
+      "name_zh": "地理学"
+    },
+    {
+      "id": "demography",
+      "name": "Demography",
+      "description": "Study of populations, fertility, mortality, migration and demographic change.",
+      "name_zh": "人口学"
+    },
+    {
+      "id": "international-relations",
+      "name": "International Relations",
+      "description": "Study of relations among states, institutions and transnational actors.",
+      "name_zh": "国际关系"
+    },
+    {
+      "id": "public-policy",
+      "name": "Public Policy",
+      "description": "Study of collective decisions, public institutions and policy outcomes.",
+      "name_zh": "公共政策"
+    },
+    {
+      "id": "combinatorics",
+      "name": "Combinatorics",
+      "name_zh": "组合数学",
+      "description": "Study of finite and discrete structures, arrangements and counting."
+    },
+    {
+      "id": "graph-theory",
+      "name": "Graph Theory",
+      "name_zh": "图论",
+      "description": "Study of vertices, edges, networks and their mathematical properties."
+    },
+    {
+      "id": "measure-theory",
+      "name": "Measure Theory",
+      "name_zh": "测度论",
+      "description": "Study of measures, measurable sets and foundations of integration."
+    },
+    {
+      "id": "functional-analysis",
+      "name": "Functional Analysis",
+      "name_zh": "泛函分析",
+      "description": "Study of vector spaces of functions and continuous operators."
+    },
+    {
+      "id": "stochastic-processes",
+      "name": "Stochastic Processes",
+      "name_zh": "随机过程",
+      "description": "Study of random variables evolving across time or space."
+    },
+    {
+      "id": "operations-research",
+      "name": "Operations Research",
+      "name_zh": "运筹学",
+      "description": "Mathematical study of decisions, allocation, scheduling and operations."
+    },
+    {
+      "id": "theoretical-computer-science",
+      "name": "Theoretical Computer Science",
+      "name_zh": "理论计算机科学",
+      "description": "Study of the mathematical foundations and limits of computation."
+    },
+    {
+      "id": "programming-languages",
+      "name": "Programming Languages",
+      "name_zh": "编程语言",
+      "description": "Study and design of languages for expressing computation."
+    },
+    {
+      "id": "software-engineering",
+      "name": "Software Engineering",
+      "name_zh": "软件工程",
+      "description": "Systematic study of designing, building and maintaining software systems."
+    },
+    {
+      "id": "databases",
+      "name": "Databases",
+      "name_zh": "数据库",
+      "description": "Study of structured data storage, querying, transactions and information systems."
+    },
+    {
+      "id": "distributed-systems",
+      "name": "Distributed Systems",
+      "name_zh": "分布式系统",
+      "description": "Study of computing systems whose components coordinate across networks."
+    },
+    {
+      "id": "computer-networks",
+      "name": "Computer Networks",
+      "name_zh": "计算机网络",
+      "description": "Study of communication protocols and interconnected computing systems."
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "name_zh": "网络安全",
+      "description": "Study of protecting information, computation and networked systems."
+    },
+    {
+      "id": "human-computer-interaction",
+      "name": "Human-Computer Interaction",
+      "name_zh": "人机交互",
+      "description": "Study of how people design, use and experience interactive systems."
+    },
+    {
+      "id": "computer-architecture",
+      "name": "Computer Architecture",
+      "name_zh": "计算机体系结构",
+      "description": "Study of the organization and design of computer hardware systems."
+    },
+    {
+      "id": "classical-mechanics",
+      "name": "Classical Mechanics",
+      "name_zh": "经典力学",
+      "description": "Study of motion, forces and macroscopic physical systems."
+    },
+    {
+      "id": "relativity",
+      "name": "Relativity",
+      "name_zh": "相对论",
+      "description": "Study of spacetime, gravitation and motion at relativistic scales."
+    },
+    {
+      "id": "particle-physics",
+      "name": "Particle Physics",
+      "name_zh": "粒子物理学",
+      "description": "Study of elementary particles and fundamental interactions."
+    },
+    {
+      "id": "condensed-matter-physics",
+      "name": "Condensed Matter Physics",
+      "name_zh": "凝聚态物理学",
+      "description": "Study of collective physical properties of matter."
+    },
+    {
+      "id": "optics",
+      "name": "Optics",
+      "name_zh": "光学",
+      "description": "Study of light, its propagation and interaction with matter."
+    },
+    {
+      "id": "astrophysics",
+      "name": "Astrophysics",
+      "name_zh": "天体物理学",
+      "description": "Application of physics to stars, galaxies and cosmic phenomena."
+    },
+    {
+      "id": "organic-chemistry",
+      "name": "Organic Chemistry",
+      "name_zh": "有机化学",
+      "description": "Study of carbon-containing compounds, structures and reactions."
+    },
+    {
+      "id": "inorganic-chemistry",
+      "name": "Inorganic Chemistry",
+      "name_zh": "无机化学",
+      "description": "Study of inorganic compounds, coordination systems and materials."
+    },
+    {
+      "id": "physical-chemistry",
+      "name": "Physical Chemistry",
+      "name_zh": "物理化学",
+      "description": "Study of chemical systems through physical laws and measurements."
+    },
+    {
+      "id": "analytical-chemistry",
+      "name": "Analytical Chemistry",
+      "name_zh": "分析化学",
+      "description": "Study of identifying and measuring chemical composition."
+    },
+    {
+      "id": "geophysics",
+      "name": "Geophysics",
+      "name_zh": "地球物理学",
+      "description": "Study of Earth through physical processes and quantitative measurements."
+    },
+    {
+      "id": "hydrology",
+      "name": "Hydrology",
+      "name_zh": "水文学",
+      "description": "Study of the movement, distribution and quality of water on Earth."
+    },
+    {
+      "id": "planetary-science",
+      "name": "Planetary Science",
+      "name_zh": "行星科学",
+      "description": "Study of planets, moons and planetary systems."
+    },
+    {
+      "id": "developmental-biology",
+      "name": "Developmental Biology",
+      "name_zh": "发育生物学",
+      "description": "Study of growth, differentiation and organismal development."
+    },
+    {
+      "id": "structural-biology",
+      "name": "Structural Biology",
+      "name_zh": "结构生物学",
+      "description": "Study of the molecular structures of biological macromolecules."
+    },
+    {
+      "id": "genomics",
+      "name": "Genomics",
+      "name_zh": "基因组学",
+      "description": "Study of genomes, their organization, variation and function."
+    },
+    {
+      "id": "botany",
+      "name": "Botany",
+      "name_zh": "植物学",
+      "description": "Scientific study of plants and plant life."
+    },
+    {
+      "id": "zoology",
+      "name": "Zoology",
+      "name_zh": "动物学",
+      "description": "Scientific study of animals and animal life."
+    },
+    {
+      "id": "anatomy",
+      "name": "Anatomy",
+      "name_zh": "解剖学",
+      "description": "Study of the structures of organisms and their parts."
+    },
+    {
+      "id": "pathology",
+      "name": "Pathology",
+      "name_zh": "病理学",
+      "description": "Study of disease mechanisms and structural or functional changes."
+    },
+    {
+      "id": "oncology",
+      "name": "Oncology",
+      "name_zh": "肿瘤学",
+      "description": "Study and clinical treatment of cancer."
+    },
+    {
+      "id": "cardiology",
+      "name": "Cardiology",
+      "name_zh": "心脏病学",
+      "description": "Study and clinical treatment of the heart and circulatory system."
+    },
+    {
+      "id": "neurology",
+      "name": "Neurology",
+      "name_zh": "神经病学",
+      "description": "Study and clinical treatment of disorders of the nervous system."
+    },
+    {
+      "id": "surgery",
+      "name": "Surgery",
+      "name_zh": "外科学",
+      "description": "Study and practice of operative treatment of disease and injury."
+    },
+    {
+      "id": "biomedical-engineering",
+      "name": "Biomedical Engineering",
+      "name_zh": "生物医学工程",
+      "description": "Application of engineering methods to biology and medicine."
+    },
+    {
+      "id": "aerospace-engineering",
+      "name": "Aerospace Engineering",
+      "name_zh": "航空航天工程",
+      "description": "Engineering of aircraft, spacecraft and flight systems."
+    },
+    {
+      "id": "industrial-engineering",
+      "name": "Industrial Engineering",
+      "name_zh": "工业工程",
+      "description": "Engineering of integrated production, service and operational systems."
+    },
+    {
+      "id": "environmental-engineering",
+      "name": "Environmental Engineering",
+      "name_zh": "环境工程",
+      "description": "Engineering methods for environmental protection and resource systems."
+    },
+    {
+      "id": "archaeology",
+      "name": "Archaeology",
+      "name_zh": "考古学",
+      "description": "Study of past societies through material remains."
+    },
+    {
+      "id": "communication-studies",
+      "name": "Communication Studies",
+      "name_zh": "传播学",
+      "description": "Study of communication processes, institutions and practices."
+    },
+    {
+      "id": "media-studies",
+      "name": "Media Studies",
+      "name_zh": "媒体研究",
+      "description": "Study of media forms, technologies, institutions and cultures."
+    },
+    {
+      "id": "literary-studies",
+      "name": "Literary Studies",
+      "name_zh": "文学研究",
+      "description": "Study of literature, interpretation and textual traditions."
+    },
+    {
+      "id": "religious-studies",
+      "name": "Religious Studies",
+      "name_zh": "宗教研究",
+      "description": "Comparative and historical study of religions and religious practice."
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "name_zh": "金融学",
+      "description": "Study of capital allocation, assets, risk and financial institutions."
+    },
+    {
+      "id": "management-science",
+      "name": "Management Science",
+      "name_zh": "管理科学",
+      "description": "Quantitative study of organizational decisions and operations."
+    }
+  ]
 }

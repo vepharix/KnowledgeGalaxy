@@ -1,6 +1,6 @@
 # 知识银河 / Knowledge Galaxy
 
-Knowledge Galaxy 研究领域关系如何生成可检查的三维知识空间。所有可见节点都是 `ResearchField`，原始知识输入只有层级 H、方向性依赖 D 和对称相关性 R。Scope、依赖深度、连接度与坐标均由输入推导；坐标只是视觉布局结果，不能反推出知识关系。
+Knowledge Galaxy 1.0 研究领域关系如何生成可检查的三维知识空间。所有可见节点都是 `ResearchField`，原始知识输入只有层级 H、方向性依赖 D 和对称相关性 R。Scope、依赖深度、连接度与坐标均由输入推导；坐标只是视觉布局结果，不能反推出知识关系。
 
 当前版本已经把领域计算与演示逻辑分开。图引擎只负责验证输入、计算 H 的层级闭包、用 D 计算依赖深度、用 R 约束局部距离、计算 D/R 连接度并优化三维坐标。Diagnostic Viewer 位于 `apps/diagnostic-viewer/`，运行图构建后直接打开其中的 `index.html`；它不是最终星图。
 
@@ -32,7 +32,7 @@ $env:PYTHONPATH = "$PWD\src"
 apps/diagnostic-viewer/galaxy-data.js   节点、坐标、H、D、R 与派生指标
 ```
 
-打开 `apps/diagnostic-viewer/index.html` 后，可以拖动旋转，使用 Shift 或鼠标右键拖动平移，滚轮缩放。页面允许分别显示 D 方向边、R 无向边和 H 色彩家族，并在选择节点后显示真实 x/y/z 坐标、依赖深度、目标与实际半径以及连接度。
+打开 `apps/diagnostic-viewer/index.html` 后，可以拖动旋转，使用 Shift 或鼠标右键拖动平移，滚轮缩放。页面允许分别显示 D 方向边、R 无向边和 H 色彩家族，可以切换中英文领域名称，并在选择节点后显示真实 x/y/z 坐标、依赖深度、目标与实际半径以及连接度。名称语言只属于显示层，不参与图计算。
 
 ## 测试
 
@@ -41,7 +41,7 @@ $env:PYTHONPATH = "$PWD\src"
 python -m unittest discover -s tests -v
 ```
 
-测试覆盖关系方向、H 环校验、最大乘积层级传递、Scope、依赖深度、R 距离、D/R 职责隔离、连接度去重、H 与坐标隔离、出现时间隔离、固定种子复现、坐标有限性和诊断查看器的数据边界。
+测试覆盖关系方向、H 环校验、最大乘积层级传递、Scope、依赖深度、R 距离、D/R 职责隔离、连接度去重、H 与坐标隔离、出现时间及本地化名称隔离、固定种子复现、坐标有限性和诊断查看器的数据边界。
 
 ## 目录
 
@@ -63,4 +63,4 @@ apps/
 tests/                            数学不变量与端到端测试
 ```
 
-当前 `data/` 中的 55 个领域以及 H、D、R 数值是附有 provenance 的人工策展输入，用于检查模型行为，不是客观测量或专家共识。未列出的 R 只表示当前没有提供相关性值，不能解释为两个领域已经被证明无关。
+当前 `data/` 中包含 150 个领域、205 条 H、314 条 D 和 492 条 R。第二次扩展补入 Graph Theory、Measure Theory、Distributed Systems、Particle Physics、Organic Chemistry、Genomics、Oncology、Archaeology、Finance 等数学、计算机系统、自然科学、生命医学、工程与人文学科。每个领域保存英文名称及中文显示名。所有关系数值均为附有 provenance 的人工策展输入，用于检查模型行为，不是客观测量或专家共识。未列出的 R 只表示当前没有提供相关性值，不能解释为两个领域已经被证明无关。

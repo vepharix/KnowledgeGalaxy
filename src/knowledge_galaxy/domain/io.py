@@ -25,6 +25,7 @@ def load_knowledge_graph(fields_path: Path, relations_path: Path) -> KnowledgeGr
                 name=item["name"],
                 description=item["description"],
                 emergence_time=item.get("emergence_time"),
+                name_zh=item.get("name_zh"),
             )
             for item in fields_payload.get("fields", [])
         ),

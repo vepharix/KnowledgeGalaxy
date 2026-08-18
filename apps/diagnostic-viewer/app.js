@@ -13,6 +13,7 @@
   const showD = document.getElementById("show-d");
   const showHColor = document.getElementById("show-h-color");
   const showLabels = document.getElementById("show-labels");
+  const useChineseNames = document.getElementById("use-chinese-names");
   const autoRotate = document.getElementById("auto-rotate");
   const resetView = document.getElementById("reset-view");
   const rThreshold = document.getElementById("r-threshold");
@@ -82,6 +83,10 @@
 
   function nodeRadius(node) {
     return 7 + 8 * node.connectivityNormalized;
+  }
+
+  function displayName(node) {
+    return useChineseNames.checked && node.nameZh ? node.nameZh : node.name;
   }
 
   function nodeColor(node) {
@@ -189,15 +194,16 @@
   }
 
   function drawNodeLabel(item, active) {
+    const name = displayName(item.node);
     const fontSize = active ? 12 : 10.5 + item.depthCue;
     const x = item.x + item.radius + 6;
     const y = item.y + 4;
     context.font = `${fontSize}px system-ui`;
-    const width = context.measureText(item.node.name).width;
+    const width = context.measureText(name).width;
     context.fillStyle = `rgba(5,11,16,${active ? 0.88 : 0.48 + 0.28 * item.depthCue})`;
     context.fillRect(x - 3, y - fontSize, width + 6, fontSize + 5);
     context.fillStyle = active ? "#f4fbff" : `rgba(220,238,246,${0.48 + 0.5 * item.depthCue})`;
-    context.fillText(item.node.name, x, y);
+    context.fillText(name, x, y);
   }
 
   function hitTest(x, y) {
@@ -211,7 +217,7 @@
     const node = nodeById.get(id);
     const families = familyById.get(id) || [];
     const format = (value) => Number(value).toFixed(4);
-    details.innerHTML = `<h2>${escapeHtml(node.name)}</h2><div>${escapeHtml(node.description)}</div><dl>
+    details.innerHTML = `<h2>${escapeHtml(displayName(node))}</h2><div>${escapeHtml(node.description)}</div><dl>
       <dt>id</dt><dd>${escapeHtml(node.id)}</dd>
       <dt>x / y / z</dt><dd>${format(node.coordinate.x)} / ${format(node.coordinate.y)} / ${format(node.coordinate.z)}</dd>
       <dt>dependency depth</dt><dd>${format(node.dependencyDepthRaw)} (${format(node.dependencyDepthNormalized)})</dd>
@@ -274,6 +280,11 @@
   }, { passive: false });
   canvas.addEventListener("contextmenu", (event) => event.preventDefault());
   for (const control of [showR, showD, showHColor, showLabels, autoRotate]) control.addEventListener("change", render);
+  useChineseNames.addEventListener("change", () => {
+    const activeId = hoveredId || selectedId;
+    if (activeId) showDetails(activeId);
+    render();
+  });
   rThreshold.addEventListener("input", () => { rValue.value = Number(rThreshold.value).toFixed(2); render(); });
   resetView.addEventListener("click", () => {
     Object.assign(camera, initialCamera);

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "knowledge-galaxy"
-version = "0.3.0"
+version = "1.0.0"
 description = "Deterministic ResearchField graph engine and 3D diagnostic viewer for Knowledge Galaxy"
 requires-python = ">=3.11"
 

@@ -18,6 +18,7 @@ def snapshot_to_dict(snapshot: GraphSnapshot) -> dict[str, Any]:
             {
                 "id": field.id,
                 "name": field.name,
+                "nameZh": field.name_zh,
                 "description": field.description,
                 "emergenceTime": field.emergence_time,
                 "coordinate": {"x": coordinate[0], "y": coordinate[1], "z": coordinate[2]},

@@ -16,6 +16,8 @@ def validate_knowledge_graph(graph: KnowledgeGraphInput) -> None:
     for field in graph.fields:
         if not field.id or not field.name or not field.description:
             raise ValueError("ResearchField id, name and description are required")
+        if field.name_zh is not None and not field.name_zh.strip():
+            raise ValueError("ResearchField name_zh must be non-empty when supplied")
 
     hierarchy_pairs: set[tuple[str, str]] = set()
     for edge in graph.hierarchy:

@@ -58,7 +58,7 @@ class GraphEngineTests(unittest.TestCase):
     def test_current_data_loads_with_reviewed_field_set(self) -> None:
         graph = load_knowledge_graph(FIELDS_PATH, RELATIONS_PATH)
         ids = {field.id for field in graph.fields}
-        self.assertEqual(len(ids), 55)
+        self.assertEqual(len(ids), 150)
         self.assertTrue(
             {
                 "mathematics",
@@ -69,12 +69,43 @@ class GraphEngineTests(unittest.TestCase):
                 "bioinformatics",
                 "cognitive-science",
                 "computational-social-science",
+                "formal-sciences",
+                "natural-sciences",
+                "social-sciences",
+                "humanities",
+                "engineering",
+                "health-sciences",
+                "logic",
+                "calculus",
+                "astronomy",
+                "environmental-science",
+                "public-health",
+                "ethics",
+                "graph-theory",
+                "distributed-systems",
+                "particle-physics",
+                "organic-chemistry",
+                "genomics",
+                "oncology",
+                "biomedical-engineering",
+                "archaeology",
+                "finance",
             }
             <= ids
         )
-        self.assertEqual(len(graph.hierarchy), 63)
-        self.assertEqual(len(graph.dependencies), 112)
-        self.assertEqual(len(graph.relatedness), 191)
+        self.assertEqual(len(graph.hierarchy), 205)
+        self.assertEqual(len(graph.dependencies), 314)
+        self.assertEqual(len(graph.relatedness), 492)
+        self.assertTrue(all(field.name_zh for field in graph.fields))
+        related_nodes = {
+            field_id
+            for relation in graph.relatedness
+            for field_id in (relation.left, relation.right)
+        }
+        self.assertEqual(related_nodes, ids)
+        for relation in (*graph.hierarchy, *graph.dependencies, *graph.relatedness):
+            self.assertIn("assumption", relation.provenance)
+            self.assertNotIn("curated-v0", relation.provenance)
 
     def test_relatedness_is_symmetric_but_dependency_remains_directed(self) -> None:
         relations = (Relatedness("b", "a", 0.7, PROVENANCE),)
@@ -253,9 +284,13 @@ class GraphEngineTests(unittest.TestCase):
         self.assertEqual(first.coordinates, second.coordinates)
         self.assertTrue(all(math.isfinite(value) for point in first.coordinates.values() for value in point))
 
-    def test_emergence_time_does_not_affect_coordinates(self) -> None:
+    def test_display_metadata_does_not_affect_coordinates(self) -> None:
         dated_fields = tuple(
             ResearchField(field.id, field.name, field.description, str(1900 + index))
+            for index, field in enumerate(self.fields)
+        )
+        localized_fields = tuple(
+            ResearchField(field.id, field.name, field.description, None, f"领域 {index}")
             for index, field in enumerate(self.fields)
         )
         relations = (Relatedness("a", "b", 0.7, PROVENANCE),)
@@ -265,7 +300,12 @@ class GraphEngineTests(unittest.TestCase):
             KnowledgeGraphInput(dated_fields, (), (), relations),
             config,
         )
+        localized = build_graph(
+            KnowledgeGraphInput(localized_fields, (), (), relations),
+            config,
+        )
         self.assertEqual(undated.coordinates, dated.coordinates)
+        self.assertEqual(undated.coordinates, localized.coordinates)
 
     def test_diagnostic_viewer_uses_output_coordinates_and_connectivity_size(self) -> None:
         script = VIEWER_SCRIPT.read_text(encoding="utf-8")
@@ -277,6 +317,9 @@ class GraphEngineTests(unittest.TestCase):
         self.assertIn("camera.distance - rotated.z", script)
         self.assertIn("camera.pitch + dy", script)
         self.assertIn('id="show-labels"', index)
+        self.assertIn('id="use-chinese-names"', index)
+        self.assertIn("function displayName", script)
+        self.assertIn("node.nameZh", script)
         self.assertIn('id="auto-rotate"', index)
         hierarchy_source = (ROOT / "src/knowledge_galaxy/graph_engine/hierarchy.py").read_text(encoding="utf-8").lower()
         for visual_term in ("palette", "rgb", "hex", "material"):
@@ -289,7 +332,7 @@ class GraphEngineTests(unittest.TestCase):
             GraphConfiguration(seed=7, optimization_steps=100, density_grid_size=3),
         )
         payload = snapshot_to_dict(snapshot)
-        self.assertEqual(len(payload["nodes"]), 55)
+        self.assertEqual(len(payload["nodes"]), 150)
         self.assertTrue(payload["H"])
         self.assertTrue(payload["D"])
         self.assertTrue(payload["R"])
@@ -298,6 +341,7 @@ class GraphEngineTests(unittest.TestCase):
         self.assertTrue(payload["diagnostics"]["coordinateFinite"])
         for node in payload["nodes"]:
             self.assertIn("coordinate", node)
+            self.assertIn("nameZh", node)
             self.assertIn("scopeRaw", node)
             self.assertIn("dependencyDepthRaw", node)
             self.assertIn("connectivityRaw", node)
