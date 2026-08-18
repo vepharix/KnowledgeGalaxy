@@ -179,7 +179,7 @@ $$
 
 $$
 L_{affinity}=
-\sum_{i<j}
+\sum_{i\lt j}
 w_{ij}
 \left(
 \|P_i-P_j\|-d^*_{ij}
@@ -222,7 +222,7 @@ $$
 
 $$
 L_{repel}=
-\sum_{i<j}
+\sum_{i\lt j}
 \frac{\varepsilon}
 {(\|P_i-P_j\|+\delta)^2}.
 $$
