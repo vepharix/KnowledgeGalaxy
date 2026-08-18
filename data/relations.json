@@ -1,0 +1,2211 @@
+{
+    "metadata":  {
+                     "dataset_id":  "knowledge-galaxy-current-relations",
+                     "version":  "0.2.0",
+                     "updated_at":  "2026-08-18",
+                     "missing_relatedness":  "An unlisted R pair means no value was supplied; it does not prove unrelatedness.",
+                     "dependency_without_relatedness":  "D does not generate R or pair distance. A D pair without explicit R affects depth and connectivity only."
+                 },
+    "H":  [
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "linear-algebra",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "probability-theory",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "statistics",
+                  "value":  0.7,
+                  "provenance":  "curated-v0-assumption; statistics is also an autonomous empirical discipline"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "optimization",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "information-theory",
+                  "value":  0.7,
+                  "provenance":  "curated-v0-assumption; the field also belongs to communication engineering"
+              },
+              {
+                  "broader":  "computer-science",
+                  "narrower":  "algorithms",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "computer-science",
+                  "narrower":  "artificial-intelligence",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "computer-science",
+                  "narrower":  "data-science",
+                  "value":  0.6,
+                  "provenance":  "curated-v0-assumption; data science is deliberately multi-parent"
+              },
+              {
+                  "broader":  "artificial-intelligence",
+                  "narrower":  "machine-learning",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption; not all AI is machine learning"
+              },
+              {
+                  "broader":  "artificial-intelligence",
+                  "narrower":  "natural-language-processing",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "artificial-intelligence",
+                  "narrower":  "computer-vision",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "machine-learning",
+                  "narrower":  "deep-learning",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "machine-learning",
+                  "narrower":  "data-science",
+                  "value":  0.5,
+                  "provenance":  "curated-v0-assumption; partial overlap rather than full containment"
+              },
+              {
+                  "broader":  "deep-learning",
+                  "narrower":  "transformer-models",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "natural-language-processing",
+                  "narrower":  "large-language-models",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption; LLM research also extends beyond NLP"
+              },
+              {
+                  "broader":  "transformer-models",
+                  "narrower":  "large-language-models",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption; not every LLM must be a transformer"
+              },
+              {
+                  "broader":  "natural-language-processing",
+                  "narrower":  "computational-linguistics",
+                  "value":  0.6,
+                  "provenance":  "curated-v0-assumption; the two fields overlap without full containment"
+              },
+              {
+                  "broader":  "physics",
+                  "narrower":  "quantum-mechanics",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "neuroscience",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption; neuroscience is interdisciplinary"
+              },
+              {
+                  "broader":  "economics",
+                  "narrower":  "econometrics",
+                  "value":  1,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "broader":  "statistics",
+                  "narrower":  "econometrics",
+                  "value":  0.5,
+                  "provenance":  "curated-v0-assumption; methodological partial containment"
+              },
+              {
+                  "broader":  "statistics",
+                  "narrower":  "data-science",
+                  "value":  0.7,
+                  "provenance":  "curated-v0-assumption; data science is deliberately multi-parent"
+              },
+              {
+                  "broader":  "computer-science",
+                  "narrower":  "signal-processing",
+                  "value":  0.4,
+                  "provenance":  "curated-v0-assumption; signal processing also belongs to engineering"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "mathematical-analysis",
+                  "value":  1,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "geometry",
+                  "value":  1,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "discrete-mathematics",
+                  "value":  1,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "numerical-analysis",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "dynamical-systems",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "mathematics",
+                  "narrower":  "network-science",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "physics",
+                  "narrower":  "thermodynamics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "physics",
+                  "narrower":  "electromagnetism",
+                  "value":  1,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "physics",
+                  "narrower":  "materials-science",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "physics",
+                  "narrower":  "climate-science",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "chemistry",
+                  "narrower":  "materials-science",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "chemistry",
+                  "narrower":  "biochemistry",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "electrical-engineering",
+                  "narrower":  "signal-processing",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "electrical-engineering",
+                  "narrower":  "control-theory",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "electrical-engineering",
+                  "narrower":  "robotics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "artificial-intelligence",
+                  "narrower":  "robotics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "computer-science",
+                  "narrower":  "robotics",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "molecular-biology",
+                  "value":  1,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "genetics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "evolutionary-biology",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "ecology",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "biochemistry",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "bioinformatics",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "biology",
+                  "narrower":  "medicine",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "molecular-biology",
+                  "narrower":  "genetics",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "medicine",
+                  "narrower":  "epidemiology",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "neuroscience",
+                  "narrower":  "computational-neuroscience",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "psychology",
+                  "narrower":  "cognitive-science",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "neuroscience",
+                  "narrower":  "cognitive-science",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "linguistics",
+                  "narrower":  "computational-linguistics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "linguistics",
+                  "narrower":  "natural-language-processing",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "economics",
+                  "narrower":  "behavioral-economics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "psychology",
+                  "narrower":  "behavioral-economics",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "sociology",
+                  "narrower":  "computational-social-science",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "political-science",
+                  "narrower":  "computational-social-science",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "data-science",
+                  "narrower":  "computational-social-science",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "computer-science",
+                  "narrower":  "bioinformatics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "data-science",
+                  "narrower":  "bioinformatics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "statistics",
+                  "narrower":  "epidemiology",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "broader":  "data-science",
+                  "narrower":  "epidemiology",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              }
+          ],
+    "D":  [
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "linear-algebra",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "probability-theory",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "optimization",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "computer-science",
+                  "value":  0.35,
+                  "provenance":  "curated-v0-assumption; broad historical and conceptual support, not a strict prerequisite"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "optimization",
+                  "value":  0.65,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "probability-theory",
+                  "dependent":  "statistics",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "probability-theory",
+                  "dependent":  "information-theory",
+                  "value":  0.75,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "probability-theory",
+                  "dependent":  "machine-learning",
+                  "value":  0.7,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "machine-learning",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "data-science",
+                  "value":  0.85,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "optimization",
+                  "dependent":  "machine-learning",
+                  "value":  0.85,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "computer-science",
+                  "dependent":  "algorithms",
+                  "value":  0.65,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "algorithms",
+                  "dependent":  "artificial-intelligence",
+                  "value":  0.55,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "computer-science",
+                  "dependent":  "artificial-intelligence",
+                  "value":  0.65,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "machine-learning",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "deep-learning",
+                  "value":  0.85,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "optimization",
+                  "dependent":  "deep-learning",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "machine-learning",
+                  "dependent":  "deep-learning",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "machine-learning",
+                  "dependent":  "computer-vision",
+                  "value":  0.7,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "machine-learning",
+                  "dependent":  "natural-language-processing",
+                  "value":  0.65,
+                  "provenance":  "curated-v0-assumption; modern NLP track only"
+              },
+              {
+                  "foundation":  "deep-learning",
+                  "dependent":  "transformer-models",
+                  "value":  0.85,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "transformer-models",
+                  "dependent":  "large-language-models",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption for the present dominant architecture family"
+              },
+              {
+                  "foundation":  "natural-language-processing",
+                  "dependent":  "large-language-models",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "information-theory",
+                  "dependent":  "signal-processing",
+                  "value":  0.65,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "signal-processing",
+                  "dependent":  "computer-vision",
+                  "value":  0.55,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "quantum-mechanics",
+                  "value":  0.85,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "probability-theory",
+                  "dependent":  "quantum-mechanics",
+                  "value":  0.4,
+                  "provenance":  "curated-v0-assumption; conceptual support rather than a complete foundation"
+              },
+              {
+                  "foundation":  "biology",
+                  "dependent":  "neuroscience",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "neuroscience",
+                  "value":  0.45,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "econometrics",
+                  "value":  0.85,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "economics",
+                  "dependent":  "econometrics",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "algorithms",
+                  "dependent":  "computational-linguistics",
+                  "value":  0.45,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "foundation":  "natural-language-processing",
+                  "dependent":  "computational-linguistics",
+                  "value":  0.55,
+                  "provenance":  "curated-v0-assumption; one possible modern computational path"
+              },
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "mathematical-analysis",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "geometry",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "discrete-mathematics",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "mathematical-analysis",
+                  "dependent":  "numerical-analysis",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "numerical-analysis",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "optimization",
+                  "dependent":  "numerical-analysis",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "mathematical-analysis",
+                  "dependent":  "dynamical-systems",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "dynamical-systems",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "probability-theory",
+                  "dependent":  "dynamical-systems",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "discrete-mathematics",
+                  "dependent":  "algorithms",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "discrete-mathematics",
+                  "dependent":  "network-science",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "probability-theory",
+                  "dependent":  "network-science",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "network-science",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "algorithms",
+                  "dependent":  "network-science",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "mathematical-analysis",
+                  "dependent":  "physics",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "physics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "physics",
+                  "dependent":  "thermodynamics",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "physics",
+                  "dependent":  "electromagnetism",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "physics",
+                  "dependent":  "materials-science",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "chemistry",
+                  "dependent":  "materials-science",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "thermodynamics",
+                  "dependent":  "materials-science",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "quantum-mechanics",
+                  "dependent":  "materials-science",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "chemistry",
+                  "dependent":  "biochemistry",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "molecular-biology",
+                  "dependent":  "biochemistry",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "physics",
+                  "dependent":  "climate-science",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "thermodynamics",
+                  "dependent":  "climate-science",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "climate-science",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "dynamical-systems",
+                  "dependent":  "climate-science",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "electromagnetism",
+                  "dependent":  "electrical-engineering",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "information-theory",
+                  "dependent":  "electrical-engineering",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "mathematics",
+                  "dependent":  "electrical-engineering",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "electrical-engineering",
+                  "dependent":  "signal-processing",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "electrical-engineering",
+                  "dependent":  "control-theory",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "dynamical-systems",
+                  "dependent":  "control-theory",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "linear-algebra",
+                  "dependent":  "control-theory",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "optimization",
+                  "dependent":  "control-theory",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "control-theory",
+                  "dependent":  "robotics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "electrical-engineering",
+                  "dependent":  "robotics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "algorithms",
+                  "dependent":  "robotics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "artificial-intelligence",
+                  "dependent":  "robotics",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "machine-learning",
+                  "dependent":  "robotics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "biology",
+                  "dependent":  "molecular-biology",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "molecular-biology",
+                  "dependent":  "genetics",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "genetics",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "genetics",
+                  "dependent":  "evolutionary-biology",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "biology",
+                  "dependent":  "ecology",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "evolutionary-biology",
+                  "dependent":  "ecology",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "ecology",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "biology",
+                  "dependent":  "medicine",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "biochemistry",
+                  "dependent":  "medicine",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "genetics",
+                  "dependent":  "medicine",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "medicine",
+                  "dependent":  "epidemiology",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "epidemiology",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "probability-theory",
+                  "dependent":  "epidemiology",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "computer-science",
+                  "dependent":  "bioinformatics",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "algorithms",
+                  "dependent":  "bioinformatics",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "bioinformatics",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "genetics",
+                  "dependent":  "bioinformatics",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "molecular-biology",
+                  "dependent":  "bioinformatics",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "neuroscience",
+                  "dependent":  "computational-neuroscience",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "dynamical-systems",
+                  "dependent":  "computational-neuroscience",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "signal-processing",
+                  "dependent":  "computational-neuroscience",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "computational-neuroscience",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "machine-learning",
+                  "dependent":  "computational-neuroscience",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "neuroscience",
+                  "dependent":  "psychology",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "psychology",
+                  "dependent":  "cognitive-science",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "neuroscience",
+                  "dependent":  "cognitive-science",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "linguistics",
+                  "dependent":  "cognitive-science",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "artificial-intelligence",
+                  "dependent":  "cognitive-science",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "linguistics",
+                  "dependent":  "computational-linguistics",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "linguistics",
+                  "dependent":  "natural-language-processing",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "economics",
+                  "dependent":  "behavioral-economics",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "psychology",
+                  "dependent":  "behavioral-economics",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "behavioral-economics",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "sociology",
+                  "dependent":  "computational-social-science",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "political-science",
+                  "dependent":  "computational-social-science",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "data-science",
+                  "dependent":  "computational-social-science",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "network-science",
+                  "dependent":  "computational-social-science",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "foundation":  "statistics",
+                  "dependent":  "computational-social-science",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              }
+          ],
+    "R":  [
+              {
+                  "left":  "mathematics",
+                  "right":  "linear-algebra",
+                  "value":  0.82,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "probability-theory",
+                  "value":  0.78,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "optimization",
+                  "value":  0.76,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "linear-algebra",
+                  "right":  "optimization",
+                  "value":  0.72,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "linear-algebra",
+                  "right":  "machine-learning",
+                  "value":  0.68,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "linear-algebra",
+                  "right":  "deep-learning",
+                  "value":  0.65,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "linear-algebra",
+                  "right":  "quantum-mechanics",
+                  "value":  0.72,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "probability-theory",
+                  "right":  "statistics",
+                  "value":  0.88,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "probability-theory",
+                  "right":  "information-theory",
+                  "value":  0.78,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "probability-theory",
+                  "right":  "machine-learning",
+                  "value":  0.65,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "statistics",
+                  "right":  "machine-learning",
+                  "value":  0.82,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "statistics",
+                  "right":  "data-science",
+                  "value":  0.88,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "statistics",
+                  "right":  "econometrics",
+                  "value":  0.88,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "optimization",
+                  "right":  "machine-learning",
+                  "value":  0.82,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "optimization",
+                  "right":  "deep-learning",
+                  "value":  0.78,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "computer-science",
+                  "right":  "algorithms",
+                  "value":  0.82,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "computer-science",
+                  "right":  "artificial-intelligence",
+                  "value":  0.8,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "computer-science",
+                  "right":  "data-science",
+                  "value":  0.58,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "algorithms",
+                  "right":  "artificial-intelligence",
+                  "value":  0.62,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "artificial-intelligence",
+                  "right":  "machine-learning",
+                  "value":  0.9,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "artificial-intelligence",
+                  "right":  "natural-language-processing",
+                  "value":  0.78,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "artificial-intelligence",
+                  "right":  "computer-vision",
+                  "value":  0.78,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "machine-learning",
+                  "right":  "deep-learning",
+                  "value":  0.94,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "machine-learning",
+                  "right":  "natural-language-processing",
+                  "value":  0.7,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "machine-learning",
+                  "right":  "computer-vision",
+                  "value":  0.76,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "machine-learning",
+                  "right":  "data-science",
+                  "value":  0.83,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "deep-learning",
+                  "right":  "transformer-models",
+                  "value":  0.93,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "deep-learning",
+                  "right":  "large-language-models",
+                  "value":  0.83,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "deep-learning",
+                  "right":  "computer-vision",
+                  "value":  0.82,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "natural-language-processing",
+                  "right":  "transformer-models",
+                  "value":  0.88,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "natural-language-processing",
+                  "right":  "large-language-models",
+                  "value":  0.94,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "natural-language-processing",
+                  "right":  "computational-linguistics",
+                  "value":  0.91,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "transformer-models",
+                  "right":  "large-language-models",
+                  "value":  0.96,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "information-theory",
+                  "right":  "signal-processing",
+                  "value":  0.84,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "information-theory",
+                  "right":  "machine-learning",
+                  "value":  0.58,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "signal-processing",
+                  "right":  "computer-vision",
+                  "value":  0.72,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "physics",
+                  "right":  "quantum-mechanics",
+                  "value":  0.94,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "physics",
+                  "value":  0.42,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "neuroscience",
+                  "value":  0.91,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "neuroscience",
+                  "right":  "artificial-intelligence",
+                  "value":  0.44,
+                  "provenance":  "curated-v0-assumption; cognitive inspiration and modeling overlap"
+              },
+              {
+                  "left":  "neuroscience",
+                  "right":  "machine-learning",
+                  "value":  0.46,
+                  "provenance":  "curated-v0-assumption; computational neuroscience bridge"
+              },
+              {
+                  "left":  "economics",
+                  "right":  "econometrics",
+                  "value":  0.93,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "econometrics",
+                  "right":  "data-science",
+                  "value":  0.62,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "econometrics",
+                  "right":  "machine-learning",
+                  "value":  0.56,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "computational-linguistics",
+                  "right":  "large-language-models",
+                  "value":  0.68,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "computational-linguistics",
+                  "right":  "computer-science",
+                  "value":  0.6,
+                  "provenance":  "curated-v0-assumption"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "mathematical-analysis",
+                  "value":  0.84,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "geometry",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "discrete-mathematics",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "numerical-analysis",
+                  "value":  0.72,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "dynamical-systems",
+                  "value":  0.68,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematics",
+                  "right":  "network-science",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematical-analysis",
+                  "right":  "geometry",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematical-analysis",
+                  "right":  "numerical-analysis",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematical-analysis",
+                  "right":  "dynamical-systems",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematical-analysis",
+                  "right":  "physics",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematical-analysis",
+                  "right":  "optimization",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "mathematical-analysis",
+                  "right":  "linear-algebra",
+                  "value":  0.58,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "geometry",
+                  "right":  "linear-algebra",
+                  "value":  0.68,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "geometry",
+                  "right":  "physics",
+                  "value":  0.52,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "geometry",
+                  "right":  "computer-vision",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "discrete-mathematics",
+                  "right":  "algorithms",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "discrete-mathematics",
+                  "right":  "computer-science",
+                  "value":  0.72,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "discrete-mathematics",
+                  "right":  "network-science",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "discrete-mathematics",
+                  "right":  "information-theory",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "numerical-analysis",
+                  "right":  "linear-algebra",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "numerical-analysis",
+                  "right":  "optimization",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "numerical-analysis",
+                  "right":  "physics",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "numerical-analysis",
+                  "right":  "data-science",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "numerical-analysis",
+                  "right":  "control-theory",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "numerical-analysis",
+                  "right":  "climate-science",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "dynamical-systems",
+                  "right":  "control-theory",
+                  "value":  0.88,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "dynamical-systems",
+                  "right":  "physics",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "dynamical-systems",
+                  "right":  "neuroscience",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "dynamical-systems",
+                  "right":  "computational-neuroscience",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "dynamical-systems",
+                  "right":  "ecology",
+                  "value":  0.62,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "dynamical-systems",
+                  "right":  "climate-science",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "dynamical-systems",
+                  "right":  "economics",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "algorithms",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "statistics",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "data-science",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "sociology",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "computational-social-science",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "bioinformatics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "ecology",
+                  "value":  0.58,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "network-science",
+                  "right":  "neuroscience",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "physics",
+                  "right":  "thermodynamics",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "physics",
+                  "right":  "electromagnetism",
+                  "value":  0.88,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "physics",
+                  "right":  "materials-science",
+                  "value":  0.68,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "physics",
+                  "right":  "climate-science",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "physics",
+                  "right":  "electrical-engineering",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "chemistry",
+                  "right":  "materials-science",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "chemistry",
+                  "right":  "thermodynamics",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "chemistry",
+                  "right":  "biochemistry",
+                  "value":  0.88,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "chemistry",
+                  "right":  "molecular-biology",
+                  "value":  0.62,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "chemistry",
+                  "right":  "medicine",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "materials-science",
+                  "right":  "thermodynamics",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "materials-science",
+                  "right":  "electromagnetism",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "materials-science",
+                  "right":  "quantum-mechanics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "materials-science",
+                  "right":  "electrical-engineering",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "materials-science",
+                  "right":  "biochemistry",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "thermodynamics",
+                  "right":  "climate-science",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "thermodynamics",
+                  "right":  "ecology",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electromagnetism",
+                  "right":  "electrical-engineering",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electromagnetism",
+                  "right":  "signal-processing",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electromagnetism",
+                  "right":  "quantum-mechanics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electromagnetism",
+                  "right":  "control-theory",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "climate-science",
+                  "right":  "ecology",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "climate-science",
+                  "right":  "statistics",
+                  "value":  0.62,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "climate-science",
+                  "right":  "data-science",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "climate-science",
+                  "right":  "economics",
+                  "value":  0.48,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "climate-science",
+                  "right":  "epidemiology",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "climate-science",
+                  "right":  "political-science",
+                  "value":  0.42,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electrical-engineering",
+                  "right":  "signal-processing",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electrical-engineering",
+                  "right":  "information-theory",
+                  "value":  0.72,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electrical-engineering",
+                  "right":  "control-theory",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electrical-engineering",
+                  "right":  "robotics",
+                  "value":  0.68,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "electrical-engineering",
+                  "right":  "computer-science",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "control-theory",
+                  "right":  "robotics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "control-theory",
+                  "right":  "optimization",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "control-theory",
+                  "right":  "signal-processing",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "control-theory",
+                  "right":  "machine-learning",
+                  "value":  0.58,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "control-theory",
+                  "right":  "artificial-intelligence",
+                  "value":  0.48,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "robotics",
+                  "right":  "artificial-intelligence",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "robotics",
+                  "right":  "machine-learning",
+                  "value":  0.72,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "robotics",
+                  "right":  "computer-vision",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "molecular-biology",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "genetics",
+                  "value":  0.86,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "evolutionary-biology",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "ecology",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "biochemistry",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "bioinformatics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biology",
+                  "right":  "medicine",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "molecular-biology",
+                  "right":  "genetics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "molecular-biology",
+                  "right":  "biochemistry",
+                  "value":  0.88,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "molecular-biology",
+                  "right":  "bioinformatics",
+                  "value":  0.72,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "molecular-biology",
+                  "right":  "medicine",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "genetics",
+                  "right":  "evolutionary-biology",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "genetics",
+                  "right":  "bioinformatics",
+                  "value":  0.88,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "genetics",
+                  "right":  "medicine",
+                  "value":  0.62,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "genetics",
+                  "right":  "epidemiology",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "evolutionary-biology",
+                  "right":  "ecology",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "ecology",
+                  "right":  "statistics",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "biochemistry",
+                  "right":  "medicine",
+                  "value":  0.68,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "bioinformatics",
+                  "right":  "computer-science",
+                  "value":  0.68,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "bioinformatics",
+                  "right":  "algorithms",
+                  "value":  0.62,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "bioinformatics",
+                  "right":  "data-science",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "bioinformatics",
+                  "right":  "machine-learning",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "bioinformatics",
+                  "right":  "statistics",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "medicine",
+                  "right":  "epidemiology",
+                  "value":  0.86,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "medicine",
+                  "right":  "neuroscience",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "medicine",
+                  "right":  "psychology",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "medicine",
+                  "right":  "statistics",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "epidemiology",
+                  "right":  "statistics",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "epidemiology",
+                  "right":  "probability-theory",
+                  "value":  0.65,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "epidemiology",
+                  "right":  "data-science",
+                  "value":  0.72,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "epidemiology",
+                  "right":  "computational-social-science",
+                  "value":  0.4,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-neuroscience",
+                  "right":  "neuroscience",
+                  "value":  0.92,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-neuroscience",
+                  "right":  "machine-learning",
+                  "value":  0.72,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-neuroscience",
+                  "right":  "signal-processing",
+                  "value":  0.76,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-neuroscience",
+                  "right":  "statistics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-neuroscience",
+                  "right":  "cognitive-science",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-neuroscience",
+                  "right":  "artificial-intelligence",
+                  "value":  0.62,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "psychology",
+                  "right":  "cognitive-science",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "psychology",
+                  "right":  "neuroscience",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "psychology",
+                  "right":  "behavioral-economics",
+                  "value":  0.8,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "psychology",
+                  "right":  "artificial-intelligence",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "cognitive-science",
+                  "right":  "neuroscience",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "cognitive-science",
+                  "right":  "linguistics",
+                  "value":  0.75,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "cognitive-science",
+                  "right":  "artificial-intelligence",
+                  "value":  0.7,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "cognitive-science",
+                  "right":  "philosophy",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "cognitive-science",
+                  "right":  "computational-linguistics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "sociology",
+                  "right":  "political-science",
+                  "value":  0.68,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "sociology",
+                  "right":  "computational-social-science",
+                  "value":  0.85,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "sociology",
+                  "right":  "behavioral-economics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "sociology",
+                  "right":  "economics",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "political-science",
+                  "right":  "computational-social-science",
+                  "value":  0.78,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "political-science",
+                  "right":  "economics",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "linguistics",
+                  "right":  "computational-linguistics",
+                  "value":  0.92,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "linguistics",
+                  "right":  "natural-language-processing",
+                  "value":  0.88,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "linguistics",
+                  "right":  "large-language-models",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "linguistics",
+                  "right":  "philosophy",
+                  "value":  0.5,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "philosophy",
+                  "right":  "artificial-intelligence",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "philosophy",
+                  "right":  "mathematics",
+                  "value":  0.3,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "behavioral-economics",
+                  "right":  "economics",
+                  "value":  0.9,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "behavioral-economics",
+                  "right":  "econometrics",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "behavioral-economics",
+                  "right":  "data-science",
+                  "value":  0.45,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-social-science",
+                  "right":  "data-science",
+                  "value":  0.82,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-social-science",
+                  "right":  "machine-learning",
+                  "value":  0.55,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-social-science",
+                  "right":  "econometrics",
+                  "value":  0.6,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              },
+              {
+                  "left":  "computational-social-science",
+                  "right":  "behavioral-economics",
+                  "value":  0.58,
+                  "provenance":  "curated-expanded-assumption; manually chosen for geometry inspection, not an objective measurement"
+              }
+          ]
+}

@@ -1,3 +1,3 @@
-"""ResearchField spatial-model tools for New Synapse."""
+"""Knowledge Galaxy graph engine and diagnostic tools."""
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"

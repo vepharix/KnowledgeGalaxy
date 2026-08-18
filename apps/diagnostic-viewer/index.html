@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge Galaxy — Diagnostic Viewer</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #071017; color: #dceaf0; }
+    canvas { display: block; width: 100%; height: 100%; cursor: grab; }
+    canvas.dragging { cursor: grabbing; }
+    .title, .controls, .details, .legend { position: fixed; z-index: 2; background: rgba(7,16,23,.88); border: 1px solid #29404c; border-radius: 10px; backdrop-filter: blur(10px); }
+    .title { top: 16px; left: 16px; padding: 12px 15px; }
+    .title strong { display: block; font-size: 16px; }
+    .title span { color: #f2b84b; font-size: 12px; }
+    .controls { top: 16px; right: 16px; padding: 12px 14px; min-width: 220px; font-size: 13px; }
+    .controls label { display: block; margin: 8px 0; }
+    .controls input { vertical-align: middle; }
+    .details { left: 16px; bottom: 16px; width: min(390px, calc(100vw - 32px)); padding: 13px 15px; font-size: 12px; line-height: 1.55; }
+    .details h2 { margin: 0 0 6px; font-size: 15px; }
+    .details dl { display: grid; grid-template-columns: 145px 1fr; margin: 6px 0 0; }
+    .details dt { color: #8ca5b1; }
+    .details dd { margin: 0; font-variant-numeric: tabular-nums; }
+    .legend { right: 16px; bottom: 16px; max-width: 360px; padding: 11px 14px; color: #9fb3bd; font-size: 11px; line-height: 1.45; }
+    .key { display: inline-flex; align-items: center; margin-right: 12px; }
+    .swatch { display: inline-block; width: 18px; height: 2px; margin-right: 5px; }
+    @media (max-width: 760px) { .legend { display: none; } .controls { top: 82px; } }
+  </style>
+</head>
+<body>
+  <canvas id="view" aria-label="Knowledge Galaxy three-dimensional diagnostic view"></canvas>
+  <section class="title">
+    <strong>Knowledge Galaxy · Diagnostic Viewer</strong>
+    <span>not final product</span>
+  </section>
+  <section class="controls">
+    <strong>显示</strong>
+    <label><input id="show-r" type="checkbox" checked> R 无向边</label>
+    <label><input id="show-d" type="checkbox"> D 方向边</label>
+    <label><input id="show-h-color" type="checkbox" checked> H 色彩家族</label>
+    <label>R 阈值 <input id="r-threshold" type="range" min="0" max="1" step="0.05" value="0.55"> <output id="r-value">0.55</output></label>
+    <small>拖动旋转；Shift/右键拖动平移；滚轮缩放。</small>
+  </section>
+  <section id="details" class="details">
+    <h2>选择一个节点</h2>
+    悬停或点击节点查看真实坐标与派生指标。
+  </section>
+  <section class="legend">
+    <span class="key"><i class="swatch" style="background:#80bfff"></i>R</span>
+    <span class="key"><i class="swatch" style="background:#f0a45d"></i>D（箭头指向 dependent）</span><br>
+    节点大小只表示 D/R 综合连接度。H 颜色是诊断简化；多重层级归属不能由单一颜色完整表达，也不会改变坐标。
+  </section>
+  <script src="./galaxy-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

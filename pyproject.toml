@@ -3,13 +3,13 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "new-synapse-research"
-version = "0.2.0"
-description = "Deterministic ResearchField 3D spatial experiment for New Synapse"
+name = "knowledge-galaxy"
+version = "0.3.0"
+description = "Deterministic ResearchField graph engine and 3D diagnostic viewer for Knowledge Galaxy"
 requires-python = ">=3.11"
 
 [project.scripts]
-new-synapse = "knowledge_galaxy.cli:main"
+knowledge-galaxy = "knowledge_galaxy.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

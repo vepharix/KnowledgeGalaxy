@@ -1,6 +1,5 @@
 # Local Codex working and delivery directories
-/work/
-/outputs/
+/apps/diagnostic-viewer/galaxy-data.js
 
 # Local environment and generated artifacts
 .vscode/

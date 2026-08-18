@@ -1,0 +1,291 @@
+{
+    "metadata":  {
+                     "dataset_id":  "knowledge-galaxy-current",
+                     "display_name":  "Knowledge Galaxy current field graph",
+                     "version":  "0.2.0",
+                     "updated_at":  "2026-08-18",
+                     "curation_method":  "55 ResearchFields curated for deterministic graph construction; values remain reviewable assumptions.",
+                     "provenance_limit":  "H, D and R values are curated model inputs, not objective measurements or expert consensus."
+                 },
+    "fields":  [
+                   {
+                       "id":  "mathematics",
+                       "name":  "Mathematics",
+                       "description":  "Study of quantity, structure, space, change and formal patterns."
+                   },
+                   {
+                       "id":  "linear-algebra",
+                       "name":  "Linear Algebra",
+                       "description":  "Study of vector spaces, linear maps, matrices and related structures."
+                   },
+                   {
+                       "id":  "probability-theory",
+                       "name":  "Probability Theory",
+                       "description":  "Mathematical study of random phenomena and probability measures."
+                   },
+                   {
+                       "id":  "statistics",
+                       "name":  "Statistics",
+                       "description":  "Study of collecting, modeling and drawing conclusions from data."
+                   },
+                   {
+                       "id":  "optimization",
+                       "name":  "Optimization",
+                       "description":  "Study of selecting solutions that minimize or maximize an objective."
+                   },
+                   {
+                       "id":  "information-theory",
+                       "name":  "Information Theory",
+                       "description":  "Study of information, entropy, coding and communication limits.",
+                       "emergence_time":  "1948"
+                   },
+                   {
+                       "id":  "computer-science",
+                       "name":  "Computer Science",
+                       "description":  "Study of computation, information processes and computational systems."
+                   },
+                   {
+                       "id":  "algorithms",
+                       "name":  "Algorithms",
+                       "description":  "Study of finite procedures for solving computational problems."
+                   },
+                   {
+                       "id":  "artificial-intelligence",
+                       "name":  "Artificial Intelligence",
+                       "description":  "Study of computational systems that perform tasks associated with intelligent behavior.",
+                       "emergence_time":  "1956"
+                   },
+                   {
+                       "id":  "machine-learning",
+                       "name":  "Machine Learning",
+                       "description":  "Study of computational methods that improve behavior from data."
+                   },
+                   {
+                       "id":  "deep-learning",
+                       "name":  "Deep Learning",
+                       "description":  "Study of machine learning using multilayer representation-learning models."
+                   },
+                   {
+                       "id":  "natural-language-processing",
+                       "name":  "Natural Language Processing",
+                       "description":  "Study of computational processing and generation of human language."
+                   },
+                   {
+                       "id":  "computer-vision",
+                       "name":  "Computer Vision",
+                       "description":  "Study of computational interpretation of visual data."
+                   },
+                   {
+                       "id":  "transformer-models",
+                       "name":  "Transformer Models",
+                       "description":  "Study of neural architectures based primarily on attention mechanisms.",
+                       "emergence_time":  "2017"
+                   },
+                   {
+                       "id":  "large-language-models",
+                       "name":  "Large Language Models",
+                       "description":  "Study of large-scale language models trained on broad text corpora."
+                   },
+                   {
+                       "id":  "data-science",
+                       "name":  "Data Science",
+                       "description":  "Interdisciplinary study of extracting knowledge and decisions from data."
+                   },
+                   {
+                       "id":  "signal-processing",
+                       "name":  "Signal Processing",
+                       "description":  "Study of representation, transformation and analysis of signals."
+                   },
+                   {
+                       "id":  "physics",
+                       "name":  "Physics",
+                       "description":  "Study of matter, energy, motion and interactions in nature."
+                   },
+                   {
+                       "id":  "quantum-mechanics",
+                       "name":  "Quantum Mechanics",
+                       "description":  "Study of physical systems governed by quantum theory.",
+                       "emergence_time":  "1925"
+                   },
+                   {
+                       "id":  "biology",
+                       "name":  "Biology",
+                       "description":  "Study of living systems and biological processes."
+                   },
+                   {
+                       "id":  "neuroscience",
+                       "name":  "Neuroscience",
+                       "description":  "Study of nervous systems, cognition and neural processes."
+                   },
+                   {
+                       "id":  "economics",
+                       "name":  "Economics",
+                       "description":  "Study of production, allocation, incentives and economic behavior."
+                   },
+                   {
+                       "id":  "econometrics",
+                       "name":  "Econometrics",
+                       "description":  "Application of statistical methods to economic data and hypotheses."
+                   },
+                   {
+                       "id":  "computational-linguistics",
+                       "name":  "Computational Linguistics",
+                       "description":  "Interdisciplinary study of language using computational and formal methods."
+                   },
+                   {
+                       "id":  "mathematical-analysis",
+                       "name":  "Mathematical Analysis",
+                       "description":  "Study of limits, continuity, differentiation, integration and infinite processes."
+                   },
+                   {
+                       "id":  "geometry",
+                       "name":  "Geometry",
+                       "description":  "Study of shape, space, size and structural properties of spatial objects."
+                   },
+                   {
+                       "id":  "discrete-mathematics",
+                       "name":  "Discrete Mathematics",
+                       "description":  "Study of finite and countable mathematical structures."
+                   },
+                   {
+                       "id":  "numerical-analysis",
+                       "name":  "Numerical Analysis",
+                       "description":  "Study of algorithms for approximate numerical solutions to mathematical problems."
+                   },
+                   {
+                       "id":  "dynamical-systems",
+                       "name":  "Dynamical Systems",
+                       "description":  "Study of systems whose states evolve over time according to mathematical rules."
+                   },
+                   {
+                       "id":  "network-science",
+                       "name":  "Network Science",
+                       "description":  "Interdisciplinary study of complex systems represented as networks."
+                   },
+                   {
+                       "id":  "chemistry",
+                       "name":  "Chemistry",
+                       "description":  "Study of substances, their properties, composition and transformations."
+                   },
+                   {
+                       "id":  "materials-science",
+                       "name":  "Materials Science",
+                       "description":  "Study of relationships among the structure, properties and uses of materials."
+                   },
+                   {
+                       "id":  "thermodynamics",
+                       "name":  "Thermodynamics",
+                       "description":  "Study of heat, work, energy and macroscopic state change."
+                   },
+                   {
+                       "id":  "electromagnetism",
+                       "name":  "Electromagnetism",
+                       "description":  "Study of electric and magnetic fields, charges and radiation."
+                   },
+                   {
+                       "id":  "climate-science",
+                       "name":  "Climate Science",
+                       "description":  "Study of climate systems, variability, mechanisms and long-term change."
+                   },
+                   {
+                       "id":  "electrical-engineering",
+                       "name":  "Electrical Engineering",
+                       "description":  "Study and design of electrical, electronic and information systems."
+                   },
+                   {
+                       "id":  "control-theory",
+                       "name":  "Control Theory",
+                       "description":  "Study of regulating dynamical systems through feedback and control inputs."
+                   },
+                   {
+                       "id":  "robotics",
+                       "name":  "Robotics",
+                       "description":  "Study and engineering of sensing, planning, control and embodied machines."
+                   },
+                   {
+                       "id":  "molecular-biology",
+                       "name":  "Molecular Biology",
+                       "description":  "Study of biological processes at the molecular level."
+                   },
+                   {
+                       "id":  "genetics",
+                       "name":  "Genetics",
+                       "description":  "Study of heredity, genes and variation in living systems."
+                   },
+                   {
+                       "id":  "evolutionary-biology",
+                       "name":  "Evolutionary Biology",
+                       "description":  "Study of the evolutionary processes that shape biological diversity."
+                   },
+                   {
+                       "id":  "ecology",
+                       "name":  "Ecology",
+                       "description":  "Study of interactions among organisms and their environments."
+                   },
+                   {
+                       "id":  "biochemistry",
+                       "name":  "Biochemistry",
+                       "description":  "Study of chemical processes and substances in living systems."
+                   },
+                   {
+                       "id":  "bioinformatics",
+                       "name":  "Bioinformatics",
+                       "description":  "Use of computational and statistical methods to study biological data."
+                   },
+                   {
+                       "id":  "medicine",
+                       "name":  "Medicine",
+                       "description":  "Study and practice of health, disease, diagnosis, prevention and treatment."
+                   },
+                   {
+                       "id":  "epidemiology",
+                       "name":  "Epidemiology",
+                       "description":  "Study of the distribution and determinants of health events in populations."
+                   },
+                   {
+                       "id":  "computational-neuroscience",
+                       "name":  "Computational Neuroscience",
+                       "description":  "Study of nervous systems using mathematical and computational models."
+                   },
+                   {
+                       "id":  "psychology",
+                       "name":  "Psychology",
+                       "description":  "Study of mind, behavior and mental processes."
+                   },
+                   {
+                       "id":  "cognitive-science",
+                       "name":  "Cognitive Science",
+                       "description":  "Interdisciplinary study of cognition, intelligence and mental representation."
+                   },
+                   {
+                       "id":  "sociology",
+                       "name":  "Sociology",
+                       "description":  "Study of social relations, institutions, groups and societies."
+                   },
+                   {
+                       "id":  "political-science",
+                       "name":  "Political Science",
+                       "description":  "Study of political systems, institutions, power and collective decision-making."
+                   },
+                   {
+                       "id":  "linguistics",
+                       "name":  "Linguistics",
+                       "description":  "Scientific study of language and its structure, use and change."
+                   },
+                   {
+                       "id":  "philosophy",
+                       "name":  "Philosophy",
+                       "description":  "Study of fundamental questions concerning knowledge, reality, reasoning and value."
+                   },
+                   {
+                       "id":  "behavioral-economics",
+                       "name":  "Behavioral Economics",
+                       "description":  "Study of economic decisions using psychological and behavioral evidence."
+                   },
+                   {
+                       "id":  "computational-social-science",
+                       "name":  "Computational Social Science",
+                       "description":  "Study of social phenomena using computational models and large-scale data."
+                   }
+               ]
+}
