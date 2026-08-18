@@ -17,6 +17,8 @@
     .controls { top: 16px; right: 16px; padding: 12px 14px; min-width: 220px; font-size: 13px; }
     .controls label { display: block; margin: 8px 0; }
     .controls input { vertical-align: middle; }
+    .controls button { width: 100%; margin-top: 7px; padding: 6px 9px; color: #dceaf0; background: #142733; border: 1px solid #35505e; border-radius: 6px; cursor: pointer; }
+    .controls button:hover { background: #1c3442; }
     .details { left: 16px; bottom: 16px; width: min(390px, calc(100vw - 32px)); padding: 13px 15px; font-size: 12px; line-height: 1.55; }
     .details h2 { margin: 0 0 6px; font-size: 15px; }
     .details dl { display: grid; grid-template-columns: 145px 1fr; margin: 6px 0 0; }
@@ -39,7 +41,10 @@
     <label><input id="show-r" type="checkbox" checked> R 无向边</label>
     <label><input id="show-d" type="checkbox"> D 方向边</label>
     <label><input id="show-h-color" type="checkbox" checked> H 色彩家族</label>
+    <label><input id="show-labels" type="checkbox"> 显示全部名称</label>
+    <label><input id="auto-rotate" type="checkbox" checked> 缓慢自动旋转</label>
     <label>R 阈值 <input id="r-threshold" type="range" min="0" max="1" step="0.05" value="0.55"> <output id="r-value">0.55</output></label>
+    <button id="reset-view" type="button">恢复初始视角</button>
     <small>拖动旋转；Shift/右键拖动平移；滚轮缩放。</small>
   </section>
   <section id="details" class="details">

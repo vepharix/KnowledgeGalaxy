@@ -12,6 +12,9 @@
   const showR = document.getElementById("show-r");
   const showD = document.getElementById("show-d");
   const showHColor = document.getElementById("show-h-color");
+  const showLabels = document.getElementById("show-labels");
+  const autoRotate = document.getElementById("auto-rotate");
+  const resetView = document.getElementById("reset-view");
   const rThreshold = document.getElementById("r-threshold");
   const rValue = document.getElementById("r-value");
   const nodeById = new Map(snapshot.nodes.map((node) => [node.id, node]));
@@ -19,11 +22,14 @@
   const roots = hierarchyRoots(snapshot.H);
   const familyById = hierarchyFamilies(snapshot.hierarchyMembers, roots);
 
-  const camera = { yaw: -0.65, pitch: 0.38, zoom: 1, panX: 0, panY: 0 };
+  const initialCamera = { yaw: -0.65, pitch: 0.38, zoom: 1, panX: 0, panY: 0 };
+  const camera = { ...initialCamera, distance: 18, focalLength: 18 };
   const pointer = { down: false, mode: "orbit", x: 0, y: 0, moved: false };
   let projected = [];
   let selectedId = null;
   let hoveredId = null;
+  let previousFrameTime = performance.now();
+  let automaticRotationPausedUntil = 0;
 
   function hierarchyRoots(edges) {
     const broader = new Set(edges.map((edge) => edge.broader));
@@ -61,13 +67,16 @@
   function project(node) {
     const rotated = rotate(node.coordinate);
     const base = Math.min(innerWidth, innerHeight) * 0.075 * camera.zoom;
-    const perspective = 1 / Math.max(0.45, 1 + rotated.z * 0.035);
+    const cameraDepth = Math.max(6, camera.distance - rotated.z);
+    const perspective = camera.focalLength / cameraDepth;
     return {
       node,
       x: innerWidth / 2 + camera.panX + rotated.x * base * perspective,
       y: innerHeight / 2 + camera.panY - rotated.y * base * perspective,
       z: rotated.z,
-      radius: nodeRadius(node) * Math.sqrt(perspective),
+      perspective,
+      depthCue: 0.5,
+      radius: nodeRadius(node) * Math.pow(perspective, 0.72),
     };
   }
 
@@ -83,11 +92,12 @@
   }
 
   function drawLine(left, right, color, alpha, width) {
+    const depthAlpha = 0.32 + 0.68 * ((left.depthCue + right.depthCue) / 2);
     context.beginPath();
     context.moveTo(left.x, left.y);
     context.lineTo(right.x, right.y);
     context.strokeStyle = color;
-    context.globalAlpha = alpha;
+    context.globalAlpha = alpha * depthAlpha;
     context.lineWidth = width;
     context.stroke();
     context.globalAlpha = 1;
@@ -106,7 +116,7 @@
     context.lineTo(tipX - Math.cos(angle + 0.55) * size, tipY - Math.sin(angle + 0.55) * size);
     context.closePath();
     context.fillStyle = "#f0a45d";
-    context.globalAlpha = 0.45 + strength * 0.45;
+    context.globalAlpha = (0.45 + strength * 0.45) * (0.35 + 0.65 * right.depthCue);
     context.fill();
     context.globalAlpha = 1;
   }
@@ -120,6 +130,10 @@
     context.fillRect(0, 0, innerWidth, innerHeight);
 
     projected = snapshot.nodes.map(project);
+    const minimumDepth = Math.min(...projected.map((item) => item.z));
+    const maximumDepth = Math.max(...projected.map((item) => item.z));
+    const depthRange = Math.max(maximumDepth - minimumDepth, 1e-9);
+    for (const item of projected) item.depthCue = (item.z - minimumDepth) / depthRange;
     const screenById = new Map(projected.map((item) => [item.node.id, item]));
     if (showR.checked) {
       const threshold = Number(rThreshold.value);
@@ -134,26 +148,61 @@
 
     for (const item of [...projected].sort((left, right) => left.z - right.z)) {
       const active = item.node.id === hoveredId || item.node.id === selectedId;
+      const color = nodeColor(item.node);
+      const depthAlpha = 0.38 + 0.62 * item.depthCue;
       context.beginPath();
       context.arc(item.x, item.y, item.radius + (active ? 3 : 0), 0, Math.PI * 2);
-      context.fillStyle = nodeColor(item.node);
-      context.globalAlpha = active ? 1 : 0.88;
-      context.shadowColor = nodeColor(item.node);
-      context.shadowBlur = active ? 18 : 7;
+      context.fillStyle = color;
+      context.globalAlpha = active ? 1 : depthAlpha;
+      context.shadowColor = color;
+      context.shadowBlur = active ? 20 : 2 + 9 * item.depthCue;
       context.fill();
       context.shadowBlur = 0;
+      context.strokeStyle = `rgba(235,248,255,${0.18 + 0.5 * item.depthCue})`;
+      context.lineWidth = active ? 2 : 0.7 + item.depthCue;
+      context.stroke();
+
+      const highlight = context.createRadialGradient(
+        item.x - item.radius * 0.3,
+        item.y - item.radius * 0.35,
+        0,
+        item.x,
+        item.y,
+        item.radius,
+      );
+      highlight.addColorStop(0, "rgba(255,255,255,0.62)");
+      highlight.addColorStop(0.34, "rgba(255,255,255,0.08)");
+      highlight.addColorStop(1, "rgba(0,0,0,0.28)");
+      context.beginPath();
+      context.arc(item.x, item.y, item.radius, 0, Math.PI * 2);
+      context.fillStyle = highlight;
+      context.globalAlpha = active ? 1 : depthAlpha;
+      context.fill();
       context.globalAlpha = 1;
-      if (active) {
-        context.fillStyle = "#eef8fb";
-        context.font = "12px system-ui";
-        context.fillText(item.node.name, item.x + item.radius + 7, item.y + 4);
-      }
     }
+
+    for (const item of [...projected].sort((left, right) => left.z - right.z)) {
+      const active = item.node.id === hoveredId || item.node.id === selectedId;
+      if (!active && !showLabels.checked) continue;
+      drawNodeLabel(item, active);
+    }
+  }
+
+  function drawNodeLabel(item, active) {
+    const fontSize = active ? 12 : 10.5 + item.depthCue;
+    const x = item.x + item.radius + 6;
+    const y = item.y + 4;
+    context.font = `${fontSize}px system-ui`;
+    const width = context.measureText(item.node.name).width;
+    context.fillStyle = `rgba(5,11,16,${active ? 0.88 : 0.48 + 0.28 * item.depthCue})`;
+    context.fillRect(x - 3, y - fontSize, width + 6, fontSize + 5);
+    context.fillStyle = active ? "#f4fbff" : `rgba(220,238,246,${0.48 + 0.5 * item.depthCue})`;
+    context.fillText(item.node.name, x, y);
   }
 
   function hitTest(x, y) {
     return [...projected]
-      .reverse()
+      .sort((left, right) => right.z - left.z)
       .find((item) => Math.hypot(x - item.x, y - item.y) <= item.radius + 5)?.node.id || null;
   }
 
@@ -182,6 +231,7 @@
     pointer.x = event.clientX;
     pointer.y = event.clientY;
     pointer.moved = false;
+    automaticRotationPausedUntil = performance.now() + 1800;
     canvas.classList.add("dragging");
     canvas.setPointerCapture(event.pointerId);
   });
@@ -194,7 +244,7 @@
         camera.panX += dx;
         camera.panY += dy;
       } else {
-        camera.yaw += dx * 0.008;
+        camera.yaw -= dx * 0.008;
         camera.pitch = Math.max(-1.45, Math.min(1.45, camera.pitch + dy * 0.008));
       }
       pointer.x = event.clientX;
@@ -212,17 +262,36 @@
       if (selectedId) showDetails(selectedId);
     }
     pointer.down = false;
+    automaticRotationPausedUntil = performance.now() + 1200;
     canvas.classList.remove("dragging");
     render();
   });
   canvas.addEventListener("wheel", (event) => {
     event.preventDefault();
+    automaticRotationPausedUntil = performance.now() + 1000;
     camera.zoom = Math.max(0.25, Math.min(5, camera.zoom * Math.exp(-event.deltaY * 0.001)));
     render();
   }, { passive: false });
   canvas.addEventListener("contextmenu", (event) => event.preventDefault());
-  for (const control of [showR, showD, showHColor]) control.addEventListener("change", render);
+  for (const control of [showR, showD, showHColor, showLabels, autoRotate]) control.addEventListener("change", render);
   rThreshold.addEventListener("input", () => { rValue.value = Number(rThreshold.value).toFixed(2); render(); });
+  resetView.addEventListener("click", () => {
+    Object.assign(camera, initialCamera);
+    automaticRotationPausedUntil = performance.now() + 1200;
+    render();
+  });
   window.addEventListener("resize", resize);
   resize();
+
+  function animate(frameTime) {
+    const elapsed = Math.min(frameTime - previousFrameTime, 50);
+    previousFrameTime = frameTime;
+    if (autoRotate.checked && !pointer.down && frameTime >= automaticRotationPausedUntil) {
+      camera.yaw += elapsed * 0.000055;
+      render();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
 })();

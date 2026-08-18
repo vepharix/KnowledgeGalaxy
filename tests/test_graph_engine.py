@@ -269,10 +269,15 @@ class GraphEngineTests(unittest.TestCase):
 
     def test_diagnostic_viewer_uses_output_coordinates_and_connectivity_size(self) -> None:
         script = VIEWER_SCRIPT.read_text(encoding="utf-8")
+        index = VIEWER_INDEX.read_text(encoding="utf-8")
         radius_function = script[script.index("function nodeRadius"):script.index("function nodeColor")]
         self.assertIn("connectivityNormalized", radius_function)
         self.assertNotIn("scopeNormalized", radius_function)
         self.assertIn("node.coordinate", script)
+        self.assertIn("camera.distance - rotated.z", script)
+        self.assertIn("camera.pitch + dy", script)
+        self.assertIn('id="show-labels"', index)
+        self.assertIn('id="auto-rotate"', index)
         hierarchy_source = (ROOT / "src/knowledge_galaxy/graph_engine/hierarchy.py").read_text(encoding="utf-8").lower()
         for visual_term in ("palette", "rgb", "hex", "material"):
             self.assertNotIn(visual_term, hierarchy_source)
