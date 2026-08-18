@@ -39,14 +39,14 @@ $$
 当所有边权为 1 时，它退化为普通祖先—后代关系；在软层级中，它保留从 A 到 B 的最强传递路径。由此得到领域范围
 
 $$
-\operatorname{Scope}(A)=\sum_{B\ne A}M(A,B),
+\mathrm{Scope}(A)=\sum_{B\ne A}M(A,B),
 $$
 
 以及归一化形式
 
 $$
-\operatorname{Scope}_{norm}(A)=
-\frac{\log(1+\operatorname{Scope}(A))}
+\mathrm{Scope}_{norm}(A)=
+\frac{\log(1+\mathrm{Scope}(A))}
 {\log(1+N-1)}.
 $$
 
@@ -136,14 +136,14 @@ $$
 依赖关系也应当使有知识承接的领域在空间中保持一定接近，但 D 的方向性不能永久合并进 R。模型先构造对称依赖亲和
 
 $$
-\bar D(A,B)=\frac{D(A,B)+D(B,A)}{2},
+\bar D(A,B)=\frac{D(A,B) + D(B,A)}{2},
 $$
 
 再定义仅供布局使用的几何亲和
 
 $$
 G(A,B)=
-\operatorname{clip}
+\mathrm{clip}
 \left(
 R(A,B)+\lambda_A\bar D(A,B),0,1
 \right).
