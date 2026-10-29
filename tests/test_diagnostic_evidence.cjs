@@ -6,13 +6,15 @@ const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
 const read = (name) => JSON.parse(fs.readFileSync(path.join(root, 'data/mathematics', name), 'utf8'));
-const source = read('manifest.json').sources[0];
+const sources = read('manifest.json').sources;
+const source = sources[0];
 const alignment = {
   nodes: read('nodes.json').nodes,
   mappings: read('mappings.json').mappings,
   declarations: read('declarations.json').declarations.map(d => ({
-    ...d, url: `${source.repository}/blob/${source.revision}/${d.path}#L${d.line_start}`,
+    ...d, url: `${sources.find(s => s.id === d.source_id).repository}/blob/${sources.find(s => s.id === d.source_id).revision}/${d.path}#L${d.line_start}`,
   })),
+  assertions: read('assertions.json').assertions,
 };
 
 // A small DOM contract test; this deliberately does not claim browser/layout coverage.
@@ -62,4 +64,14 @@ test('legacy field-only snapshots require no formal-evidence payload', () => {
   const container = new Element('div');
   context.window.showFormalEvidence(container, { id: 'mathematics' }, {});
   assert.equal(container.children.length, 0);
+});
+
+test('Lean-core links and unassessed relation values retain their meaning', () => {
+  const natural = render('natural_numbers');
+  assert(natural.some(e => e.tag === 'a' && e.href.startsWith('https://github.com/leanprover/lean4/blob/')));
+  const group = render('group').map(e => e.textContent).join('\n');
+  assert(group.includes('未知'));
+  assert(group.includes('candidate'));
+  const summability = render('summability').map(e => e.textContent).join('\n');
+  assert(summability.includes('to_additive'));
 });

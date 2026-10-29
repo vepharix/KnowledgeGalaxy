@@ -209,6 +209,507 @@
       "line_start": 64,
       "line_end": 65,
       "signature_excerpt": "class IsProbabilityMeasure (μ : Measure α) : Prop where\n  measure_univ : μ univ = 1"
+    },
+    {
+      "id": "Function.comp",
+      "source_id": "lean-core",
+      "name": "Function.comp",
+      "path": "src/Init/Prelude.lean",
+      "blob_sha": "93cc20f0a801552ea7ca6ecfca2238c13ea48c5d",
+      "line_start": 141,
+      "line_end": 143,
+      "signature_excerpt": "@[inline, implicit_reducible] def Function.comp {α : Sort u} {β : Sort v} {δ : Sort w} (f : β → δ) (g : α → β) : α → δ :=\n  fun x => f (g x)\n"
+    },
+    {
+      "id": "Equivalence",
+      "source_id": "lean-core",
+      "name": "Equivalence",
+      "path": "src/Init/Core.lean",
+      "blob_sha": "8e32158627177a2fa009755be2dd46b2e75f5319",
+      "line_start": 1322,
+      "line_end": 1324,
+      "signature_excerpt": "structure Equivalence {α : Sort u} (r : α → α → Prop) : Prop where\n  /-- An equivalence relation is reflexive: `r x x` -/\n  refl  : ∀ x, r x x"
+    },
+    {
+      "id": "Nat",
+      "source_id": "lean-core",
+      "name": "Nat",
+      "path": "src/Init/Prelude.lean",
+      "blob_sha": "93cc20f0a801552ea7ca6ecfca2238c13ea48c5d",
+      "line_start": 1357,
+      "line_end": 1359,
+      "signature_excerpt": "inductive Nat where\n  /--\n  Zero, the smallest natural number."
+    },
+    {
+      "id": "Int",
+      "source_id": "lean-core",
+      "name": "Int",
+      "path": "src/Init/Data/Int/Basic.lean",
+      "blob_sha": "19c0b9e6b40902cec1862fe2b1a44217dab2c658",
+      "line_start": 46,
+      "line_end": 48,
+      "signature_excerpt": "inductive Int : Type where\n  /--\n  A natural number is an integer."
+    },
+    {
+      "id": "Rat",
+      "source_id": "lean-core",
+      "name": "Rat",
+      "path": "src/Init/Data/Rat/Basic.lean",
+      "blob_sha": "9722e2373e6d49b7ec3e635a6125af895c9940b0",
+      "line_start": 33,
+      "line_end": 35,
+      "signature_excerpt": "structure Rat where\n  /-- Constructs a rational number from components.\n  We rename the constructor to `mk'` to avoid a clash with the smart constructor. -/"
+    },
+    {
+      "id": "Nat.gcd",
+      "source_id": "lean-core",
+      "name": "Nat.gcd",
+      "path": "src/Init/Data/Nat/Gcd.lean",
+      "blob_sha": "6b3ac409cc1ed8775644c5c6a00a1a59f96fac2b",
+      "line_start": 35,
+      "line_end": 37,
+      "signature_excerpt": "def gcd (m n : @& Nat) : Nat :=\n  if m = 0 then\n    n"
+    },
+    {
+      "id": "Nat.dvd_iff_mod_eq_zero",
+      "source_id": "lean-core",
+      "name": "Nat.dvd_iff_mod_eq_zero",
+      "path": "src/Init/Data/Nat/Dvd.lean",
+      "blob_sha": "996481d2e08458e4484f0b34480376711b7fb5dd",
+      "line_start": 96,
+      "line_end": 98,
+      "signature_excerpt": "theorem dvd_iff_mod_eq_zero {m n : Nat} : m ∣ n ↔ n % m = 0 :=\n  ⟨mod_eq_zero_of_dvd, dvd_of_mod_eq_zero⟩\n"
+    },
+    {
+      "id": "Set",
+      "source_id": "mathlib",
+      "name": "Set",
+      "path": "Mathlib/Data/Set/Defs.lean",
+      "blob_sha": "fc6d59792303dd7fe9b05bdbb6824feb75024f22",
+      "line_start": 48,
+      "line_end": 50,
+      "signature_excerpt": "structure Set (α : Type u) where\n  /-- Turn a predicate `p : α → Prop` into a set, also written as `{x | p x}` -/\n  ofPred ::"
+    },
+    {
+      "id": "Real",
+      "source_id": "mathlib",
+      "name": "Real",
+      "path": "Mathlib/Basic/Real/Basic.lean",
+      "blob_sha": "ff65dc47a6be2cc613383b61d942526cd895ce3d",
+      "line_start": 36,
+      "line_end": 38,
+      "signature_excerpt": "structure Real where ofCauchy ::\n  /-- The underlying Cauchy completion -/\n  cauchy : CauSeq.Completion.Cauchy (abs : ℚ → ℚ)"
+    },
+    {
+      "id": "Complex",
+      "source_id": "mathlib",
+      "name": "Complex",
+      "path": "Mathlib/Basic/Complex/Basic.lean",
+      "blob_sha": "0bd1c511d5e6483c9819496d644820b6d4b0545a",
+      "line_start": 35,
+      "line_end": 37,
+      "signature_excerpt": "structure Complex : Type where\n  /-- The real part of a complex number. -/\n  re : ℝ"
+    },
+    {
+      "id": "Ring",
+      "source_id": "mathlib",
+      "name": "Ring",
+      "path": "Mathlib/Algebra/Ring/Defs.lean",
+      "blob_sha": "8afb79e8c61c7674ddf861a7596cdc5c3a04e722",
+      "line_start": 146,
+      "line_end": 148,
+      "signature_excerpt": "class Ring (R : Type u) extends Semiring R, AddCommGroup R, AddGroupWithOne R\n\n-- Add some short-cut instances to avoid going through the less used ring type classes."
+    },
+    {
+      "id": "Subgroup",
+      "source_id": "mathlib",
+      "name": "Subgroup",
+      "path": "Mathlib/Algebra/Group/Subgroup/Defs.lean",
+      "blob_sha": "f86e2f5c6f5d273871cb44bc97d6e45c8bfdb1e8",
+      "line_start": 296,
+      "line_end": 298,
+      "signature_excerpt": "structure Subgroup (G : Type*) [Group G] extends Submonoid G where\n  /-- `G` is closed under inverses -/\n  inv_mem' {x} : x ∈ carrier → x⁻¹ ∈ carrier"
+    },
+    {
+      "id": "MonoidHom",
+      "source_id": "mathlib",
+      "name": "MonoidHom",
+      "path": "Mathlib/Algebra/Group/Hom/Defs.lean",
+      "blob_sha": "be698a93890113952ea4ce37c4e8112d960322d1",
+      "line_start": 366,
+      "line_end": 368,
+      "signature_excerpt": "structure MonoidHom (M : Type*) (N : Type*) [MulOne M] [MulOne N]\n  extends OneHom M N, M →ₙ* N\n"
+    },
+    {
+      "id": "Polynomial",
+      "source_id": "mathlib",
+      "name": "Polynomial",
+      "path": "Mathlib/Algebra/Polynomial/Basic.lean",
+      "blob_sha": "29d9f2b94dc85e8687564f8ea4a133e5247862af",
+      "line_start": 69,
+      "line_end": 71,
+      "signature_excerpt": "structure Polynomial (R : Type*) [Semiring R] where ofFinsupp ::\n  /-- The coefficients `ℕ →₀ R` of a polynomial in `R[X]`. -/\n  toFinsupp : AddMonoidAlgebra R ℕ"
+    },
+    {
+      "id": "Ideal",
+      "source_id": "mathlib",
+      "name": "Ideal",
+      "path": "Mathlib/RingTheory/Ideal/Defs.lean",
+      "blob_sha": "32a392ff7bf92ad7c68a9301d9dc5d6961d531b1",
+      "line_start": 40,
+      "line_end": 42,
+      "signature_excerpt": "abbrev Ideal (R : Type u) [Semiring R] :=\n  Submodule R R\n"
+    },
+    {
+      "id": "Ideal.instHasQuotient",
+      "source_id": "mathlib",
+      "name": "Ideal.instHasQuotient",
+      "path": "Mathlib/RingTheory/Ideal/Quotient/Defs.lean",
+      "blob_sha": "57cda3306d8ab8174a514491c626ec66dbe25dc5",
+      "line_start": 43,
+      "line_end": 45,
+      "signature_excerpt": "instance instHasQuotient : HasQuotient R (Ideal R) := Submodule.hasQuotient\n\n/-- Shortcut instance for commutative rings. -/"
+    },
+    {
+      "id": "Submodule",
+      "source_id": "mathlib",
+      "name": "Submodule",
+      "path": "Mathlib/Algebra/Module/Submodule/Defs.lean",
+      "blob_sha": "1ab180395f20c7912b9e20d1746e167ca7e5da8e",
+      "line_start": 39,
+      "line_end": 41,
+      "signature_excerpt": "structure Submodule (R : Type u) (M : Type v) [Semiring R] [AddCommMonoid M] [Module R M] : Type v\n    extends AddSubmonoid M, SubMulAction R M\n"
+    },
+    {
+      "id": "LinearIndependent",
+      "source_id": "mathlib",
+      "name": "LinearIndependent",
+      "path": "Mathlib/LinearAlgebra/LinearIndependent/Defs.lean",
+      "blob_sha": "a90147453928cdb658706df93a48f1c4dc41451e",
+      "line_start": 98,
+      "line_end": 100,
+      "signature_excerpt": "def LinearIndependent : Prop :=\n  Injective (Finsupp.linearCombination R v)\n"
+    },
+    {
+      "id": "Module.Basis",
+      "source_id": "mathlib",
+      "name": "Module.Basis",
+      "path": "Mathlib/LinearAlgebra/Basis/Defs.lean",
+      "blob_sha": "6040d2bb1d5b9d8726672bdec1c09ff0b9a9b5ac",
+      "line_start": 89,
+      "line_end": 91,
+      "signature_excerpt": "structure Basis where\n  /-- `Basis.ofRepr` constructs a basis given an assignment of coordinates to each vector. -/\n  ofRepr ::"
+    },
+    {
+      "id": "Module.finrank",
+      "source_id": "mathlib",
+      "name": "Module.finrank",
+      "path": "Mathlib/LinearAlgebra/Dimension/Finrank.lean",
+      "blob_sha": "fd96f2b223c7551d3618da2068b027bd7bc63520",
+      "line_start": 61,
+      "line_end": 63,
+      "signature_excerpt": "noncomputable def finrank (R M : Type*) [Semiring R] [AddCommMonoid M] [Module R M] : ℕ :=\n  Cardinal.toNat (Module.rank R M)\n"
+    },
+    {
+      "id": "LinearMap.ker",
+      "source_id": "mathlib",
+      "name": "LinearMap.ker",
+      "path": "Mathlib/Algebra/Module/Submodule/Ker.lean",
+      "blob_sha": "8d028f00602840da70c730dcc50e6129914c61ad",
+      "line_start": 59,
+      "line_end": 61,
+      "signature_excerpt": "def ker (f : M →ₛₗ[τ₁₂] M₂) : Submodule R M :=\n  comap f ⊥\n"
+    },
+    {
+      "id": "LinearMap.range",
+      "source_id": "mathlib",
+      "name": "LinearMap.range",
+      "path": "Mathlib/Algebra/Module/Submodule/Range.lean",
+      "blob_sha": "c7b72b1e791a51c4eb115c49442b9e445df3c44f",
+      "line_start": 57,
+      "line_end": 59,
+      "signature_excerpt": "def range [RingHomSurjective τ₁₂] (f : M →ₛₗ[τ₁₂] M₂) : Submodule R₂ M₂ :=\n  (map f ⊤).copy (Set.range f) Set.image_univ.symm\n"
+    },
+    {
+      "id": "Matrix.det",
+      "source_id": "mathlib",
+      "name": "Matrix.det",
+      "path": "Mathlib/LinearAlgebra/Matrix/Determinant/Basic.lean",
+      "blob_sha": "6dec7f1d075bfee5f2508c89737a9c5fb20e0081",
+      "line_start": 63,
+      "line_end": 65,
+      "signature_excerpt": "def det (M : Matrix n n R) : R :=\n  detRowAlternating M\n"
+    },
+    {
+      "id": "Module.End.HasEigenvalue",
+      "source_id": "mathlib",
+      "name": "Module.End.HasEigenvalue",
+      "path": "Mathlib/LinearAlgebra/Eigenspace/Basic.lean",
+      "blob_sha": "eac262c276d0d825f708aab7d64899f98ce1ed6e",
+      "line_start": 443,
+      "line_end": 445,
+      "signature_excerpt": "abbrev HasEigenvalue (f : End R M) (a : R) : Prop :=\n  HasUnifEigenvalue f a 1\n"
+    },
+    {
+      "id": "InnerProductSpace",
+      "source_id": "mathlib",
+      "name": "InnerProductSpace",
+      "path": "Mathlib/Analysis/InnerProductSpace/Defs.lean",
+      "blob_sha": "4e79b8b6fcc4ef6e148bd1b181d7af8a140d25fd",
+      "line_start": 110,
+      "line_end": 112,
+      "signature_excerpt": "class InnerProductSpace (𝕜 : Type*) (E : Type*) [RCLike 𝕜] [SeminormedAddCommGroup E] extends\n    NormedSpace 𝕜 E, Inner 𝕜 E where\n  /-- The inner product induces the norm. -/"
+    },
+    {
+      "id": "NormedSpace",
+      "source_id": "mathlib",
+      "name": "NormedSpace",
+      "path": "Mathlib/Analysis/Normed/Module/Basic.lean",
+      "blob_sha": "54ce650fb8ea645b9bb266553b9f81d50f61a371",
+      "line_start": 37,
+      "line_end": 39,
+      "signature_excerpt": "class NormedSpace (𝕜 : Type*) (E : Type*) [NormedField 𝕜] [SeminormedAddCommGroup E]\n    extends Module 𝕜 E where\n  protected norm_smul_le : ∀ (a : 𝕜) (b : E), ‖a • b‖ ≤ ‖a‖ * ‖b‖"
+    },
+    {
+      "id": "LinearEquiv",
+      "source_id": "mathlib",
+      "name": "LinearEquiv",
+      "path": "Mathlib/Algebra/Module/Equiv/Defs.lean",
+      "blob_sha": "6be4cedda755e0e8a646c5cb7cdf079b2108f2bf",
+      "line_start": 49,
+      "line_end": 51,
+      "signature_excerpt": "structure LinearEquiv {R : Type*} {S : Type*} [Semiring R] [Semiring S] (σ : R →+* S)\n  {σ' : S →+* R} [RingHomInvPair σ σ'] [RingHomInvPair σ' σ] (M : Type*) (M₂ : Type*)\n  [AddCommMonoid M] [AddCommMonoid M₂] [Module R M] [Module S M₂] extends LinearMap σ M M₂, M ≃+ M₂"
+    },
+    {
+      "id": "Filter",
+      "source_id": "mathlib",
+      "name": "Filter",
+      "path": "Mathlib/Order/Filter/Defs.lean",
+      "blob_sha": "d4c9b71e0af471a0678411944010222949957896",
+      "line_start": 74,
+      "line_end": 76,
+      "signature_excerpt": "structure Filter (α : Type*) where\n  /-- The set of sets that belong to the filter. -/\n  sets : Set (Set α)"
+    },
+    {
+      "id": "Filter.Tendsto",
+      "source_id": "mathlib",
+      "name": "Filter.Tendsto",
+      "path": "Mathlib/Order/Filter/Defs.lean",
+      "blob_sha": "d4c9b71e0af471a0678411944010222949957896",
+      "line_start": 421,
+      "line_end": 423,
+      "signature_excerpt": "def Tendsto (f : α → β) (l₁ : Filter α) (l₂ : Filter β) :=\n  l₁.map f ≤ l₂\n"
+    },
+    {
+      "id": "CauchySeq",
+      "source_id": "mathlib",
+      "name": "CauchySeq",
+      "path": "Mathlib/Topology/UniformSpace/Cauchy.lean",
+      "blob_sha": "93505d809ff904c690582639d33e806257415cac",
+      "line_start": 185,
+      "line_end": 187,
+      "signature_excerpt": "def CauchySeq [Preorder β] (u : β → α) :=\n  Cauchy (atTop.map u)\n"
+    },
+    {
+      "id": "CompleteSpace",
+      "source_id": "mathlib",
+      "name": "CompleteSpace",
+      "path": "Mathlib/Topology/UniformSpace/Cauchy.lean",
+      "blob_sha": "93505d809ff904c690582639d33e806257415cac",
+      "line_start": 369,
+      "line_end": 371,
+      "signature_excerpt": "class CompleteSpace (α : Type u) [UniformSpace α] : Prop where\n  /-- In a complete uniform space, every Cauchy filter converges. -/\n  complete : ∀ {f : Filter α}, Cauchy f → ∃ x, f ≤ 𝓝 x"
+    },
+    {
+      "id": "MeasureTheory.integral",
+      "source_id": "mathlib",
+      "name": "MeasureTheory.integral",
+      "path": "Mathlib/MeasureTheory/Integral/Bochner/Basic.lean",
+      "blob_sha": "bbdcf5a2ba08348eff06a4d9b3bfc533acc20713",
+      "line_start": 158,
+      "line_end": 160,
+      "signature_excerpt": "@[no_expose] def integral {_ : MeasurableSpace α} (μ : Measure α) (f : α → G) : G :=\n  if _ : CompleteSpace G then\n    if hf : Integrable f μ then L1.integral (hf.toL1 f) else 0"
+    },
+    {
+      "id": "DifferentiableAt",
+      "source_id": "mathlib",
+      "name": "DifferentiableAt",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Defs.lean",
+      "blob_sha": "907e23720d2cb20e6dd847d57a9cfdebe521606d",
+      "line_start": 145,
+      "line_end": 147,
+      "signature_excerpt": "def DifferentiableAt (f : E → F) (x : E) :=\n  ∃ f' : E →L[𝕜] F, HasFDerivAt f f' x\n"
+    },
+    {
+      "id": "UniformContinuous",
+      "source_id": "mathlib",
+      "name": "UniformContinuous",
+      "path": "Mathlib/Topology/UniformSpace/Defs.lean",
+      "blob_sha": "d84f7d2a847c040acb8cea92e95b56fbfbc41f6d",
+      "line_start": 665,
+      "line_end": 667,
+      "signature_excerpt": "def UniformContinuous (f : α → β) :=\n  Tendsto (fun x : α × α => (f x.1, f x.2)) (𝓤 α) (𝓤 β)\n"
+    },
+    {
+      "id": "IsOpen",
+      "source_id": "mathlib",
+      "name": "IsOpen",
+      "path": "Mathlib/Topology/Defs/Basic.lean",
+      "blob_sha": "ffea343c7ce3447088fa76bb660c36170476bd4a",
+      "line_start": 93,
+      "line_end": 95,
+      "signature_excerpt": "def IsOpen : Set X → Prop := TopologicalSpace.IsOpen\n\n@[simp] theorem isOpen_univ : IsOpen (univ : Set X) := TopologicalSpace.isOpen_univ"
+    },
+    {
+      "id": "IsClosed",
+      "source_id": "mathlib",
+      "name": "IsClosed",
+      "path": "Mathlib/Topology/Defs/Basic.lean",
+      "blob_sha": "ffea343c7ce3447088fa76bb660c36170476bd4a",
+      "line_start": 105,
+      "line_end": 107,
+      "signature_excerpt": "class IsClosed (s : Set X) : Prop where\n  /-- The complement of a closed set is an open set. -/\n  isOpen_compl : IsOpen sᶜ"
+    },
+    {
+      "id": "IsConnected",
+      "source_id": "mathlib",
+      "name": "IsConnected",
+      "path": "Mathlib/Topology/Connected/Basic.lean",
+      "blob_sha": "06e332292e04337e1f3eb5aa761ee2954a35b1bb",
+      "line_start": 55,
+      "line_end": 57,
+      "signature_excerpt": "def IsConnected (s : Set α) : Prop :=\n  s.Nonempty ∧ IsPreconnected s\n"
+    },
+    {
+      "id": "IsPathConnected",
+      "source_id": "mathlib",
+      "name": "IsPathConnected",
+      "path": "Mathlib/Topology/Connected/PathConnected.lean",
+      "blob_sha": "770ac1119407292c772007f8e847d9e4531ced9b",
+      "line_start": 412,
+      "line_end": 414,
+      "signature_excerpt": "def IsPathConnected (F : Set X) : Prop :=\n  ∃ x ∈ F, ∀ ⦃y⦄, y ∈ F → JoinedIn F x y\n"
+    },
+    {
+      "id": "T2Space",
+      "source_id": "mathlib",
+      "name": "T2Space",
+      "path": "Mathlib/Topology/Separation/Hausdorff.lean",
+      "blob_sha": "a9b4585f708266ce93cbdaf54f298b2df00bf271",
+      "line_start": 84,
+      "line_end": 86,
+      "signature_excerpt": "class T2Space (X : Type u) [TopologicalSpace X] : Prop where\n  /-- Every two points in a Hausdorff space admit disjoint open neighbourhoods. -/\n  t2 : Pairwise fun x y => ∃ u v : Set X, IsOpen u ∧ IsOpen v ∧ x ∈ u ∧ y ∈ v ∧ Disjoint u v"
+    },
+    {
+      "id": "instTopologicalSpaceProd",
+      "source_id": "mathlib",
+      "name": "instTopologicalSpaceProd",
+      "path": "Mathlib/Topology/Constructions/SumProd.lean",
+      "blob_sha": "7b95027a86e7759bec23c0598a98b17d9cafab6b",
+      "line_start": 52,
+      "line_end": 54,
+      "signature_excerpt": "instance instTopologicalSpaceProd [t₁ : TopologicalSpace X] [t₂ : TopologicalSpace Y] :\n    TopologicalSpace (X × Y) :=\n  induced Prod.fst t₁ ⊓ induced Prod.snd t₂"
+    },
+    {
+      "id": "MeasureTheory.Measure.map",
+      "source_id": "mathlib",
+      "name": "MeasureTheory.Measure.map",
+      "path": "Mathlib/MeasureTheory/Measure/Map.lean",
+      "blob_sha": "3d37c13c66386999710a8c5ad852b136425b233a",
+      "line_start": 96,
+      "line_end": 98,
+      "signature_excerpt": "def map [MeasurableSpace α] [MeasurableSpace β] (f : α → β) (μ : Measure α) :\n    Measure β :=\n  if hf : AEMeasurable f μ"
+    },
+    {
+      "id": "ProbabilityTheory.variance",
+      "source_id": "mathlib",
+      "name": "ProbabilityTheory.variance",
+      "path": "Mathlib/Probability/Moments/Variance.lean",
+      "blob_sha": "11864e20ef5d62daf68d4d316c0dd06d73d90d18",
+      "line_start": 64,
+      "line_end": 66,
+      "signature_excerpt": "def variance : ℝ := (evariance X μ).toReal\n\n/-- The `ℝ≥0∞`-valued variance of the real-valued random variable `X` according to the measure `μ`."
+    },
+    {
+      "id": "ProbabilityTheory.IndepFun",
+      "source_id": "mathlib",
+      "name": "ProbabilityTheory.IndepFun",
+      "path": "Mathlib/Probability/Independence/Basic.lean",
+      "blob_sha": "8012069acd8cb55ce4c3b9d4ab3047bb98e2b5cd",
+      "line_start": 143,
+      "line_end": 145,
+      "signature_excerpt": "def IndepFun {β γ} {_mΩ : MeasurableSpace Ω} [MeasurableSpace β] [MeasurableSpace γ]\n    (f : Ω → β) (g : Ω → γ) (μ : Measure Ω := by volume_tac) : Prop :=\n  Kernel.IndepFun f g (Kernel.const Unit μ) (Measure.dirac () : Measure Unit)"
+    },
+    {
+      "id": "MeasureTheory.condExp",
+      "source_id": "mathlib",
+      "name": "MeasureTheory.condExp",
+      "path": "Mathlib/MeasureTheory/Function/ConditionalExpectation/Basic.lean",
+      "blob_sha": "7c54a469eac8d08fc1ea0ef75b27b4c6358d6aca",
+      "line_start": 101,
+      "line_end": 103,
+      "signature_excerpt": "noncomputable def condExp (μ : Measure[m₀] α) (f : α → E) : α → E :=\n  if hm : m ≤ m₀ then\n    if h : SigmaFinite (μ.trim hm) ∧ Integrable f μ then"
+    },
+    {
+      "id": "Nat.Prime",
+      "source_id": "mathlib",
+      "name": "Nat.Prime",
+      "path": "Mathlib/Data/Nat/Prime/Defs.lean",
+      "blob_sha": "dcd64ae81a9312bef3e971abe2c60ffa0e804684",
+      "line_start": 42,
+      "line_end": 44,
+      "signature_excerpt": "def Prime (p : ℕ) :=\n  Irreducible p\n"
+    },
+    {
+      "id": "LinearMap.finrank_range_add_finrank_ker",
+      "source_id": "mathlib",
+      "name": "LinearMap.finrank_range_add_finrank_ker",
+      "path": "Mathlib/LinearAlgebra/FiniteDimensional/Lemmas.lean",
+      "blob_sha": "df7fee03d9459669352f630d7631741e9f96314c",
+      "line_start": 173,
+      "line_end": 175,
+      "signature_excerpt": "theorem finrank_range_add_finrank_ker [Module.Finite K V] (f : V →ₗ[K] V₂) :\n    finrank K (LinearMap.range f) + finrank K (LinearMap.ker f) = finrank K V := by\n  rw [← f.quotKerEquivRange.finrank_eq]"
+    },
+    {
+      "id": "exists_deriv_eq_slope",
+      "source_id": "mathlib",
+      "name": "exists_deriv_eq_slope",
+      "path": "Mathlib/Analysis/Calculus/Deriv/MeanValue.lean",
+      "blob_sha": "1ab726bd729b8a524e22ffc1b1f23a44d48dcff8",
+      "line_start": 155,
+      "line_end": 157,
+      "signature_excerpt": "theorem exists_deriv_eq_slope : ∃ c ∈ Ioo a b, deriv f c = (f b - f a) / (b - a) :=\n  exists_hasDerivAt_eq_slope f (deriv f) hab hfc fun x hx =>\n    ((hfd x hx).differentiableAt <| IsOpen.mem_nhds isOpen_Ioo hx).hasDerivAt"
+    },
+    {
+      "id": "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le",
+      "source_id": "mathlib",
+      "name": "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le",
+      "path": "Mathlib/MeasureTheory/Integral/IntervalIntegral/FundThmCalculus.lean",
+      "blob_sha": "4b7e1b7061aa366b4bb9f7e4a11f28618d28e52f",
+      "line_start": 1140,
+      "line_end": 1142,
+      "signature_excerpt": "theorem integral_eq_sub_of_hasDerivAt_of_le (hab : a ≤ b) (hcont : ContinuousOn f (Icc a b))\n    (hderiv : ∀ x ∈ Ioo a b, HasDerivAt f (f' x) x) (hint : IntervalIntegrable f' volume a b) :\n    ∫ y in a..b, f' y = f b - f a :="
+    },
+    {
+      "id": "norm_inner_le_norm",
+      "source_id": "mathlib",
+      "name": "norm_inner_le_norm",
+      "path": "Mathlib/Analysis/InnerProductSpace/Basic.lean",
+      "blob_sha": "b3ee71623bb1cfc556c80e6a1458abe8f2f35810",
+      "line_start": 455,
+      "line_end": 457,
+      "signature_excerpt": "theorem norm_inner_le_norm (x y : E) : ‖⟪x, y⟫‖ ≤ ‖x‖ * ‖y‖ := by\n  rw [norm_eq_sqrt_re_inner (𝕜 := 𝕜) x, norm_eq_sqrt_re_inner (𝕜 := 𝕜) y]\n  let : PreInnerProductSpace.Core 𝕜 E := PreInnerProductSpace.toCore"
+    },
+    {
+      "id": "Summable",
+      "source_id": "mathlib",
+      "name": "Summable",
+      "path": "Mathlib/Topology/Algebra/InfiniteSum/Defs.lean",
+      "blob_sha": "d38759c99896b8961ffe756878dec27054bee2a1",
+      "line_start": 115,
+      "line_end": 117,
+      "signature_excerpt": "def Multipliable (f : β → α) (L := unconditional β) : Prop :=\n  ∃ a, HasProd f a L\n",
+      "generated_from": "Multipliable via to_additive"
     }
   ]
 }

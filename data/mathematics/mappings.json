@@ -375,6 +375,1001 @@
       "review_status": "semantic_assessed",
       "reviewer": "codex-assisted-curation",
       "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "set:Set",
+      "node_id": "set",
+      "declaration_id": "Set",
+      "role": "defining_expression",
+      "expression": "Set α",
+      "conditions": [
+        "α : Type*"
+      ],
+      "caveats": [
+        "Set 是包装谓词的结构，与 α → Prop 的对应要通过成员关系表达。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "function:Function.comp",
+      "node_id": "function",
+      "declaration_id": "Function.comp",
+      "role": "context",
+      "expression": "α → β",
+      "conditions": [
+        "α β : Type*"
+      ],
+      "caveats": [
+        "箭头类型是原生语言表达式；Function.comp 仅为使用函数的上下文证据，不定义所有函数。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "binary_relation:Equivalence",
+      "node_id": "binary_relation",
+      "declaration_id": "Equivalence",
+      "role": "context",
+      "expression": "α → α → Prop",
+      "conditions": [
+        "α : Type*"
+      ],
+      "caveats": [
+        "该声明只是关系类型的使用上下文，不是任意二元关系都满足 Equivalence。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "equivalence_relation:Equivalence",
+      "node_id": "equivalence_relation",
+      "declaration_id": "Equivalence",
+      "role": "defining_expression",
+      "expression": "Equivalence r",
+      "conditions": [
+        "α : Type*",
+        "r : α → α → Prop"
+      ],
+      "caveats": [
+        "需要自反、对称、传递三个条件；不自动生成 H 或 D。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "natural_numbers:Nat",
+      "node_id": "natural_numbers",
+      "declaration_id": "Nat",
+      "role": "defining_expression",
+      "expression": "Nat",
+      "conditions": [
+        "采用从零开始的自然数约定"
+      ],
+      "caveats": [
+        "归纳定义在 Lean 核心，并非 mathlib 自行定义。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "integers:Int",
+      "node_id": "integers",
+      "declaration_id": "Int",
+      "role": "defining_expression",
+      "expression": "Int",
+      "conditions": [
+        "包含全部非负数及负数"
+      ],
+      "caveats": [
+        "构造实现使用自然数；数学上的学习路径另外策展。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "rational_numbers:Rat",
+      "node_id": "rational_numbers",
+      "declaration_id": "Rat",
+      "role": "defining_expression",
+      "expression": "Rat",
+      "conditions": [
+        "使用有理数的规范化表示"
+      ],
+      "caveats": [
+        "结构的分母与约分条件不可在自然语言解释中删除。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "real_numbers:Real",
+      "node_id": "real_numbers",
+      "declaration_id": "Real",
+      "role": "defining_expression",
+      "expression": "Real",
+      "conditions": [
+        "采用 mathlib 固定版本的实数类型"
+      ],
+      "caveats": [
+        "完成构造使用 Cauchy 序列，不要求把该实现变成唯一 D 顺序。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "complex_numbers:Complex",
+      "node_id": "complex_numbers",
+      "declaration_id": "Complex",
+      "role": "defining_expression",
+      "expression": "Complex",
+      "conditions": [
+        "采用标准实部与虚部表示"
+      ],
+      "caveats": [
+        "这里只覆盖标准复数域。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "ring:Ring",
+      "node_id": "ring",
+      "declaration_id": "Ring",
+      "role": "defining_expression",
+      "expression": "Ring R",
+      "conditions": [
+        "R : Type*"
+      ],
+      "caveats": [
+        "允许非交换与零环；本节点采用含单位约定。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "subgroup:Subgroup",
+      "node_id": "subgroup",
+      "declaration_id": "Subgroup",
+      "role": "defining_expression",
+      "expression": "Subgroup G",
+      "conditions": [
+        "[Group G]"
+      ],
+      "caveats": [
+        "子群携带载体子集及其封闭条件。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "group_homomorphism:MonoidHom",
+      "node_id": "group_homomorphism",
+      "declaration_id": "MonoidHom",
+      "role": "defining_expression",
+      "expression": "G →* H",
+      "conditions": [
+        "[Group G]；[Group H]"
+      ],
+      "caveats": [
+        "原始 MonoidHom 支持更一般的结构；群假设不能省略。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "polynomial:Polynomial",
+      "node_id": "polynomial",
+      "declaration_id": "Polynomial",
+      "role": "defining_expression",
+      "expression": "Polynomial R",
+      "conditions": [
+        "[CommRing R]"
+      ],
+      "caveats": [
+        "形式多项式不等同于函数 R → R，有限域上尤其需区分。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "ideal:Ideal",
+      "node_id": "ideal",
+      "declaration_id": "Ideal",
+      "role": "defining_expression",
+      "expression": "Ideal R",
+      "conditions": [
+        "[CommRing R]"
+      ],
+      "caveats": [
+        "一般 semiring 上的 Ideal 是左理想；本节点限定交换环。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "quotient_ring:Ideal.instHasQuotient",
+      "node_id": "quotient_ring",
+      "declaration_id": "Ideal.instHasQuotient",
+      "role": "defining_expression",
+      "expression": "R ⧸ I",
+      "conditions": [
+        "[CommRing R]",
+        "I : Ideal R"
+      ],
+      "caveats": [
+        "这里的 HasQuotient 给出商的构造，环运算结构由另外的实例提供。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "subspace:Submodule",
+      "node_id": "subspace",
+      "declaration_id": "Submodule",
+      "role": "defining_expression",
+      "expression": "Submodule K V",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]"
+      ],
+      "caveats": [
+        "将标量限制为域，避免把一般子模全归为向量子空间。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "linear_independence:LinearIndependent",
+      "node_id": "linear_independence",
+      "declaration_id": "LinearIndependent",
+      "role": "defining_expression",
+      "expression": "LinearIndependent K v",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "v : ι → V"
+      ],
+      "caveats": [
+        "线性组合只使用有限支撑系数；索引族可无限。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "basis:Module.Basis",
+      "node_id": "basis",
+      "declaration_id": "Module.Basis",
+      "role": "defining_expression",
+      "expression": "Module.Basis ι K V",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "ι : Type*"
+      ],
+      "caveats": [
+        "该固定版本使用 Module.Basis；不假设正交或有限。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "dimension:Module.finrank",
+      "node_id": "dimension",
+      "declaration_id": "Module.finrank",
+      "role": "defining_expression",
+      "expression": "Module.finrank K V",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "[Module.Finite K V]"
+      ],
+      "caveats": [
+        "finrank 在无限维时也返回自然数，不能略去有限维前提。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "kernel:LinearMap.ker",
+      "node_id": "kernel",
+      "declaration_id": "LinearMap.ker",
+      "role": "defining_expression",
+      "expression": "LinearMap.ker f",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "[AddCommGroup W]；[Module K W]",
+        "f : V →ₗ[K] W"
+      ],
+      "caveats": [
+        "原声明支持半线性，此处固定恒等标量同态。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "range:LinearMap.range",
+      "node_id": "range",
+      "declaration_id": "LinearMap.range",
+      "role": "defining_expression",
+      "expression": "LinearMap.range f",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "[AddCommGroup W]；[Module K W]",
+        "f : V →ₗ[K] W"
+      ],
+      "caveats": [
+        "普通线性的标量同态为恒等，满足所需满射标量同态条件。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "determinant:Matrix.det",
+      "node_id": "determinant",
+      "declaration_id": "Matrix.det",
+      "role": "defining_expression",
+      "expression": "Matrix.det A",
+      "conditions": [
+        "[Field K]",
+        "n : ℕ",
+        "A : Matrix (Fin n) (Fin n) K"
+      ],
+      "caveats": [
+        "只取有限方阵；空方阵行列式依约定为一。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "eigenvalue:Module.End.HasEigenvalue",
+      "node_id": "eigenvalue",
+      "declaration_id": "Module.End.HasEigenvalue",
+      "role": "defining_expression",
+      "expression": "Module.End.HasEigenvalue f a",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "f : V →ₗ[K] V；a : K"
+      ],
+      "caveats": [
+        "断言存在非零特征向量，不预设每个线性映射都有特征值。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "inner_product_space:InnerProductSpace",
+      "node_id": "inner_product_space",
+      "declaration_id": "InnerProductSpace",
+      "role": "defining_expression",
+      "expression": "InnerProductSpace ℝ V",
+      "conditions": [
+        "[NormedAddCommGroup V]",
+        "[InnerProductSpace ℝ V]"
+      ],
+      "caveats": [
+        "内积必须与已有范数相容；复内积的共轭约定另行处理。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "normed_space:NormedSpace",
+      "node_id": "normed_space",
+      "declaration_id": "NormedSpace",
+      "role": "defining_expression",
+      "expression": "NormedSpace ℝ V",
+      "conditions": [
+        "[NormedAddCommGroup V]"
+      ],
+      "caveats": [
+        "NormedSpace 本身也支持半范数载体；本节点的额外假设确保分离。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "linear_equivalence:LinearEquiv",
+      "node_id": "linear_equivalence",
+      "declaration_id": "LinearEquiv",
+      "role": "defining_expression",
+      "expression": "V ≃ₗ[K] W",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "[AddCommGroup W]；[Module K W]",
+        "标量同态为 RingHom.id K"
+      ],
+      "caveats": [
+        "原始结构允许半线性，不把非恒等同态版本无条件合并。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "filter:Filter",
+      "node_id": "filter",
+      "declaration_id": "Filter",
+      "role": "defining_expression",
+      "expression": "Filter α",
+      "conditions": [
+        "α : Type*"
+      ],
+      "caveats": [
+        "允许底滤子，非平凡性并未由 Filter 自动提供。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "limit:Filter.Tendsto",
+      "node_id": "limit",
+      "declaration_id": "Filter.Tendsto",
+      "role": "defining_expression",
+      "expression": "Filter.Tendsto f L (𝓝 y)",
+      "conditions": [
+        "[TopologicalSpace Y]",
+        "f : X → Y；y : Y；L : Filter X",
+        "[Filter.NeBot L]"
+      ],
+      "caveats": [
+        "目标邻域可包含多个极限；唯一性另需分离条件。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "sequence_limit:Filter.Tendsto",
+      "node_id": "sequence_limit",
+      "declaration_id": "Filter.Tendsto",
+      "role": "variant",
+      "expression": "Filter.Tendsto u Filter.atTop (𝓝 x)",
+      "conditions": [
+        "[TopologicalSpace X]",
+        "u : ℕ → X；x : X"
+      ],
+      "caveats": [
+        "源滤子明确为自然数的 atTop，不是任意 Filter.lim 值。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "cauchy_sequence:CauchySeq",
+      "node_id": "cauchy_sequence",
+      "declaration_id": "CauchySeq",
+      "role": "defining_expression",
+      "expression": "CauchySeq u",
+      "conditions": [
+        "[MetricSpace X]",
+        "u : ℕ → X"
+      ],
+      "caveats": [
+        "此版本使用一致结构；在度量空间中对应通常的柯西列。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "completeness:CompleteSpace",
+      "node_id": "completeness",
+      "declaration_id": "CompleteSpace",
+      "role": "defining_expression",
+      "expression": "CompleteSpace X",
+      "conditions": [
+        "[MetricSpace X]"
+      ],
+      "caveats": [
+        "一般声明用于一致空间；这里只解释度量空间。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "series:Filter.Tendsto",
+      "node_id": "series",
+      "declaration_id": "Filter.Tendsto",
+      "role": "variant",
+      "expression": "Filter.Tendsto (fun n : ℕ => ∑ i ∈ Finset.range n, a i) Filter.atTop (𝓝 s)",
+      "conditions": [
+        "a : ℕ → ℝ；s : ℝ"
+      ],
+      "caveats": [
+        "这表达按自然数顺序的部分和收敛，不等同于默认无条件 HasSum。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "summability:Summable",
+      "node_id": "summability",
+      "declaration_id": "Summable",
+      "role": "defining_expression",
+      "expression": "Summable a",
+      "conditions": [
+        "a : ℕ → ℝ"
+      ],
+      "caveats": [
+        "声明由 Multipliable 经 to_additive 生成；源码定位指向生成来源。",
+        "默认有限子集滤子的无条件求和；不包括所有有条件收敛的实级数。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "integral:MeasureTheory.integral",
+      "node_id": "integral",
+      "declaration_id": "MeasureTheory.integral",
+      "role": "value_operator",
+      "expression": "∫ x, f x ∂μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω",
+        "f : Ω → ℝ；MeasureTheory.Integrable f μ"
+      ],
+      "caveats": [
+        "可积性是本节点解释的前提；算子在不可积时仍有默认值。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "differentiability:DifferentiableAt",
+      "node_id": "differentiability",
+      "declaration_id": "DifferentiableAt",
+      "role": "defining_expression",
+      "expression": "DifferentiableAt ℝ f x",
+      "conditions": [
+        "f : ℝ → ℝ；x : ℝ"
+      ],
+      "caveats": [
+        "原声明适用于更一般的线性近似，本节点只选实值单变量。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "uniform_continuity:UniformContinuous",
+      "node_id": "uniform_continuity",
+      "declaration_id": "UniformContinuous",
+      "role": "defining_expression",
+      "expression": "UniformContinuous f",
+      "conditions": [
+        "[MetricSpace X]；[MetricSpace Y]",
+        "f : X → Y"
+      ],
+      "caveats": [
+        "原声明依赖 UniformSpace；两个点的控制需统一，不只是逐点连续。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "open_set:IsOpen",
+      "node_id": "open_set",
+      "declaration_id": "IsOpen",
+      "role": "defining_expression",
+      "expression": "IsOpen s",
+      "conditions": [
+        "[TopologicalSpace X]",
+        "s : Set X"
+      ],
+      "caveats": [
+        "这是给定拓扑下的属性。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "closed_set:IsClosed",
+      "node_id": "closed_set",
+      "declaration_id": "IsClosed",
+      "role": "defining_expression",
+      "expression": "IsClosed s",
+      "conditions": [
+        "[TopologicalSpace X]",
+        "s : Set X"
+      ],
+      "caveats": [
+        "与开集取补相连；既开又闭的集合并不矛盾。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "connectedness:IsConnected",
+      "node_id": "connectedness",
+      "declaration_id": "IsConnected",
+      "role": "defining_expression",
+      "expression": "IsConnected s",
+      "conditions": [
+        "[TopologicalSpace X]",
+        "s : Set X"
+      ],
+      "caveats": [
+        "IsConnected 明确要求非空，不与 IsPreconnected 无条件等同。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "path_connectedness:IsPathConnected",
+      "node_id": "path_connectedness",
+      "declaration_id": "IsPathConnected",
+      "role": "defining_expression",
+      "expression": "IsPathConnected s",
+      "conditions": [
+        "[TopologicalSpace X]",
+        "s : Set X"
+      ],
+      "caveats": [
+        "定义包括非空条件；连通不自动蕴含道路连通。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "hausdorff_space:T2Space",
+      "node_id": "hausdorff_space",
+      "declaration_id": "T2Space",
+      "role": "defining_expression",
+      "expression": "T2Space X",
+      "conditions": [
+        "[TopologicalSpace X]"
+      ],
+      "caveats": [
+        "只要求不同点可分离；不推出可度量。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "product_topology:instTopologicalSpaceProd",
+      "node_id": "product_topology",
+      "declaration_id": "instTopologicalSpaceProd",
+      "role": "defining_expression",
+      "expression": "TopologicalSpace (X × Y)",
+      "conditions": [
+        "[TopologicalSpace X]；[TopologicalSpace Y]"
+      ],
+      "caveats": [
+        "标准实例为二元乘积拓扑，不是箱拓扑的无限版本。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "probability_space:MeasurableSpace",
+      "node_id": "probability_space",
+      "declaration_id": "MeasurableSpace",
+      "role": "context",
+      "expression": "(Ω, m, μ)",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]"
+      ],
+      "caveats": [
+        "此声明只提供可测结构；必须联合测度与总质量条件。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "probability_space:MeasureTheory.Measure",
+      "node_id": "probability_space",
+      "declaration_id": "MeasureTheory.Measure",
+      "role": "context",
+      "expression": "(Ω, m, μ)",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]"
+      ],
+      "caveats": [
+        "Measure 不自带质量为一的约束。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "probability_space:MeasureTheory.IsProbabilityMeasure",
+      "node_id": "probability_space",
+      "declaration_id": "MeasureTheory.IsProbabilityMeasure",
+      "role": "context",
+      "expression": "MeasureTheory.IsProbabilityMeasure μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]"
+      ],
+      "caveats": [
+        "这是组合表达的一部分，不存在被本项目假设出来的单一 ProbabilitySpace 声明。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "probability_measure:MeasureTheory.IsProbabilityMeasure",
+      "node_id": "probability_measure",
+      "declaration_id": "MeasureTheory.IsProbabilityMeasure",
+      "role": "defining_expression",
+      "expression": "MeasureTheory.IsProbabilityMeasure μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω"
+      ],
+      "caveats": [
+        "该断言要求 μ univ = 1，零测度不满足。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "distribution:MeasureTheory.Measure.map",
+      "node_id": "distribution",
+      "declaration_id": "MeasureTheory.Measure.map",
+      "role": "value_operator",
+      "expression": "MeasureTheory.Measure.map X μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]",
+        "[MeasurableSpace E]",
+        "X : Ω → E；Measurable X"
+      ],
+      "caveats": [
+        "推前使用可测性；没有密度的分布也由测度表达。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "expectation:MeasureTheory.integral",
+      "node_id": "expectation",
+      "declaration_id": "MeasureTheory.integral",
+      "role": "value_operator",
+      "expression": "∫ ω, X ω ∂μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]",
+        "X : Ω → ℝ；MeasureTheory.Integrable X μ"
+      ],
+      "caveats": [
+        "有限期望的约定，不从算子默认零推出可积。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "variance:ProbabilityTheory.variance",
+      "node_id": "variance",
+      "declaration_id": "ProbabilityTheory.variance",
+      "role": "value_operator",
+      "expression": "ProbabilityTheory.variance X μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]",
+        "X : Ω → ℝ；Measurable X",
+        "MeasureTheory.MemLp X 2 μ"
+      ],
+      "caveats": [
+        "实值 variance 经 toReal，若允许无穷值会丢失信息；这里明确要求平方可积。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "independence:ProbabilityTheory.IndepFun",
+      "node_id": "independence",
+      "declaration_id": "ProbabilityTheory.IndepFun",
+      "role": "defining_expression",
+      "expression": "ProbabilityTheory.IndepFun X Y μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]",
+        "[MeasurableSpace E]；[MeasurableSpace F]",
+        "X : Ω → E；Y : Ω → F",
+        "Measurable X；Measurable Y"
+      ],
+      "caveats": [
+        "仅两个随机变量；不把协方差零当作充分条件。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "conditional_expectation:MeasureTheory.condExp",
+      "node_id": "conditional_expectation",
+      "declaration_id": "MeasureTheory.condExp",
+      "role": "value_operator",
+      "expression": "μ[X | m]",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]",
+        "m m₀ : MeasurableSpace Ω；m ≤ m₀",
+        "μ 是环境 σ-代数 m₀ 上的概率测度",
+        "X : Ω → ℝ；MeasureTheory.Integrable X μ",
+        "相对 m 的 trim 测度 σ-有限（概率测度限制满足）"
+      ],
+      "caveats": [
+        "若子 σ-代数、可积性或 σ-有限条件不满足，算子可返回默认零。",
+        "唯一性一般只到几乎处处相等，不是逐点唯一。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "divisibility:Nat.dvd_iff_mod_eq_zero",
+      "node_id": "divisibility",
+      "declaration_id": "Nat.dvd_iff_mod_eq_zero",
+      "role": "related_result",
+      "expression": "m ∣ n",
+      "conditions": [
+        "m n : ℕ"
+      ],
+      "caveats": [
+        "此定理给出整除的等价判据，原始 Dvd 类型类本身不规定具体整除语义。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "prime_number:Nat.Prime",
+      "node_id": "prime_number",
+      "declaration_id": "Nat.Prime",
+      "role": "defining_expression",
+      "expression": "Nat.Prime p",
+      "conditions": [
+        "p : ℕ"
+      ],
+      "caveats": [
+        "这里的 Nat.Prime 是自然数性质，不是任意交换环中的 Prime。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "gcd:Nat.gcd",
+      "node_id": "gcd",
+      "declaration_id": "Nat.gcd",
+      "role": "value_operator",
+      "expression": "Nat.gcd m n",
+      "conditions": [
+        "m n : ℕ"
+      ],
+      "caveats": [
+        "包含 gcd 0 0 = 0 的约定。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "rank_nullity:LinearMap.finrank_range_add_finrank_ker",
+      "node_id": "rank_nullity",
+      "declaration_id": "LinearMap.finrank_range_add_finrank_ker",
+      "role": "related_result",
+      "expression": "Module.finrank K (LinearMap.range f) + Module.finrank K (LinearMap.ker f) = Module.finrank K V",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[Module K V]",
+        "[AddCommGroup W]；[Module K W]",
+        "f : V →ₗ[K] W",
+        "[Module.Finite K V]"
+      ],
+      "caveats": [
+        "源空间有限维；域假设提供定理需要的秩性质。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "mean_value_theorem:exists_deriv_eq_slope",
+      "node_id": "mean_value_theorem",
+      "declaration_id": "exists_deriv_eq_slope",
+      "role": "related_result",
+      "expression": "∃ c ∈ Set.Ioo a b, deriv f c = (f b - f a) / (b - a)",
+      "conditions": [
+        "f : ℝ → ℝ；a b : ℝ；a < b",
+        "ContinuousOn f (Set.Icc a b)",
+        "DifferentiableOn ℝ f (Set.Ioo a b)"
+      ],
+      "caveats": [
+        "闭区间连续和开区间可微均不可省略。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "fundamental_theorem_of_calculus:intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le",
+      "node_id": "fundamental_theorem_of_calculus",
+      "declaration_id": "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le",
+      "role": "related_result",
+      "expression": "∫ y in a..b, f' y = f b - f a",
+      "conditions": [
+        "f f' : ℝ → ℝ；a b : ℝ；a ≤ b",
+        "ContinuousOn f (Set.Icc a b)",
+        "∀ x ∈ Set.Ioo a b, HasDerivAt f (f' x) x",
+        "IntervalIntegrable f' MeasureTheory.volume a b"
+      ],
+      "caveats": [
+        "这是 FTC 第二部分的一个充分条件版本。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
+    },
+    {
+      "id": "cauchy_schwarz:norm_inner_le_norm",
+      "node_id": "cauchy_schwarz",
+      "declaration_id": "norm_inner_le_norm",
+      "role": "related_result",
+      "expression": "‖inner ℝ x y‖ ≤ ‖x‖ * ‖y‖",
+      "conditions": [
+        "[NormedAddCommGroup V]；[InnerProductSpace ℝ V]",
+        "x y : V"
+      ],
+      "caveats": [
+        "声明也可用于复数情形，本切片只解释实数版本。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已检查固定版本的源码、上下文条件和节点范围；未运行 Lean 或经独立专家复核。摘录只作定位，完整类型还包括所在 section 的隐含参数。"
     }
   ]
 }

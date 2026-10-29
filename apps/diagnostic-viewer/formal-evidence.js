@@ -28,7 +28,8 @@ window.showFormalEvidence = function (container, node, snapshot) {
     text(entry, "p", `条件：${mapping.conditions.join("；")}`);
     if (mapping.caveats.length) text(entry, "p", `边界：${mapping.caveats.join("；")}`);
     text(entry, "p", `${mapping.review_status} · ${mapping.review_note}`);
-    if (declaration && /^https:\/\/github\.com\/leanprover-community\/mathlib4\/blob\/[0-9a-f]{40}\//.test(declaration.url)) {
+    if (declaration?.generated_from) text(entry, "p", `生成来源：${declaration.generated_from}（尚未运行 Lean 核验生成声明）`);
+    if (declaration && /^https:\/\/github\.com\/(leanprover-community\/mathlib4|leanprover\/lean4)\/blob\/[0-9a-f]{40}\//.test(declaration.url)) {
       const link = text(entry, "a", "查看固定版本源码");
       link.href = declaration.url;
       link.target = "_blank";
@@ -37,5 +38,18 @@ window.showFormalEvidence = function (container, node, snapshot) {
     section.appendChild(entry);
   }
   text(section, "p", "已核对源码与语义条件；本项目尚未运行 Lean 编译验证。");
+  const relations = (alignment.assertions || []).filter(item => item.source === node.id || item.target === node.id);
+  if (relations.length) {
+    const list = document.createElement("details");
+    text(list, "summary", `关系判断与未决项（${relations.length}）`);
+    for (const item of relations) {
+      const otherId = item.source === node.id ? item.target : item.source;
+      const other = alignment.nodes.find(n => n.id === otherId);
+      const direction = item.kind === "R" ? "↔" : item.source === node.id ? "→" : "←";
+      const value = item.value === null ? "未知" : String(item.value);
+      text(list, "p", `${item.kind} ${direction} ${other?.name_zh || otherId} · ${value} · ${item.status}${item.dependency_extent ? " / " + item.dependency_extent : ""}\n${item.rationale}`);
+    }
+    section.appendChild(list);
+  }
   container.appendChild(section);
 };

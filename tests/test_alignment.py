@@ -28,9 +28,9 @@ class AlignmentTests(unittest.TestCase):
 
     def test_sample_covers_conditional_many_to_many_mapping(self):
         dataset = self.dataset
-        self.assertEqual(len(dataset.nodes), 20)
-        self.assertEqual(len(dataset.declarations), 21)
-        self.assertEqual(len(dataset.mappings), 22)
+        self.assertEqual(len(dataset.nodes), 80)
+        self.assertEqual(len(dataset.declarations), 71)
+        self.assertEqual(len(dataset.mappings), 80)
         by_node = {node.id: [m for m in dataset.mappings if m.node_id == node.id] for node in dataset.nodes}
         module, vector = by_node["module"][0], by_node["vector_space"][0]
         self.assertEqual(module.declaration_id, vector.declaration_id)
@@ -44,14 +44,14 @@ class AlignmentTests(unittest.TestCase):
 
     def test_candidates_unknown_and_indirect_assertions_are_not_graph_edges(self):
         graph = to_graph_input(self.dataset)
-        self.assertEqual((len(graph.hierarchy), len(graph.dependencies), len(graph.relatedness)), (17, 11, 38))
+        self.assertEqual((len(graph.hierarchy), len(graph.dependencies), len(graph.relatedness)), (84, 78, 209))
         pairs = {(d.foundation, d.dependent) for d in graph.dependencies}
         self.assertNotIn(("topological_space", "derivative"), pairs)
         self.assertNotIn(("topological_space", "metric_space"), pairs)
         self.assertNotIn(("measurable_space", "random_variable"), pairs)
         self.assertNotIn(("group", "random_variable"), {(r.left, r.right) for r in graph.relatedness})
         unknown = [a for a in self.dataset.assertions if a.value is None]
-        self.assertEqual(len(unknown), 2)
+        self.assertEqual(len(unknown), 4)
         # No R is inferred just by adding a D, and no declaration count becomes a weight.
         subset = replace(self.dataset, assertions=tuple(a for a in self.dataset.assertions if a.kind == "D"))
         self.assertEqual(to_graph_input(subset).relatedness, ())
@@ -153,11 +153,11 @@ class AlignmentTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             snapshot = Path(temp) / "galaxy.json"
             viewer_data = Path(temp) / "galaxy-data.js"
-            self.assertEqual(main(["build-math", "--dataset", str(DATA), "--snapshot", str(snapshot), "--viewer-data", str(viewer_data)]), 0)
+            self.assertEqual(main(["build-math", "--dataset", str(DATA), "--snapshot", str(snapshot), "--viewer-data", str(viewer_data), "--steps", "25"]), 0)
             payload = json.loads(snapshot.read_text())
-            self.assertEqual(len(payload["nodes"]), 20)
+            self.assertEqual(len(payload["nodes"]), 80)
             self.assertEqual(payload["metadata"]["dataset"], "mathematics")
-            self.assertEqual(len(payload["formalAlignment"]["mappings"]), 22)
+            self.assertEqual(len(payload["formalAlignment"]["mappings"]), 80)
             self.assertIn(self.dataset.sources[0].revision, payload["formalAlignment"]["declarations"][0]["url"])
             self.assertIsNone(next(a["value"] for a in payload["formalAlignment"]["assertions"] if a["id"] == "R:group:random_variable:relation"))
             self.assertIn('window.KNOWLEDGE_GALAXY_SNAPSHOT = ', viewer_data.read_text())

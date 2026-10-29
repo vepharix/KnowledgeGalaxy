@@ -159,6 +159,486 @@
       "kind": "concept",
       "description": "从概率空间到可测空间的可测函数。",
       "scope_note": "明确采用处处可测的版本；不把 AEMeasurable 或任意函数视为同一概念。"
+    },
+    {
+      "id": "mathematical_foundations",
+      "name": "Mathematical Foundations",
+      "name_zh": "数学基础",
+      "description": "组织集合、函数、关系与常见数系的知识范围。",
+      "scope_note": "组织节点，不把工程 Prelude 视为数学学习路径。",
+      "kind": "field"
+    },
+    {
+      "id": "number_theory",
+      "name": "Number Theory",
+      "name_zh": "数论",
+      "description": "研究整数、整除、素数等算术结构的领域。",
+      "scope_note": "首版只选择自然数整除、素数与最大公因数。",
+      "kind": "field"
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "name_zh": "几何学",
+      "description": "研究空间及其形状、度量与结构的领域。",
+      "scope_note": "本切片只通过内积、范数等线性几何主题建立联系。",
+      "kind": "field"
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "name_zh": "统计学",
+      "description": "研究从数据推断规律及其不确定性的数学领域。",
+      "scope_note": "此处只展示概率分布、期望和方差等共同基础，不代表统计学已获覆盖。",
+      "kind": "field"
+    },
+    {
+      "id": "set",
+      "name": "Set",
+      "name_zh": "集合",
+      "description": "指定类型元素构成的集合。",
+      "scope_note": "此版本 Set 是包装成员谓词的结构；不将 Lean 类型本身与其子集混同。",
+      "kind": "concept"
+    },
+    {
+      "id": "function",
+      "name": "Function",
+      "name_zh": "函数",
+      "description": "给每个输入指定唯一输出的映射。",
+      "scope_note": "普通总函数；Lean 的 α → β 是原生类型表达式，没有必须叫 Function 的单一声明。",
+      "kind": "concept"
+    },
+    {
+      "id": "binary_relation",
+      "name": "Binary Relation",
+      "name_zh": "二元关系",
+      "description": "对指定载体上的两个元素断言某个命题的关系。",
+      "scope_note": "首版选同一类型 α 上的关系 α → α → Prop，不自动假定对称或传递。",
+      "kind": "concept"
+    },
+    {
+      "id": "equivalence_relation",
+      "name": "Equivalence Relation",
+      "name_zh": "等价关系",
+      "description": "满足自反、对称与传递的二元关系。",
+      "scope_note": "等价关系、等价类和商类型分别是不同对象。",
+      "kind": "concept"
+    },
+    {
+      "id": "natural_numbers",
+      "name": "Natural Numbers",
+      "name_zh": "自然数",
+      "description": "从零开始按后继生成的自然数。",
+      "scope_note": "采用含零的约定；归纳类型定义来自 Lean 核心。",
+      "kind": "concept"
+    },
+    {
+      "id": "integers",
+      "name": "Integers",
+      "name_zh": "整数",
+      "description": "包括非负整数和负整数的数系。",
+      "scope_note": "Lean 使用 ofNat 与 negSucc 构造，区别于把整数直接当作某个有序对。",
+      "kind": "concept"
+    },
+    {
+      "id": "rational_numbers",
+      "name": "Rational Numbers",
+      "name_zh": "有理数",
+      "description": "可表达为整数与非零自然数之比的数。",
+      "scope_note": "Lean 核心使用规范化分子分母及其条件，不能忽略分母与约分约束。",
+      "kind": "concept"
+    },
+    {
+      "id": "real_numbers",
+      "name": "Real Numbers",
+      "name_zh": "实数",
+      "description": "构成完备有序域的实数系。",
+      "scope_note": "此实现通过有理 Cauchy 序列的完成构造；不将这种实现认定为唯一学习依赖。",
+      "kind": "concept"
+    },
+    {
+      "id": "complex_numbers",
+      "name": "Complex Numbers",
+      "name_zh": "复数",
+      "description": "由实部、虚部构成并带标准运算的复数系。",
+      "scope_note": "本节点对应标准复数，不预设抽象代数扩张的具体构造。",
+      "kind": "concept"
+    },
+    {
+      "id": "ring",
+      "name": "Ring",
+      "name_zh": "环",
+      "description": "带相容加法、乘法及乘法单位元的代数结构。",
+      "scope_note": "本切片采用含单位环；不自动要求交换或非平凡。",
+      "kind": "concept"
+    },
+    {
+      "id": "subgroup",
+      "name": "Subgroup",
+      "name_zh": "子群",
+      "description": "群中对群运算封闭并包含单位元与逆元的子集。",
+      "scope_note": "结构特例关系不自动变为 H 范围包含。",
+      "kind": "concept"
+    },
+    {
+      "id": "group_homomorphism",
+      "name": "Group Homomorphism",
+      "name_zh": "群同态",
+      "description": "两个群之间保持乘法的映射。",
+      "scope_note": "MonoidHom 在群假设下表达群同态，不需要另造 GroupHom 名称。",
+      "kind": "concept"
+    },
+    {
+      "id": "polynomial",
+      "name": "Polynomial",
+      "name_zh": "多项式",
+      "description": "系数来自指定环、只有有限个非零系数的一元形式多项式。",
+      "scope_note": "形式多项式与取值后的多项式函数区分；此处选交换环。",
+      "kind": "concept"
+    },
+    {
+      "id": "ideal",
+      "name": "Ideal",
+      "name_zh": "理想",
+      "description": "交换环中对加法和环元素乘法封闭的理想。",
+      "scope_note": "只选交换环情形，避免混淆非交换环的左理想和双侧理想。",
+      "kind": "concept"
+    },
+    {
+      "id": "quotient_ring",
+      "name": "Quotient Ring",
+      "name_zh": "商环",
+      "description": "按理想的陪集关系构成的环。",
+      "scope_note": "此处为交换环 R 的 R/I，不将商集、商模与商环结构无条件等同。",
+      "kind": "concept"
+    },
+    {
+      "id": "subspace",
+      "name": "Linear Subspace",
+      "name_zh": "线性子空间",
+      "description": "向量空间中对加法和标量乘法封闭的子集。",
+      "scope_note": "用域上的 Submodule 表达，与一般环上的子模区分。",
+      "kind": "concept"
+    },
+    {
+      "id": "linear_independence",
+      "name": "Linear Independence",
+      "name_zh": "线性无关",
+      "description": "向量族的有限线性组合为零时系数只能全为零的性质。",
+      "scope_note": "索引族而非未标注的向量列表；不默认有限个向量。",
+      "kind": "concept"
+    },
+    {
+      "id": "basis",
+      "name": "Basis",
+      "name_zh": "基",
+      "description": "线性无关并张成整个向量空间的向量族。",
+      "scope_note": "固定版本名称是 Module.Basis；基不默认有限或正交。",
+      "kind": "concept"
+    },
+    {
+      "id": "dimension",
+      "name": "Dimension",
+      "name_zh": "维数",
+      "description": "有限维向量空间中任一基的元素个数。",
+      "scope_note": "本节点明确选有限维；finrank 在无限维时的默认零不能当作维数为零。",
+      "kind": "concept"
+    },
+    {
+      "id": "kernel",
+      "name": "Kernel",
+      "name_zh": "核",
+      "description": "线性映射中被映到零的向量构成的子空间。",
+      "scope_note": "首版选线性映射的核，不合并群同态、环同态的全部核概念。",
+      "kind": "concept"
+    },
+    {
+      "id": "range",
+      "name": "Range",
+      "name_zh": "像空间",
+      "description": "线性映射的全部输出构成的子空间。",
+      "scope_note": "这里是线性像空间，不是任意函数的集合像或数值区间。",
+      "kind": "concept"
+    },
+    {
+      "id": "determinant",
+      "name": "Determinant",
+      "name_zh": "行列式",
+      "description": "有限方阵上的交替多线性标量不变量。",
+      "scope_note": "首版选有限方阵行列式，不把一般矩形矩阵附上同一算子。",
+      "kind": "concept"
+    },
+    {
+      "id": "eigenvalue",
+      "name": "Eigenvalue",
+      "name_zh": "特征值",
+      "description": "使线性自映射在某非零向量上等于标量乘法的标量。",
+      "scope_note": "不要求特征值存在于指定域内，也不默认可以对角化。",
+      "kind": "concept"
+    },
+    {
+      "id": "inner_product_space",
+      "name": "Inner Product Space",
+      "name_zh": "内积空间",
+      "description": "带与标准范数相容内积的实向量空间。",
+      "scope_note": "首版明确选实内积空间；复数版本需要共轭约定。",
+      "kind": "concept"
+    },
+    {
+      "id": "normed_space",
+      "name": "Normed Vector Space",
+      "name_zh": "赋范空间",
+      "description": "带与标量作用相容范数的实向量空间。",
+      "scope_note": "载体使用 NormedAddCommGroup，排除只给半范数而未分离的情形。",
+      "kind": "concept"
+    },
+    {
+      "id": "linear_equivalence",
+      "name": "Linear Equivalence",
+      "name_zh": "线性同构",
+      "description": "带线性逆映射的线性映射。",
+      "scope_note": "选同一域和恒等标量同态，区别于更一般的半线性等价。",
+      "kind": "concept"
+    },
+    {
+      "id": "filter",
+      "name": "Filter",
+      "name_zh": "滤子",
+      "description": "对有限交与向上包含封闭的集合族，用于表达趋近。",
+      "scope_note": "Lean Filter 允许底滤子；需要非平凡性时必须另加 NeBot，避免空泛收敛。",
+      "kind": "concept"
+    },
+    {
+      "id": "limit",
+      "name": "Limit",
+      "name_zh": "极限",
+      "description": "函数沿某种趋近方式趋向目标值的性质。",
+      "scope_note": "用非平凡源滤子和邻域表达，极限唯一性需另加分离条件。",
+      "kind": "concept"
+    },
+    {
+      "id": "sequence_limit",
+      "name": "Sequence Limit",
+      "name_zh": "数列极限",
+      "description": "以自然数为索引的数列趋近某个值的性质。",
+      "scope_note": "是极限的一个具体形式；不是 Filter.lim 的默认取值。",
+      "kind": "concept"
+    },
+    {
+      "id": "cauchy_sequence",
+      "name": "Cauchy Sequence",
+      "name_zh": "柯西列",
+      "description": "充分靠后的项彼此任意接近的数列。",
+      "scope_note": "首版选度量空间中的自然数列，不把 Cauchy 自动当作已有极限。",
+      "kind": "concept"
+    },
+    {
+      "id": "completeness",
+      "name": "Completeness",
+      "name_zh": "完备性",
+      "description": "度量空间中的每个柯西列均在该空间内收敛的性质。",
+      "scope_note": "所选为度量/一致完备性，不是序完备性或逻辑完备性。",
+      "kind": "concept"
+    },
+    {
+      "id": "series",
+      "name": "Series",
+      "name_zh": "级数",
+      "description": "按自然数顺序排列的项的部分和及其极限。",
+      "scope_note": "采用通常顺序的部分和；不把有条件收敛与无条件可和混同。",
+      "kind": "concept"
+    },
+    {
+      "id": "summability",
+      "name": "Unconditional Summability",
+      "name_zh": "无条件可和性",
+      "description": "一个实值可数族在有限子集趋向全体时有和的性质。",
+      "scope_note": "默认 Summable 是无条件求和；与仅按自然顺序收敛的级数区分。",
+      "kind": "concept"
+    },
+    {
+      "id": "integral",
+      "name": "Lebesgue Integral",
+      "name_zh": "勒贝格积分",
+      "description": "相对于测度的可积实值函数的积分。",
+      "scope_note": "选可积的有限实值情形；Lean integral 对不可积函数的默认零不代表积分存在。",
+      "kind": "concept"
+    },
+    {
+      "id": "differentiability",
+      "name": "Differentiability",
+      "name_zh": "可微性",
+      "description": "函数在指定点存在一阶线性近似的性质。",
+      "scope_note": "首版为实变量实值函数的点处可微，不把高阶光滑当作同一概念。",
+      "kind": "concept"
+    },
+    {
+      "id": "uniform_continuity",
+      "name": "Uniform Continuity",
+      "name_zh": "一致连续性",
+      "description": "对所有输入点可统一选择误差控制的一种连续性。",
+      "scope_note": "首版用度量空间的一致结构；不是逐点连续的同义词。",
+      "kind": "concept"
+    },
+    {
+      "id": "open_set",
+      "name": "Open Set",
+      "name_zh": "开集",
+      "description": "属于给定拓扑开集族的集合。",
+      "scope_note": "开闭是相对于指定拓扑的性质；集合可以既开又闭。",
+      "kind": "concept"
+    },
+    {
+      "id": "closed_set",
+      "name": "Closed Set",
+      "name_zh": "闭集",
+      "description": "补集在给定拓扑中为开的集合。",
+      "scope_note": "闭不自动等于紧，也不自动有界。",
+      "kind": "concept"
+    },
+    {
+      "id": "connectedness",
+      "name": "Connectedness",
+      "name_zh": "连通性",
+      "description": "一个非空子集不能分成两个不相交非空相对开集的性质。",
+      "scope_note": "IsConnected 约定非空；与允许空集的 IsPreconnected 区分。",
+      "kind": "concept"
+    },
+    {
+      "id": "path_connectedness",
+      "name": "Path Connectedness",
+      "name_zh": "道路连通性",
+      "description": "非空集合内任意两点可用位于集合内的连续道路连接的性质。",
+      "scope_note": "道路连通比一般连通更强，不能无条件反推。",
+      "kind": "concept"
+    },
+    {
+      "id": "hausdorff_space",
+      "name": "Hausdorff Space",
+      "name_zh": "豪斯多夫空间",
+      "description": "任意不同两点可由不相交邻域分离的拓扑空间。",
+      "scope_note": "这是 T2 分离性，不预设可度量或紧致。",
+      "kind": "concept"
+    },
+    {
+      "id": "product_topology",
+      "name": "Product Topology",
+      "name_zh": "乘积拓扑",
+      "description": "使坐标投影连续的两个空间乘积上的最粗拓扑。",
+      "scope_note": "首版只选二元乘积；不合并箱拓扑或任意无限乘积的所有技术。",
+      "kind": "concept"
+    },
+    {
+      "id": "probability_space",
+      "name": "Probability Space",
+      "name_zh": "概率空间",
+      "description": "带 σ-代数及总质量为一的测度的空间。",
+      "scope_note": "由多个形式条件共同表达，不伪造单一 ProbabilitySpace 类型。",
+      "kind": "concept"
+    },
+    {
+      "id": "probability_measure",
+      "name": "Probability Measure",
+      "name_zh": "概率测度",
+      "description": "总质量为一的测度。",
+      "scope_note": "不同于任意有限测度；总质量零不算概率测度。",
+      "kind": "concept"
+    },
+    {
+      "id": "distribution",
+      "name": "Distribution",
+      "name_zh": "分布",
+      "description": "随机变量将概率测度推前得到的目标空间测度。",
+      "scope_note": "不等同于概率密度函数，也不与广义函数 distribution 混同。",
+      "kind": "concept"
+    },
+    {
+      "id": "expectation",
+      "name": "Expectation",
+      "name_zh": "期望",
+      "description": "可积实值随机变量相对于概率测度的积分。",
+      "scope_note": "先选有限期望；不可积情况下 integral 的零值不作概率学结论。",
+      "kind": "concept"
+    },
+    {
+      "id": "variance",
+      "name": "Variance",
+      "name_zh": "方差",
+      "description": "平方可积实值随机变量与期望偏差的平方的期望。",
+      "scope_note": "实值 variance 把无穷值经 toReal 转换后可能得到零；本节点要求平方可积。",
+      "kind": "concept"
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "name_zh": "独立性",
+      "description": "两个随机变量的可测事件交概率等于概率乘积的性质。",
+      "scope_note": "首版选两个可测随机变量的独立，不混同互不相关或任意多个的相互独立。",
+      "kind": "concept"
+    },
+    {
+      "id": "conditional_expectation",
+      "name": "Conditional Expectation",
+      "name_zh": "条件期望",
+      "description": "相对于子 σ-代数、满足积分一致条件的可测条件均值。",
+      "scope_note": "只在可积及适当测度条件下解释，通常只在几乎处处意义下唯一。",
+      "kind": "concept"
+    },
+    {
+      "id": "divisibility",
+      "name": "Divisibility",
+      "name_zh": "整除",
+      "description": "自然数 m 整除 n 指存在自然数 k 使 n=m k。",
+      "scope_note": "此处为自然数整除；不把可解的除法或实数商当作整除。",
+      "kind": "concept"
+    },
+    {
+      "id": "prime_number",
+      "name": "Prime Number",
+      "name_zh": "素数",
+      "description": "大于等于二且正因数只有一和自身的自然数。",
+      "scope_note": "自然数 Prime 与一般环的 prime element 不混同。",
+      "kind": "concept"
+    },
+    {
+      "id": "gcd",
+      "name": "Greatest Common Divisor",
+      "name_zh": "最大公因数",
+      "description": "两个自然数按整除顺序的最大公因数。",
+      "scope_note": "约定 gcd(0,0)=0；不是按普通大小对所有公因数直接取最大。",
+      "kind": "concept"
+    },
+    {
+      "id": "rank_nullity",
+      "name": "Rank–Nullity Theorem",
+      "name_zh": "秩—零度定理",
+      "description": "有限维线性映射的像空间维数与核维数之和等于定义域维数。",
+      "scope_note": "要求定义域有限维，不把 finrank 的默认零推广到任意无限维情形。",
+      "kind": "result"
+    },
+    {
+      "id": "mean_value_theorem",
+      "name": "Mean Value Theorem",
+      "name_zh": "中值定理",
+      "description": "闭区间连续、开区间可微的实函数在某内部点的导数等于端点割线斜率。",
+      "scope_note": "明确区分开闭区间及 a<b，不把连续本身当作充分条件。",
+      "kind": "result"
+    },
+    {
+      "id": "fundamental_theorem_of_calculus",
+      "name": "Fundamental Theorem of Calculus",
+      "name_zh": "微积分基本定理",
+      "description": "在适当连续、可微及可积条件下，导数的定积分等于原函数端点值之差。",
+      "scope_note": "首版只选 FTC 第二部分的一个充分条件版本，尚不覆盖全部表述。",
+      "kind": "result"
+    },
+    {
+      "id": "cauchy_schwarz",
+      "name": "Cauchy–Schwarz Inequality",
+      "name_zh": "柯西—施瓦茨不等式",
+      "description": "内积的绝对值不超过两个向量范数的乘积。",
+      "scope_note": "首版取实内积空间的范数版本；不默认额外讨论等号条件。",
+      "kind": "result"
     }
   ]
 }

@@ -21,6 +21,7 @@ class Declaration:
     line_start: int
     line_end: int
     signature_excerpt: str
+    generated_from: str | None = None
 
 
 @dataclass(frozen=True)

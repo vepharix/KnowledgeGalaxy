@@ -259,12 +259,12 @@
       "source": "module",
       "target": "vector_space",
       "value": 0.75,
-      "status": "curated",
+      "status": "candidate",
       "evidence_kind": "curriculum_prerequisite",
       "declaration_ids": [
         "Module"
       ],
-      "rationale": "按一般模到域上模的概念组织；这不是唯一教学路径，也不是必须先学习模才能学习向量空间。",
+      "rationale": "一般模是向量空间的推广，但常见本科路径先学向量空间；特例关系不足以确立先修方向。本边保留为候选，不进入深度骨架。",
       "reviewer": "codex-assisted-curation",
       "dependency_extent": "direct"
     },
@@ -381,7 +381,7 @@
       "dependency_extent": "direct"
     },
     {
-      "id": "D:measure:random_variable:direct",
+      "id": "D:measure:random_variable:indirect",
       "kind": "D",
       "source": "measure",
       "target": "random_variable",
@@ -393,9 +393,9 @@
         "Measurable",
         "MeasureTheory.IsProbabilityMeasure"
       ],
-      "rationale": "本节点采用概率空间上的可测函数；概率测度是该选定上下文的一部分。",
+      "rationale": "概率空间提供随机变量的直接背景，测度通过概率测度和概率空间成为间接背景；该判断保留，不额外施加一步层差。",
       "reviewer": "codex-assisted-curation",
-      "dependency_extent": "direct"
+      "dependency_extent": "indirect"
     },
     {
       "id": "D:topological_space:derivative:indirect",
@@ -984,6 +984,4852 @@
       "evidence_kind": "semantic_assessment",
       "declaration_ids": [],
       "rationale": "人工关联强度假设，未经统计校准。测度、积分和极限工具连接二者；不是由共同底层 Lean 依赖计数得到。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:set:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "set",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:function:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "function",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Function.comp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:binary_relation:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "binary_relation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Equivalence"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:equivalence_relation:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "equivalence_relation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Equivalence"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:natural_numbers:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "natural_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Nat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:integers:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "integers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Int"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:rational_numbers:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "rational_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Rat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:real_numbers:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "real_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:mathematical_foundations:complex_numbers:relation",
+      "kind": "H",
+      "source": "mathematical_foundations",
+      "target": "complex_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Complex"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:number_theory:natural_numbers:relation",
+      "kind": "H",
+      "source": "number_theory",
+      "target": "natural_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Nat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:number_theory:integers:relation",
+      "kind": "H",
+      "source": "number_theory",
+      "target": "integers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Int"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:number_theory:divisibility:relation",
+      "kind": "H",
+      "source": "number_theory",
+      "target": "divisibility",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Nat.dvd_iff_mod_eq_zero"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:number_theory:prime_number:relation",
+      "kind": "H",
+      "source": "number_theory",
+      "target": "prime_number",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Nat.Prime"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:number_theory:gcd:relation",
+      "kind": "H",
+      "source": "number_theory",
+      "target": "gcd",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Nat.gcd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:ring:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "ring",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:subgroup:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "subgroup",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Subgroup"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:group_homomorphism:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "group_homomorphism",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MonoidHom"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:polynomial:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "polynomial",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Polynomial"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:ideal:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "ideal",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Ideal"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:quotient_ring:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "quotient_ring",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Ideal.instHasQuotient"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:subspace:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "subspace",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:linear_independence:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "linear_independence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "LinearIndependent"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:basis:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "basis",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Module.Basis"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:dimension:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "dimension",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Module.finrank"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:kernel:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "kernel",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "LinearMap.ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:range:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "range",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "LinearMap.range"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:determinant:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "determinant",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Matrix.det"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:eigenvalue:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "eigenvalue",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Module.End.HasEigenvalue"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:inner_product_space:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "inner_product_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "InnerProductSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:normed_space:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "normed_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:linear_equivalence:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "linear_equivalence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "LinearEquiv"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:rank_nullity:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "rank_nullity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:filter:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "filter",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Filter"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:limit:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "limit",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:sequence_limit:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "sequence_limit",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:cauchy_sequence:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "cauchy_sequence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "CauchySeq"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:completeness:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "completeness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "CompleteSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:series:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "series",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:summability:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "summability",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "Summable"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:integral:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "integral",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:differentiability:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "differentiability",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "DifferentiableAt"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:uniform_continuity:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "uniform_continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "UniformContinuous"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:mean_value_theorem:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "mean_value_theorem",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "exists_deriv_eq_slope"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:fundamental_theorem_of_calculus:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "fundamental_theorem_of_calculus",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:open_set:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "open_set",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "IsOpen"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:closed_set:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "closed_set",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "IsClosed"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:connectedness:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "connectedness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "IsConnected"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:path_connectedness:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "path_connectedness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "IsPathConnected"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:hausdorff_space:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "hausdorff_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "T2Space"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:product_topology:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "product_topology",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "instTopologicalSpaceProd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:uniform_continuity:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "uniform_continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "UniformContinuous"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:completeness:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "completeness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "CompleteSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:probability_space:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "probability_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:probability_measure:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "probability_measure",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.IsProbabilityMeasure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:distribution:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "distribution",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.Measure.map"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:expectation:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:variance:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "variance",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "ProbabilityTheory.variance"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:independence:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "independence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:conditional_expectation:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "conditional_expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.condExp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:statistics:distribution:relation",
+      "kind": "H",
+      "source": "statistics",
+      "target": "distribution",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.Measure.map"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:statistics:expectation:relation",
+      "kind": "H",
+      "source": "statistics",
+      "target": "expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:statistics:variance:relation",
+      "kind": "H",
+      "source": "statistics",
+      "target": "variance",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "ProbabilityTheory.variance"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:statistics:independence:relation",
+      "kind": "H",
+      "source": "statistics",
+      "target": "independence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:statistics:conditional_expectation:relation",
+      "kind": "H",
+      "source": "statistics",
+      "target": "conditional_expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "MeasureTheory.condExp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:geometry:inner_product_space:relation",
+      "kind": "H",
+      "source": "geometry",
+      "target": "inner_product_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "InnerProductSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:geometry:normed_space:relation",
+      "kind": "H",
+      "source": "geometry",
+      "target": "normed_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:geometry:cauchy_schwarz:relation",
+      "kind": "H",
+      "source": "geometry",
+      "target": "cauchy_schwarz",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [
+        "norm_inner_le_norm"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该知识主题属于此领域的研究范围；不是类型继承或空间位置判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "D:set:function:direct",
+      "kind": "D",
+      "source": "set",
+      "target": "function",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Function.comp",
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。以集合间映射组织本切片的函数概念；不声称 Lean 箭头类型由 Set 定义。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:set:binary_relation:direct",
+      "kind": "D",
+      "source": "set",
+      "target": "binary_relation",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Equivalence",
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本切片先给出载体与成员概念，再组织二元关系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:binary_relation:equivalence_relation:direct",
+      "kind": "D",
+      "source": "binary_relation",
+      "target": "equivalence_relation",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Equivalence"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。等价关系在二元关系上附加自反、对称和传递条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:natural_numbers:integers:direct",
+      "kind": "D",
+      "source": "natural_numbers",
+      "target": "integers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Int",
+        "Nat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。按扩充自然数以容纳负数的所选教学路径。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:integers:rational_numbers:direct",
+      "kind": "D",
+      "source": "integers",
+      "target": "rational_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Int",
+        "Rat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。有理数表述需要整数分子和非零分母。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:rational_numbers:real_numbers:direct",
+      "kind": "D",
+      "source": "rational_numbers",
+      "target": "real_numbers",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Rat",
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。以有理数到实数的数系扩展组织；不把 Cauchy 实现强加为唯一教学路径。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:real_numbers:complex_numbers:direct",
+      "kind": "D",
+      "source": "real_numbers",
+      "target": "complex_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Complex",
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点用标准实部与虚部表达复数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:natural_numbers:divisibility:direct",
+      "kind": "D",
+      "source": "natural_numbers",
+      "target": "divisibility",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Nat",
+        "Nat.dvd_iff_mod_eq_zero"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选整除关系的载体是自然数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:divisibility:prime_number:direct",
+      "kind": "D",
+      "source": "divisibility",
+      "target": "prime_number",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Nat.Prime",
+        "Nat.dvd_iff_mod_eq_zero"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。素数的因数条件直接使用整除。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:divisibility:gcd:direct",
+      "kind": "D",
+      "source": "divisibility",
+      "target": "gcd",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Nat.dvd_iff_mod_eq_zero",
+        "Nat.gcd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。最大公因数由公共整除和整除极大性质表达。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:group:ring:direct",
+      "kind": "D",
+      "source": "group",
+      "target": "ring",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "AddGroup",
+        "Group",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。含单位环的加法结构是交换群；不把环类型继承转换成 H。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:ring:field:direct",
+      "kind": "D",
+      "source": "ring",
+      "target": "field",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Field",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。域在交换环结构上要求非零元素可逆及非平凡。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:ring:module:direct",
+      "kind": "D",
+      "source": "ring",
+      "target": "module",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Module",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点选环上的模，需要环作为标量背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:group:subgroup:direct",
+      "kind": "D",
+      "source": "group",
+      "target": "subgroup",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "AddGroup",
+        "Group",
+        "Subgroup"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。子群以环境群及其运算为背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:group:group_homomorphism:direct",
+      "kind": "D",
+      "source": "group",
+      "target": "group_homomorphism",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "AddGroup",
+        "Group",
+        "MonoidHom"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。群同态的源和目标均为群。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:function:group_homomorphism:direct",
+      "kind": "D",
+      "source": "function",
+      "target": "group_homomorphism",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Function.comp",
+        "MonoidHom"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。群同态是在函数上附加运算保持条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:ring:polynomial:direct",
+      "kind": "D",
+      "source": "ring",
+      "target": "polynomial",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Polynomial",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本切片选交换环上的形式多项式。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:ring:ideal:direct",
+      "kind": "D",
+      "source": "ring",
+      "target": "ideal",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Ideal",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点理想明确以交换环为环境。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:ideal:quotient_ring:direct",
+      "kind": "D",
+      "source": "ideal",
+      "target": "quotient_ring",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Ideal",
+        "Ideal.instHasQuotient"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。商环由指定理想确定陪集关系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:equivalence_relation:quotient_ring:direct",
+      "kind": "D",
+      "source": "equivalence_relation",
+      "target": "quotient_ring",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Equivalence",
+        "Ideal.instHasQuotient"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。陪集商的解释涉及等价关系；这是一条明确的策展背景判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:vector_space:subspace:direct",
+      "kind": "D",
+      "source": "vector_space",
+      "target": "subspace",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Module",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。子空间以所选环境向量空间为背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:vector_space:linear_independence:direct",
+      "kind": "D",
+      "source": "vector_space",
+      "target": "linear_independence",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearIndependent",
+        "Module"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性组合和系数的含义取自向量空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:linear_independence:basis:direct",
+      "kind": "D",
+      "source": "linear_independence",
+      "target": "basis",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearIndependent",
+        "Module.Basis"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。基同时要求线性无关和张成。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:subspace:basis:direct",
+      "kind": "D",
+      "source": "subspace",
+      "target": "basis",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Module.Basis",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。按张成子空间来解释基的覆盖条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:basis:dimension:direct",
+      "kind": "D",
+      "source": "basis",
+      "target": "dimension",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Module.Basis",
+        "Module.finrank"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本切片用有限基大小解释有限维数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:linear_map:kernel:direct",
+      "kind": "D",
+      "source": "linear_map",
+      "target": "kernel",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap",
+        "LinearMap.ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性核是映到零的子空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:linear_map:range:direct",
+      "kind": "D",
+      "source": "linear_map",
+      "target": "range",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap",
+        "LinearMap.range"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性像是所有输出构成的子空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:subspace:kernel:direct",
+      "kind": "D",
+      "source": "subspace",
+      "target": "kernel",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap.ker",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。为了将核作为子空间解释而保留该背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:subspace:range:direct",
+      "kind": "D",
+      "source": "subspace",
+      "target": "range",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap.range",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。为了将像作为子空间解释而保留该背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:matrix:determinant:direct",
+      "kind": "D",
+      "source": "matrix",
+      "target": "determinant",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Matrix",
+        "Matrix.det"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点选有限方阵的行列式。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:linear_map:eigenvalue:direct",
+      "kind": "D",
+      "source": "linear_map",
+      "target": "eigenvalue",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap",
+        "Module.End.HasEigenvalue"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。特征值断言涉及向量空间的线性自映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:linear_map:linear_equivalence:direct",
+      "kind": "D",
+      "source": "linear_map",
+      "target": "linear_equivalence",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearEquiv",
+        "LinearMap"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性同构在普通线性映射上附加线性逆。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:vector_space:normed_space:direct",
+      "kind": "D",
+      "source": "vector_space",
+      "target": "normed_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Module",
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选赋范空间以实向量空间为背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:normed_space:inner_product_space:direct",
+      "kind": "D",
+      "source": "normed_space",
+      "target": "inner_product_space",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "InnerProductSpace",
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本切片按已有范数上附加相容内积来组织；这是所选解释路径。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:inner_product_space:cauchy_schwarz:direct",
+      "kind": "D",
+      "source": "inner_product_space",
+      "target": "cauchy_schwarz",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "InnerProductSpace",
+        "norm_inner_le_norm"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。该不等式直接涉及内积与相容范数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:dimension:rank_nullity:direct",
+      "kind": "D",
+      "source": "dimension",
+      "target": "rank_nullity",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker",
+        "Module.finrank"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选定理讨论有限维数的加法关系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:kernel:rank_nullity:direct",
+      "kind": "D",
+      "source": "kernel",
+      "target": "rank_nullity",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker",
+        "LinearMap.ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。定理明确使用线性核。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:range:rank_nullity:direct",
+      "kind": "D",
+      "source": "range",
+      "target": "rank_nullity",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker",
+        "LinearMap.range"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。定理明确使用线性像。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:set:filter:direct",
+      "kind": "D",
+      "source": "set",
+      "target": "filter",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Filter",
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。滤子是带封闭条件的集合族；语言实现与学习背景区分。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:filter:limit:direct",
+      "kind": "D",
+      "source": "filter",
+      "target": "limit",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Filter",
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点采用滤子统一表达一般趋近方式。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:limit:direct",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "limit",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Filter.Tendsto",
+        "TopologicalSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。目标值的邻域来自指定拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:limit:sequence_limit:direct",
+      "kind": "D",
+      "source": "limit",
+      "target": "sequence_limit",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。数列极限是一般趋近表达的具体形式。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:sequence_limit:series:direct",
+      "kind": "D",
+      "source": "sequence_limit",
+      "target": "series",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。通常级数的收敛是部分和序列的极限。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:series:summability:direct",
+      "kind": "D",
+      "source": "series",
+      "target": "summability",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Filter.Tendsto",
+        "Summable"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。用通常级数引入更强的无条件可和性；明确是教学路径，不是类型必然依赖。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:metric_space:cauchy_sequence:direct",
+      "kind": "D",
+      "source": "metric_space",
+      "target": "cauchy_sequence",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "CauchySeq",
+        "MetricSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选柯西列使用度量的远项距离。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:cauchy_sequence:completeness:direct",
+      "kind": "D",
+      "source": "cauchy_sequence",
+      "target": "completeness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "CauchySeq",
+        "CompleteSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点以柯西列收敛解释度量完备。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:metric_space:uniform_continuity:direct",
+      "kind": "D",
+      "source": "metric_space",
+      "target": "uniform_continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MetricSpace",
+        "UniformContinuous"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选一致连续使用度量给出统一误差控制。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:limit:differentiability:direct",
+      "kind": "D",
+      "source": "limit",
+      "target": "differentiability",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "DifferentiableAt",
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。实变量可微的近似误差用极限条件表达。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:differentiability:mean_value_theorem:direct",
+      "kind": "D",
+      "source": "differentiability",
+      "target": "mean_value_theorem",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "DifferentiableAt",
+        "exists_deriv_eq_slope"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。中值定理需要开区间上可微。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:continuity:mean_value_theorem:direct",
+      "kind": "D",
+      "source": "continuity",
+      "target": "mean_value_theorem",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "exists_deriv_eq_slope"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。中值定理需要闭区间上连续。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:measure:integral:direct",
+      "kind": "D",
+      "source": "measure",
+      "target": "integral",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasureTheory.Measure",
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本切片选择相对于测度的勒贝格积分。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:integral:fundamental_theorem_of_calculus:direct",
+      "kind": "D",
+      "source": "integral",
+      "target": "fundamental_theorem_of_calculus",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasureTheory.integral",
+        "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选 FTC 第二部分明确包含定积分。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:derivative:fundamental_theorem_of_calculus:direct",
+      "kind": "D",
+      "source": "derivative",
+      "target": "fundamental_theorem_of_calculus",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "HasDerivAt",
+        "deriv",
+        "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选 FTC 明确假设原函数的导数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:open_set:direct",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "open_set",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "IsOpen",
+        "TopologicalSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。开集是给定拓扑下的属性。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:open_set:closed_set:direct",
+      "kind": "D",
+      "source": "open_set",
+      "target": "closed_set",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "IsClosed",
+        "IsOpen"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。闭集通过补集为开定义。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:open_set:connectedness:direct",
+      "kind": "D",
+      "source": "open_set",
+      "target": "connectedness",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "IsConnected",
+        "IsOpen"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。连通性涉及相对开分解。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:continuity:path_connectedness:direct",
+      "kind": "D",
+      "source": "continuity",
+      "target": "path_connectedness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "IsPathConnected"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。道路是区间到空间的连续映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:hausdorff_space:direct",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "hausdorff_space",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "T2Space",
+        "TopologicalSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。T2 是拓扑空间的额外分离条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:product_topology:direct",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "product_topology",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "TopologicalSpace",
+        "instTopologicalSpaceProd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。二元乘积拓扑使用两个因子的拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:measure:probability_measure:direct",
+      "kind": "D",
+      "source": "measure",
+      "target": "probability_measure",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。概率测度在测度上附加总质量为一。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:probability_measure:probability_space:direct",
+      "kind": "D",
+      "source": "probability_measure",
+      "target": "probability_space",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。概率空间必须指定概率测度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:probability_space:random_variable:direct",
+      "kind": "D",
+      "source": "probability_space",
+      "target": "random_variable",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Measurable",
+        "MeasurableSpace",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选随机变量是指定概率空间上的可测函数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:random_variable:distribution:direct",
+      "kind": "D",
+      "source": "random_variable",
+      "target": "distribution",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure.map"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点分布是随机变量的推前概率测度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:integral:expectation:direct",
+      "kind": "D",
+      "source": "integral",
+      "target": "expectation",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本切片有限期望以可积实值函数的积分表达。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:random_variable:expectation:direct",
+      "kind": "D",
+      "source": "random_variable",
+      "target": "expectation",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。期望的对象是选定概率空间上的随机变量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:expectation:variance:direct",
+      "kind": "D",
+      "source": "expectation",
+      "target": "variance",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasureTheory.integral",
+        "ProbabilityTheory.variance"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。方差使用均值及平方偏差的期望。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:random_variable:independence:direct",
+      "kind": "D",
+      "source": "random_variable",
+      "target": "independence",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure",
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。此独立性节点明确讨论两个可测随机变量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:expectation:conditional_expectation:direct",
+      "kind": "D",
+      "source": "expectation",
+      "target": "conditional_expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasureTheory.condExp",
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。通过给定子 σ-代数的条件均值推广普通期望。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:measurable_space:conditional_expectation:direct",
+      "kind": "D",
+      "source": "measurable_space",
+      "target": "conditional_expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.condExp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。条件期望必须指定子 σ-代数；不是仅凭函数取值即可确定。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:cauchy_sequence:real_numbers:unspecified",
+      "kind": "D",
+      "source": "cauchy_sequence",
+      "target": "real_numbers",
+      "value": null,
+      "status": "candidate",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "CauchySeq",
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。实数的源码构造使用有理柯西序列，但实现选择不能确立唯一学习顺序。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "unspecified"
+    },
+    {
+      "id": "D:normed_space:differentiability:unspecified",
+      "kind": "D",
+      "source": "normed_space",
+      "target": "differentiability",
+      "value": null,
+      "status": "candidate",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "DifferentiableAt",
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。一般 Fréchet 理论需要赋范背景；本切片目前只选实函数，尚不把泛化版本强加为前置。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "unspecified"
+    },
+    {
+      "id": "R:mathematical_foundations:set:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "set",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。集合是所选基础主题。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:mathematical_foundations:function:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "function",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Function.comp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。函数是所选基础主题。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:mathematical_foundations:binary_relation:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "binary_relation",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Equivalence"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。二元关系是所选基础主题。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:mathematical_foundations:equivalence_relation:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "equivalence_relation",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Equivalence"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。等价关系连接商构造。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:mathematical_foundations:natural_numbers:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "natural_numbers",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。数系是基础主题的一部分。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:mathematical_foundations:real_numbers:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "real_numbers",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。实数为分析和线性理论提供基础背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:mathematical_foundations:algebra:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "algebra",
+      "value": 0.6,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "辅助策展假设，非测量或专家共识。运算结构使用基础语言。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:mathematical_foundations:analysis:relation",
+      "kind": "R",
+      "source": "mathematical_foundations",
+      "target": "analysis",
+      "value": 0.6,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "辅助策展假设，非测量或专家共识。分析使用集合、函数与数系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:set:function:relation",
+      "kind": "R",
+      "source": "set",
+      "target": "function",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Function.comp",
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。映射涉及输入输出集合。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:set:binary_relation:relation",
+      "kind": "R",
+      "source": "set",
+      "target": "binary_relation",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Equivalence",
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。关系涉及载体和成员条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:function:binary_relation:relation",
+      "kind": "R",
+      "source": "function",
+      "target": "binary_relation",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Equivalence",
+        "Function.comp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。函数图像是一类特殊关系，语义仍有区别。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:binary_relation:equivalence_relation:relation",
+      "kind": "R",
+      "source": "binary_relation",
+      "target": "equivalence_relation",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Equivalence"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。等价关系是附带特定性质的关系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:equivalence_relation:quotient_ring:relation",
+      "kind": "R",
+      "source": "equivalence_relation",
+      "target": "quotient_ring",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Equivalence",
+        "Ideal.instHasQuotient"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。陪集关系参与商构造。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:set:measurable_space:relation",
+      "kind": "R",
+      "source": "set",
+      "target": "measurable_space",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "Set"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。σ-代数组织可测集合。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:set:topological_space:relation",
+      "kind": "R",
+      "source": "set",
+      "target": "topological_space",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Set",
+        "TopologicalSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。拓扑组织开集。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:function:linear_map:relation",
+      "kind": "R",
+      "source": "function",
+      "target": "linear_map",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Function.comp",
+        "LinearMap"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性映射是带保持条件的函数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:function:continuity:relation",
+      "kind": "R",
+      "source": "function",
+      "target": "continuity",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "Function.comp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。连续性是函数的性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:natural_numbers:integers:relation",
+      "kind": "R",
+      "source": "natural_numbers",
+      "target": "integers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Int",
+        "Nat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。数系扩展联系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:integers:rational_numbers:relation",
+      "kind": "R",
+      "source": "integers",
+      "target": "rational_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Int",
+        "Rat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。分子分母构造联系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:rational_numbers:real_numbers:relation",
+      "kind": "R",
+      "source": "rational_numbers",
+      "target": "real_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Rat",
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。数系包含与完成联系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:real_numbers:complex_numbers:relation",
+      "kind": "R",
+      "source": "real_numbers",
+      "target": "complex_numbers",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Complex",
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。实部虚部表达联系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:real_numbers:limit:relation",
+      "kind": "R",
+      "source": "real_numbers",
+      "target": "limit",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto",
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。实函数极限是常见具体情形。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:real_numbers:derivative:relation",
+      "kind": "R",
+      "source": "real_numbers",
+      "target": "derivative",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "HasDerivAt",
+        "Real",
+        "deriv"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选导数为实变量实值。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:complex_numbers:polynomial:relation",
+      "kind": "R",
+      "source": "complex_numbers",
+      "target": "polynomial",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Complex",
+        "Polynomial"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。复系数和复根是多项式的重要应用，此处未自动采集相关定理。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:real_numbers:field:relation",
+      "kind": "R",
+      "source": "real_numbers",
+      "target": "field",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Field",
+        "Real"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。实数域是具体域实例。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:complex_numbers:field:relation",
+      "kind": "R",
+      "source": "complex_numbers",
+      "target": "field",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Complex",
+        "Field"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。复数域是具体域实例。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:rational_numbers:field:relation",
+      "kind": "R",
+      "source": "rational_numbers",
+      "target": "field",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Field",
+        "Rat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。有理数域是具体域实例。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:number_theory:natural_numbers:relation",
+      "kind": "R",
+      "source": "number_theory",
+      "target": "natural_numbers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。自然数是所选数论对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:number_theory:integers:relation",
+      "kind": "R",
+      "source": "number_theory",
+      "target": "integers",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Int"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。整数是数论的重要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:number_theory:divisibility:relation",
+      "kind": "R",
+      "source": "number_theory",
+      "target": "divisibility",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat.dvd_iff_mod_eq_zero"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。整除是所选基础关系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:number_theory:prime_number:relation",
+      "kind": "R",
+      "source": "number_theory",
+      "target": "prime_number",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat.Prime"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。素数是所选主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:number_theory:gcd:relation",
+      "kind": "R",
+      "source": "number_theory",
+      "target": "gcd",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat.gcd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。最大公因数是所选算术概念。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:number_theory:algebra:relation",
+      "kind": "R",
+      "source": "number_theory",
+      "target": "algebra",
+      "value": 0.65,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "辅助策展假设，非测量或专家共识。数论和代数共享环、域和理想等工具。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:natural_numbers:divisibility:relation",
+      "kind": "R",
+      "source": "natural_numbers",
+      "target": "divisibility",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat",
+        "Nat.dvd_iff_mod_eq_zero"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选整除关系以自然数为载体。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:divisibility:prime_number:relation",
+      "kind": "R",
+      "source": "divisibility",
+      "target": "prime_number",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat.Prime",
+        "Nat.dvd_iff_mod_eq_zero"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。素数由整除性质刻画。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:divisibility:gcd:relation",
+      "kind": "R",
+      "source": "divisibility",
+      "target": "gcd",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat.dvd_iff_mod_eq_zero",
+        "Nat.gcd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。最大公因数由整除刻画。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:prime_number:gcd:relation",
+      "kind": "R",
+      "source": "prime_number",
+      "target": "gcd",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Nat.Prime",
+        "Nat.gcd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。互素性与素因子提供共同研究内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:integers:ring:relation",
+      "kind": "R",
+      "source": "integers",
+      "target": "ring",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Int",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。整数是环的常见实例。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:ring:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "ring",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。环是代数主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:subgroup:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "subgroup",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Subgroup"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。子群属于群论的对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:group_homomorphism:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "group_homomorphism",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MonoidHom"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。同态是结构保持映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:polynomial:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "polynomial",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Polynomial"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。形式多项式参与代数运算。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:ideal:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "ideal",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Ideal"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。理想研究环结构。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:quotient_ring:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "quotient_ring",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Ideal.instHasQuotient"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。商环研究环结构的商。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:group:ring:relation",
+      "kind": "R",
+      "source": "group",
+      "target": "ring",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "AddGroup",
+        "Group",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。环的加法给出群结构。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:ring:field:relation",
+      "kind": "R",
+      "source": "ring",
+      "target": "field",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Field",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。域是带更强条件的环。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:ring:module:relation",
+      "kind": "R",
+      "source": "ring",
+      "target": "module",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。本节点模使用环标量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:group:subgroup:relation",
+      "kind": "R",
+      "source": "group",
+      "target": "subgroup",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "AddGroup",
+        "Group",
+        "Subgroup"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。子群使用环境群运算。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:group:group_homomorphism:relation",
+      "kind": "R",
+      "source": "group",
+      "target": "group_homomorphism",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "AddGroup",
+        "Group",
+        "MonoidHom"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。群之间的同态。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:subgroup:group_homomorphism:relation",
+      "kind": "R",
+      "source": "subgroup",
+      "target": "group_homomorphism",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MonoidHom",
+        "Subgroup"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。同态的像和核与子群有联系，此处未另建群核节点。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:ring:polynomial:relation",
+      "kind": "R",
+      "source": "ring",
+      "target": "polynomial",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Polynomial",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。多项式的系数与运算来自环。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:ring:ideal:relation",
+      "kind": "R",
+      "source": "ring",
+      "target": "ideal",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Ideal",
+        "Ring"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。理想依赖环境环运算。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:ideal:quotient_ring:relation",
+      "kind": "R",
+      "source": "ideal",
+      "target": "quotient_ring",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Ideal",
+        "Ideal.instHasQuotient"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。理想确定所选商环。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:polynomial:ideal:relation",
+      "kind": "R",
+      "source": "polynomial",
+      "target": "ideal",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Ideal",
+        "Polynomial"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。多项式环上的理想提供共同研究对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:quotient_ring:field:relation",
+      "kind": "R",
+      "source": "quotient_ring",
+      "target": "field",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Field",
+        "Ideal.instHasQuotient"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。适当极大理想的商产生域；本边为策展判断，不替代具体定理假设。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:subspace:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "subspace",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。子空间是线性代数主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:linear_independence:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "linear_independence",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearIndependent"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性无关是主要性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:basis:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "basis",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module.Basis"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。基组织线性坐标。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:dimension:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "dimension",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module.finrank"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。维数是主要不变量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:kernel:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "kernel",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。核描述线性映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:range:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "range",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.range"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。像描述线性映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:determinant:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "determinant",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Matrix.det"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。行列式研究方阵。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:eigenvalue:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "eigenvalue",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module.End.HasEigenvalue"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。特征值研究线性自映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:linear_equivalence:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "linear_equivalence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearEquiv"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。同构研究线性结构的等价。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:rank_nullity:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "rank_nullity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。秩—零度联系映射与维数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:vector_space:subspace:relation",
+      "kind": "R",
+      "source": "vector_space",
+      "target": "subspace",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。子空间是所选向量空间内的线性子结构。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:vector_space:linear_independence:relation",
+      "kind": "R",
+      "source": "vector_space",
+      "target": "linear_independence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearIndependent",
+        "Module"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性组合使用向量空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_independence:basis:relation",
+      "kind": "R",
+      "source": "linear_independence",
+      "target": "basis",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearIndependent",
+        "Module.Basis"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。基必须线性无关且张成。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:subspace:basis:relation",
+      "kind": "R",
+      "source": "subspace",
+      "target": "basis",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module.Basis",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。基和张成子空间相连。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:basis:dimension:relation",
+      "kind": "R",
+      "source": "basis",
+      "target": "dimension",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module.Basis",
+        "Module.finrank"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。有限基的大小给出维数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:basis:matrix:relation",
+      "kind": "R",
+      "source": "basis",
+      "target": "matrix",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Matrix",
+        "Module.Basis"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。选基将线性映射表示为矩阵。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:dimension:matrix:relation",
+      "kind": "R",
+      "source": "dimension",
+      "target": "matrix",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Matrix",
+        "Module.finrank"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。有限矩阵大小和有限维表示相关。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_map:kernel:relation",
+      "kind": "R",
+      "source": "linear_map",
+      "target": "kernel",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap",
+        "LinearMap.ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性核定义于映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_map:range:relation",
+      "kind": "R",
+      "source": "linear_map",
+      "target": "range",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap",
+        "LinearMap.range"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性像定义于映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:subspace:kernel:relation",
+      "kind": "R",
+      "source": "subspace",
+      "target": "kernel",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.ker",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性核是子空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:subspace:range:relation",
+      "kind": "R",
+      "source": "subspace",
+      "target": "range",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.range",
+        "Submodule"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性像是子空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:kernel:range:relation",
+      "kind": "R",
+      "source": "kernel",
+      "target": "range",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.ker",
+        "LinearMap.range"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。同一线性映射的结构由二者共同描述。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:matrix:determinant:relation",
+      "kind": "R",
+      "source": "matrix",
+      "target": "determinant",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Matrix",
+        "Matrix.det"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。行列式作用于方阵。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_map:eigenvalue:relation",
+      "kind": "R",
+      "source": "linear_map",
+      "target": "eigenvalue",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap",
+        "Module.End.HasEigenvalue"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。特征值是线性自映射的性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:matrix:eigenvalue:relation",
+      "kind": "R",
+      "source": "matrix",
+      "target": "eigenvalue",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Matrix",
+        "Module.End.HasEigenvalue"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。选基后可研究矩阵特征值。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:eigenvalue:determinant:relation",
+      "kind": "R",
+      "source": "eigenvalue",
+      "target": "determinant",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Matrix.det",
+        "Module.End.HasEigenvalue"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。特征多项式联系两者；此处尚未提取具体定理。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_map:linear_equivalence:relation",
+      "kind": "R",
+      "source": "linear_map",
+      "target": "linear_equivalence",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearEquiv",
+        "LinearMap"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。线性同构带线性逆。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:dimension:rank_nullity:relation",
+      "kind": "R",
+      "source": "dimension",
+      "target": "rank_nullity",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker",
+        "Module.finrank"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。秩—零度定理直接约束维数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:kernel:rank_nullity:relation",
+      "kind": "R",
+      "source": "kernel",
+      "target": "rank_nullity",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker",
+        "LinearMap.ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。定理直接涉及核。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:range:rank_nullity:relation",
+      "kind": "R",
+      "source": "range",
+      "target": "rank_nullity",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearMap.finrank_range_add_finrank_ker",
+        "LinearMap.range"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。定理直接涉及像。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:geometry:inner_product_space:relation",
+      "kind": "R",
+      "source": "geometry",
+      "target": "inner_product_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "InnerProductSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。内积给出长度和角度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:geometry:normed_space:relation",
+      "kind": "R",
+      "source": "geometry",
+      "target": "normed_space",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。范数给出线性空间上的长度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:geometry:cauchy_schwarz:relation",
+      "kind": "R",
+      "source": "geometry",
+      "target": "cauchy_schwarz",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "norm_inner_le_norm"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。不等式约束内积和长度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:geometry:linear_algebra:relation",
+      "kind": "R",
+      "source": "geometry",
+      "target": "linear_algebra",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "辅助策展假设，非测量或专家共识。线性空间提供几何表达。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:vector_space:normed_space:relation",
+      "kind": "R",
+      "source": "vector_space",
+      "target": "normed_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module",
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。范数为向量空间增添度量结构。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:normed_space:inner_product_space:relation",
+      "kind": "R",
+      "source": "normed_space",
+      "target": "inner_product_space",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "InnerProductSpace",
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。相容内积给出范数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:normed_space:metric_space:relation",
+      "kind": "R",
+      "source": "normed_space",
+      "target": "metric_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MetricSpace",
+        "NormedSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。范数诱导距离。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:inner_product_space:cauchy_schwarz:relation",
+      "kind": "R",
+      "source": "inner_product_space",
+      "target": "cauchy_schwarz",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "InnerProductSpace",
+        "norm_inner_le_norm"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。内积与范数直接参与不等式。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:limit:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "limit",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。极限是分析主要内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:sequence_limit:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "sequence_limit",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。数列极限是分析主要内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:series:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "series",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。级数是分析主要内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:summability:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "summability",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Summable"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。无条件求和研究级数的更强性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:integral:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "integral",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。积分是分析主要内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:differentiability:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "differentiability",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "DifferentiableAt"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。可微性是分析主要内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:uniform_continuity:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "uniform_continuity",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "UniformContinuous"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。一致连续研究统一误差控制。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:completeness:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "completeness",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CompleteSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。完备性支持极限存在。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:filter:limit:relation",
+      "kind": "R",
+      "source": "filter",
+      "target": "limit",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter",
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。滤子统一表达趋近。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:filter:topological_space:relation",
+      "kind": "R",
+      "source": "filter",
+      "target": "topological_space",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter",
+        "TopologicalSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。邻域滤子从拓扑产生。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:limit:sequence_limit:relation",
+      "kind": "R",
+      "source": "limit",
+      "target": "sequence_limit",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。数列趋近是极限具体形式。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:limit:continuity:relation",
+      "kind": "R",
+      "source": "limit",
+      "target": "continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。连续性与极限保持联系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:sequence_limit:cauchy_sequence:relation",
+      "kind": "R",
+      "source": "sequence_limit",
+      "target": "cauchy_sequence",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CauchySeq",
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。度量数列收敛与柯西条件密切相关。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:cauchy_sequence:completeness:relation",
+      "kind": "R",
+      "source": "cauchy_sequence",
+      "target": "completeness",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CauchySeq",
+        "CompleteSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。完备性保证柯西列的极限。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:metric_space:cauchy_sequence:relation",
+      "kind": "R",
+      "source": "metric_space",
+      "target": "cauchy_sequence",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CauchySeq",
+        "MetricSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。距离描述远项接近。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:metric_space:completeness:relation",
+      "kind": "R",
+      "source": "metric_space",
+      "target": "completeness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CompleteSpace",
+        "MetricSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选为度量完备。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:sequence_limit:series:relation",
+      "kind": "R",
+      "source": "sequence_limit",
+      "target": "series",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。级数通过部分和数列定义。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:series:summability:relation",
+      "kind": "R",
+      "source": "series",
+      "target": "summability",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto",
+        "Summable"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。区分通常顺序收敛与无条件可和。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:limit:differentiability:relation",
+      "kind": "R",
+      "source": "limit",
+      "target": "differentiability",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "DifferentiableAt",
+        "Filter.Tendsto"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。误差项趋于零描述可微性。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:differentiability:derivative:relation",
+      "kind": "R",
+      "source": "differentiability",
+      "target": "derivative",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "DifferentiableAt",
+        "HasDerivAt",
+        "deriv"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。可微存在性和导数值相互关联。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:continuity:uniform_continuity:relation",
+      "kind": "R",
+      "source": "continuity",
+      "target": "uniform_continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "UniformContinuous"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。一致连续要求更统一的条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:metric_space:uniform_continuity:relation",
+      "kind": "R",
+      "source": "metric_space",
+      "target": "uniform_continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MetricSpace",
+        "UniformContinuous"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。度量给出一致误差控制。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:measure:integral:relation",
+      "kind": "R",
+      "source": "measure",
+      "target": "integral",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.Measure",
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。所选勒贝格积分相对测度定义。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:integral:fundamental_theorem_of_calculus:relation",
+      "kind": "R",
+      "source": "integral",
+      "target": "fundamental_theorem_of_calculus",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.integral",
+        "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。定理涉及导数的定积分。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:derivative:fundamental_theorem_of_calculus:relation",
+      "kind": "R",
+      "source": "derivative",
+      "target": "fundamental_theorem_of_calculus",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "HasDerivAt",
+        "deriv",
+        "intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。定理将导数和原函数联系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:differentiability:mean_value_theorem:relation",
+      "kind": "R",
+      "source": "differentiability",
+      "target": "mean_value_theorem",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "DifferentiableAt",
+        "exists_deriv_eq_slope"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。中值定理要求开区间可微。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:continuity:mean_value_theorem:relation",
+      "kind": "R",
+      "source": "continuity",
+      "target": "mean_value_theorem",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "exists_deriv_eq_slope"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。中值定理要求闭区间连续。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:derivative:mean_value_theorem:relation",
+      "kind": "R",
+      "source": "derivative",
+      "target": "mean_value_theorem",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "HasDerivAt",
+        "deriv",
+        "exists_deriv_eq_slope"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。结论给出某点导数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:chain_rule:differentiability:relation",
+      "kind": "R",
+      "source": "chain_rule",
+      "target": "differentiability",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "DifferentiableAt",
+        "HasDerivAt.comp",
+        "deriv_comp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。复合可微性与导数链式计算相关。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:open_set:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "open_set",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsOpen"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。开集描述拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:closed_set:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "closed_set",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsClosed"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。闭集描述拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:connectedness:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "connectedness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsConnected"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。连通性是拓扑性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:path_connectedness:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "path_connectedness",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsPathConnected"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。道路连通是更强的连通性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:hausdorff_space:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "hausdorff_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "T2Space"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。T2 是分离公理。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:product_topology:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "product_topology",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "instTopologicalSpaceProd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。乘积是拓扑构造。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topological_space:open_set:relation",
+      "kind": "R",
+      "source": "topological_space",
+      "target": "open_set",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsOpen",
+        "TopologicalSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。开集属于给定拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:open_set:closed_set:relation",
+      "kind": "R",
+      "source": "open_set",
+      "target": "closed_set",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsClosed",
+        "IsOpen"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。取补连接开闭性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:open_set:connectedness:relation",
+      "kind": "R",
+      "source": "open_set",
+      "target": "connectedness",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsConnected",
+        "IsOpen"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。开分解刻画连通。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:connectedness:path_connectedness:relation",
+      "kind": "R",
+      "source": "connectedness",
+      "target": "path_connectedness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "IsConnected",
+        "IsPathConnected"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。道路连通蕴含连通，但反向不总成立。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:continuity:path_connectedness:relation",
+      "kind": "R",
+      "source": "continuity",
+      "target": "path_connectedness",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "IsPathConnected"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。道路是连续映射。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topological_space:hausdorff_space:relation",
+      "kind": "R",
+      "source": "topological_space",
+      "target": "hausdorff_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "T2Space",
+        "TopologicalSpace"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。T2 附加分离条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:hausdorff_space:limit:relation",
+      "kind": "R",
+      "source": "hausdorff_space",
+      "target": "limit",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Filter.Tendsto",
+        "T2Space"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。分离性支持极限唯一性。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topological_space:product_topology:relation",
+      "kind": "R",
+      "source": "topological_space",
+      "target": "product_topology",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "TopologicalSpace",
+        "instTopologicalSpaceProd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。由因子拓扑构造乘积。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:product_topology:continuity:relation",
+      "kind": "R",
+      "source": "product_topology",
+      "target": "continuity",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Continuous",
+        "ContinuousAt",
+        "ContinuousOn",
+        "instTopologicalSpaceProd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。坐标投影及到乘积的连续映射相连。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:compactness:closed_set:relation",
+      "kind": "R",
+      "source": "compactness",
+      "target": "closed_set",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CompactSpace",
+        "IsClosed",
+        "IsCompact"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。在 Hausdorff 条件下紧集为闭；没有这些条件不能把二者等同。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:compactness:uniform_continuity:relation",
+      "kind": "R",
+      "source": "compactness",
+      "target": "uniform_continuity",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CompactSpace",
+        "IsCompact",
+        "UniformContinuous"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。紧定义域上的连续函数有一致连续结果；这里尚未挂载具体定理。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:probability_space:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "probability_space",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。概率空间是主要背景。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:probability_measure:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "probability_measure",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.IsProbabilityMeasure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。概率测度是主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:distribution:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "distribution",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.Measure.map"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。分布是主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:expectation:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "expectation",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。期望是主要统计量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:variance:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "variance",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "ProbabilityTheory.variance"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。方差是主要统计量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:independence:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "independence",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立性是主要关系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:conditional_expectation:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "conditional_expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.condExp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。条件均值是重要工具。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:statistics:probability:relation",
+      "kind": "R",
+      "source": "statistics",
+      "target": "probability",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "辅助策展假设，非测量或专家共识。统计推断使用概率基础，但不把二者等同。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:statistics:distribution:relation",
+      "kind": "R",
+      "source": "statistics",
+      "target": "distribution",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.Measure.map"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。统计模型以分布描述数据。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:statistics:expectation:relation",
+      "kind": "R",
+      "source": "statistics",
+      "target": "expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。均值是常见统计量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:statistics:variance:relation",
+      "kind": "R",
+      "source": "statistics",
+      "target": "variance",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "ProbabilityTheory.variance"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。方差是常见统计量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:statistics:independence:relation",
+      "kind": "R",
+      "source": "statistics",
+      "target": "independence",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立性参与模型假设。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:statistics:conditional_expectation:relation",
+      "kind": "R",
+      "source": "statistics",
+      "target": "conditional_expectation",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.condExp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。条件均值与预测相关。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:measure:probability_measure:relation",
+      "kind": "R",
+      "source": "measure",
+      "target": "probability_measure",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。概率测度是质量归一的测度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability_measure:probability_space:relation",
+      "kind": "R",
+      "source": "probability_measure",
+      "target": "probability_space",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。概率空间携带概率测度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability_space:random_variable:relation",
+      "kind": "R",
+      "source": "probability_space",
+      "target": "random_variable",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Measurable",
+        "MeasurableSpace",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。随机变量定义于概率空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:measurable_space:probability_space:relation",
+      "kind": "R",
+      "source": "measurable_space",
+      "target": "probability_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。σ-代数是概率空间的一部分。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:random_variable:distribution:relation",
+      "kind": "R",
+      "source": "random_variable",
+      "target": "distribution",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure.map"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。随机变量推前给出分布。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability_measure:distribution:relation",
+      "kind": "R",
+      "source": "probability_measure",
+      "target": "distribution",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.Measure.map"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。分布本身是目标空间的概率测度。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:integral:expectation:relation",
+      "kind": "R",
+      "source": "integral",
+      "target": "expectation",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。有限期望由积分表达。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:random_variable:expectation:relation",
+      "kind": "R",
+      "source": "random_variable",
+      "target": "expectation",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure",
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。期望对随机变量取均值。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:expectation:variance:relation",
+      "kind": "R",
+      "source": "expectation",
+      "target": "variance",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.integral",
+        "ProbabilityTheory.variance"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。方差取中心化平方偏差的期望。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:random_variable:independence:relation",
+      "kind": "R",
+      "source": "random_variable",
+      "target": "independence",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure",
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。此节点讨论随机变量独立。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:expectation:conditional_expectation:relation",
+      "kind": "R",
+      "source": "expectation",
+      "target": "conditional_expectation",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.condExp",
+        "MeasureTheory.integral"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。条件期望推广普通均值。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:measurable_space:conditional_expectation:relation",
+      "kind": "R",
+      "source": "measurable_space",
+      "target": "conditional_expectation",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.condExp"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。条件由子 σ-代数提供。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:independence:conditional_expectation:relation",
+      "kind": "R",
+      "source": "independence",
+      "target": "conditional_expectation",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.condExp",
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立时条件均值可简化；本边不是无条件等价判断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability_measure:random_variable:relation",
+      "kind": "R",
+      "source": "probability_measure",
+      "target": "random_variable",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立按数学含义复核：随机变量的定义上下文指定概率测度。 空间接近本身不作为关系证据。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:distribution:independence:relation",
+      "kind": "R",
+      "source": "distribution",
+      "target": "independence",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.Measure.map",
+        "ProbabilityTheory.IndepFun"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立按数学含义复核：独立性约束联合与边缘分布的关系。 空间接近本身不作为关系证据。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:compactness:product_topology:relation",
+      "kind": "R",
+      "source": "compactness",
+      "target": "product_topology",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "CompactSpace",
+        "IsCompact",
+        "instTopologicalSpaceProd"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立按数学含义复核：有限个紧空间的乘积紧；本边只表达主题关联，没有自动挂载该结果的形式证明。 空间接近本身不作为关系证据。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:random_variable:statistics:relation",
+      "kind": "R",
+      "source": "random_variable",
+      "target": "statistics",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立按数学含义复核：统计量与概率模型使用随机变量。 空间接近本身不作为关系证据。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:matrix:module:relation",
+      "kind": "R",
+      "source": "matrix",
+      "target": "module",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Matrix",
+        "Module"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立按数学含义复核：有限域值矩阵作为向量空间也是环上的模；不把两个概念合并。 空间接近本身不作为关系证据。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:kernel:linear_equivalence:relation",
+      "kind": "R",
+      "source": "kernel",
+      "target": "linear_equivalence",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "LinearEquiv",
+        "LinearMap.ker"
+      ],
+      "rationale": "辅助策展假设，非测量或专家共识。独立按数学含义复核：普通线性同构的核只有零向量，二者有明确内容联系。 空间接近本身不作为关系证据。",
       "reviewer": "codex-assisted-curation",
       "dependency_extent": null
     }

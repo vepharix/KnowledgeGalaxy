@@ -52,15 +52,21 @@ def validate_math_dataset(dataset: MathDataset) -> None:
     _unique(dataset.mappings, "mappings")
     _unique(dataset.assertions, "assertions")
     _require(bool(node_ids), "nodes: at least one node required")
+    sources = {source.id: source for source in dataset.sources}
+    _require(len({s.repository for s in dataset.sources}) == len(dataset.sources), "one pinned revision per repository is supported")
+    _require(len({s.toolchain for s in dataset.sources}) <= 1, "formal source toolchain records must agree")
     for source in dataset.sources:
-        _require(source.repository == "https://github.com/leanprover-community/mathlib4", "unsupported formal source")
+        _require(bool(re.fullmatch(r"[a-z][a-z0-9_-]*", source.id)), "unsafe source id")
+        _require(source.repository in {"https://github.com/leanprover-community/mathlib4", "https://github.com/leanprover/lean4"}, "unsupported formal source")
         _require(isinstance(source.revision, str) and bool(re.fullmatch(r"[0-9a-f]{40}", source.revision)), "source revision must be immutable SHA")
         _require(_text(source.toolchain), "source toolchain required")
     for declaration in dataset.declarations:
         _require(declaration.source_id in source_ids, "unknown declaration source")
         _require(_text(declaration.name) and _text(declaration.signature_excerpt), "declaration name and excerpt required")
         path = PurePosixPath(declaration.path)
-        _require(not path.is_absolute() and ".." not in path.parts and declaration.path.startswith("Mathlib/") and declaration.path.endswith(".lean"), "unsafe declaration path")
+        prefix = "Mathlib/" if sources[declaration.source_id].repository.endswith("/mathlib4") else "src/"
+        _require(not path.is_absolute() and ".." not in path.parts and declaration.path.startswith(prefix) and declaration.path.endswith(".lean"), "unsafe declaration path")
+        _require(declaration.generated_from is None or _text(declaration.generated_from), "invalid generated declaration origin")
         _require(bool(re.fullmatch(r"[0-9a-f]{40}", declaration.blob_sha)), "declaration blob SHA required")
         _require(type(declaration.line_start) is int and type(declaration.line_end) is int and 1 <= declaration.line_start <= declaration.line_end, "invalid source line range")
         _require(len(declaration.signature_excerpt.split("\n")) == declaration.line_end - declaration.line_start + 1, "excerpt line count mismatch")
@@ -107,18 +113,22 @@ def validate_math_dataset(dataset: MathDataset) -> None:
 
 def verify_source_files(dataset: MathDataset, root: Path) -> int:
     """Verify pinned file bytes and exact excerpts. This does not run Lean."""
-    checked: dict[str, list[str]] = {}
-    expected: dict[str, str] = {}
+    checked: dict[tuple[str, str], list[str]] = {}
+    expected: dict[tuple[str, str], str] = {}
+    sources = {source.id: source for source in dataset.sources}
     for declaration in dataset.declarations:
-        _require(expected.setdefault(declaration.path, declaration.blob_sha) == declaration.blob_sha, "inconsistent source blobs for path")
-        if declaration.path not in checked:
-            path = (root / declaration.path).resolve()
+        key = (declaration.source_id, declaration.path)
+        _require(expected.setdefault(key, declaration.blob_sha) == declaration.blob_sha, "inconsistent source blobs for path")
+        if key not in checked:
+            source = sources[declaration.source_id]
+            source_root = root if source.repository.endswith("/mathlib4") else root / source.id
+            path = (source_root / declaration.path).resolve()
             _require(path.is_relative_to(root.resolve()), "source path escapes root")
             raw = path.read_bytes()
             sha = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
             _require(sha == declaration.blob_sha, f"source blob mismatch: {declaration.path}")
-            checked[declaration.path] = raw.decode("utf-8").splitlines()
-        lines = checked[declaration.path]
+            checked[key] = raw.decode("utf-8").splitlines()
+        lines = checked[key]
         excerpt = "\n".join(lines[declaration.line_start - 1:declaration.line_end])
         _require(excerpt == declaration.signature_excerpt, f"source excerpt mismatch: {declaration.id}")
     return len(dataset.declarations)

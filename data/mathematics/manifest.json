@@ -6,6 +6,12 @@
       "repository": "https://github.com/leanprover-community/mathlib4",
       "revision": "9bb5e306206014ecee5f033738bb5a6a8490d5c9",
       "toolchain": "leanprover/lean4:v4.36.0-rc2"
+    },
+    {
+      "id": "lean-core",
+      "repository": "https://github.com/leanprover/lean4",
+      "revision": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
+      "toolchain": "leanprover/lean4:v4.36.0-rc2"
     }
   ]
 }

@@ -32,6 +32,19 @@
   let previousFrameTime = performance.now();
   let automaticRotationPausedUntil = 0;
 
+  document.getElementById("dataset-summary").textContent = `${snapshot.nodes.length} 节点 · H ${snapshot.H.length} · D ${snapshot.D.length} · R ${snapshot.R.length}`;
+  if (window.installNodeSearch) window.installNodeSearch(snapshot.nodes,
+    document.getElementById("node-query"), document.getElementById("node-select"), id => {
+      selectedId = id;
+      hoveredId = null;
+      autoRotate.checked = false;
+      const screen = project(nodeById.get(id));
+      camera.panX += innerWidth / 2 - screen.x;
+      camera.panY += innerHeight / 2 - screen.y;
+      showDetails(id);
+      render();
+    });
+
   function hierarchyRoots(edges) {
     const broader = new Set(edges.map((edge) => edge.broader));
     const narrower = new Set(edges.map((edge) => edge.narrower));
@@ -260,7 +273,7 @@
       return;
     }
     hoveredId = hitTest(event.clientX, event.clientY);
-    if (hoveredId) showDetails(hoveredId);
+    if (hoveredId && !selectedId) showDetails(hoveredId);
     render();
   });
   canvas.addEventListener("pointerup", (event) => {

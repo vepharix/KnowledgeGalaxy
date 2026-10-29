@@ -14,9 +14,11 @@
     .title { top: 16px; left: 16px; padding: 12px 15px; }
     .title strong { display: block; font-size: 16px; }
     .title span { color: #f2b84b; font-size: 12px; }
-    .controls { top: 16px; right: 16px; padding: 12px 14px; min-width: 220px; font-size: 13px; }
+    .controls { top: 16px; right: 16px; padding: 12px 14px; width: 250px; max-width: calc(100vw - 32px); max-height: 86vh; overflow: auto; font-size: 13px; }
     .controls label { display: block; margin: 8px 0; }
     .controls input { vertical-align: middle; }
+    #node-query, #node-select { width: 100%; margin-top: 7px; padding: 5px; background: #142733; color: #dceaf0; border: 1px solid #35505e; border-radius: 4px; }
+    #dataset-summary { display: block; color: #9fb3bd; margin: 6px 0; }
     .controls button { width: 100%; margin-top: 7px; padding: 6px 9px; color: #dceaf0; background: #142733; border: 1px solid #35505e; border-radius: 6px; cursor: pointer; }
     .controls button:hover { background: #1c3442; }
     .details { left: 16px; bottom: 16px; width: min(390px, calc(100vw - 32px)); max-height: 62vh; overflow: auto; padding: 13px 15px; font-size: 12px; line-height: 1.55; }
@@ -32,7 +34,7 @@
     .legend { right: 16px; bottom: 16px; max-width: 360px; padding: 11px 14px; color: #9fb3bd; font-size: 11px; line-height: 1.45; }
     .key { display: inline-flex; align-items: center; margin-right: 12px; }
     .swatch { display: inline-block; width: 18px; height: 2px; margin-right: 5px; }
-    @media (max-width: 760px) { .legend { display: none; } .controls { top: 82px; } }
+    @media (max-width: 760px) { .legend { display: none; } .controls { top: 82px; max-height: 43vh; } .details { max-height: 38vh; } }
   </style>
 </head>
 <body>
@@ -43,11 +45,17 @@
   </section>
   <section class="controls">
     <strong>显示</strong>
+    <small id="dataset-summary"></small>
+    <details>
+      <summary>查找并定位节点</summary>
+      <input id="node-query" type="search" placeholder="中文、英文或 ID；回车定位" aria-label="搜索节点">
+      <select id="node-select" size="5" aria-label="搜索结果"></select>
+    </details>
     <label><input id="show-r" type="checkbox" checked> R 无向边</label>
     <label><input id="show-d" type="checkbox"> D 方向边</label>
     <label><input id="show-h-color" type="checkbox" checked> H 色彩家族</label>
     <label><input id="show-labels" type="checkbox"> 显示全部名称</label>
-    <label><input id="use-chinese-names" type="checkbox"> 中文领域名</label>
+    <label><input id="use-chinese-names" type="checkbox"> 中文节点名</label>
     <label><input id="auto-rotate" type="checkbox" checked> 缓慢自动旋转</label>
     <label>R 阈值 <input id="r-threshold" type="range" min="0" max="1" step="0.05" value="0.55"> <output id="r-value">0.55</output></label>
     <button id="reset-view" type="button">恢复初始视角</button>
@@ -60,10 +68,11 @@
   <section class="legend">
     <span class="key"><i class="swatch" style="background:#80bfff"></i>R</span>
     <span class="key"><i class="swatch" style="background:#f0a45d"></i>D（箭头指向 dependent）</span><br>
-    节点大小只表示 D/R 综合连接度。H 颜色是诊断简化；多重层级归属不能由单一颜色完整表达，也不会改变坐标。
+    节点大小只表示 D/R 综合连接度。H 颜色是诊断简化；多重层级归属不能由单一颜色完整表达，也不会改变坐标。空间接近不自动确认关系，缺失的 R 仍未评估。
   </section>
   <script src="./galaxy-data.js"></script>
   <script src="./formal-evidence.js"></script>
+  <script src="./node-search.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
