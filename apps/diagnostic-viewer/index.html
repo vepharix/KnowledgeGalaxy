@@ -19,11 +19,16 @@
     .controls input { vertical-align: middle; }
     .controls button { width: 100%; margin-top: 7px; padding: 6px 9px; color: #dceaf0; background: #142733; border: 1px solid #35505e; border-radius: 6px; cursor: pointer; }
     .controls button:hover { background: #1c3442; }
-    .details { left: 16px; bottom: 16px; width: min(390px, calc(100vw - 32px)); padding: 13px 15px; font-size: 12px; line-height: 1.55; }
+    .details { left: 16px; bottom: 16px; width: min(390px, calc(100vw - 32px)); max-height: 62vh; overflow: auto; padding: 13px 15px; font-size: 12px; line-height: 1.55; }
     .details h2 { margin: 0 0 6px; font-size: 15px; }
     .details dl { display: grid; grid-template-columns: 145px 1fr; margin: 6px 0 0; }
     .details dt { color: #8ca5b1; }
     .details dd { margin: 0; font-variant-numeric: tabular-nums; }
+    .formal-evidence { margin-top: 12px; border-top: 1px solid #29404c; overflow-wrap: anywhere; }
+    .formal-evidence h3 { font-size: 13px; }
+    .formal-evidence details { padding: 6px 0; }
+    .formal-evidence summary { cursor: pointer; }
+    .formal-evidence a { color: #80bfff; }
     .legend { right: 16px; bottom: 16px; max-width: 360px; padding: 11px 14px; color: #9fb3bd; font-size: 11px; line-height: 1.45; }
     .key { display: inline-flex; align-items: center; margin-right: 12px; }
     .swatch { display: inline-block; width: 18px; height: 2px; margin-right: 5px; }
@@ -58,6 +63,7 @@
     节点大小只表示 D/R 综合连接度。H 颜色是诊断简化；多重层级归属不能由单一颜色完整表达，也不会改变坐标。
   </section>
   <script src="./galaxy-data.js"></script>
+  <script src="./formal-evidence.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

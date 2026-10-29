@@ -1,0 +1,214 @@
+{
+  "declarations": [
+    {
+      "id": "Group",
+      "source_id": "mathlib",
+      "name": "Group",
+      "path": "Mathlib/Algebra/Group/Defs.lean",
+      "blob_sha": "5b98097924b1f95f321c938c31abef37e42e8dba",
+      "line_start": 33,
+      "line_end": 34,
+      "signature_excerpt": "class Group (G : Type*) extends DivInvMonoid G where\n  protected inv_mul_cancel : ∀ a : G, a⁻¹ * a = 1"
+    },
+    {
+      "id": "AddGroup",
+      "source_id": "mathlib",
+      "name": "AddGroup",
+      "path": "Mathlib/Algebra/Group/Defs.lean",
+      "blob_sha": "5b98097924b1f95f321c938c31abef37e42e8dba",
+      "line_start": 44,
+      "line_end": 45,
+      "signature_excerpt": "class AddGroup (A : Type*) extends SubNegMonoid A where\n  protected neg_add_cancel : ∀ a : A, -a + a = 0"
+    },
+    {
+      "id": "Field",
+      "source_id": "mathlib",
+      "name": "Field",
+      "path": "Mathlib/Algebra/Field/Defs.lean",
+      "blob_sha": "c7cfb7246b4896ec3fc910efbfdeb50261baddeb",
+      "line_start": 180,
+      "line_end": 181,
+      "signature_excerpt": "class Field (K : Type u) extends CommRing K, DivisionRing K\n"
+    },
+    {
+      "id": "Module",
+      "source_id": "mathlib",
+      "name": "Module",
+      "path": "Mathlib/Algebra/Module/Defs.lean",
+      "blob_sha": "658209d4f26b59f63ef01b69125ce60e37906b51",
+      "line_start": 54,
+      "line_end": 55,
+      "signature_excerpt": "class Module (R : Type u) (M : Type v) [Semiring R] [AddCommMonoid M] extends\n  DistribMulAction R M where"
+    },
+    {
+      "id": "LinearMap",
+      "source_id": "mathlib",
+      "name": "LinearMap",
+      "path": "Mathlib/Algebra/Module/LinearMap/Defs.lean",
+      "blob_sha": "e59f3ae43bc3e0d6343257273bd703fcbfe92f45",
+      "line_start": 84,
+      "line_end": 86,
+      "signature_excerpt": "structure LinearMap {R S : Type*} [Semiring R] [Semiring S] (σ : R →+* S) (M : Type*)\n    (M₂ : Type*) [AddCommMonoid M] [AddCommMonoid M₂] [Module R M] [Module S M₂] extends\n    AddHom M M₂, MulActionHom σ M M₂"
+    },
+    {
+      "id": "Matrix",
+      "source_id": "mathlib",
+      "name": "Matrix",
+      "path": "Mathlib/LinearAlgebra/Matrix/Defs.lean",
+      "blob_sha": "0f1c20589139d66ebe2080cb7356faacdb790d1f",
+      "line_start": 55,
+      "line_end": 56,
+      "signature_excerpt": "def Matrix (m : Type u) (n : Type u') (α : Type v) : Type max u u' v :=\n  m → n → α"
+    },
+    {
+      "id": "TopologicalSpace",
+      "source_id": "mathlib",
+      "name": "TopologicalSpace",
+      "path": "Mathlib/Topology/Defs/Basic.lean",
+      "blob_sha": "ffea343c7ce3447088fa76bb660c36170476bd4a",
+      "line_start": 71,
+      "line_end": 72,
+      "signature_excerpt": "class TopologicalSpace (X : Type u) where\n  /-- A predicate saying that a set is an open set. Use `IsOpen` in the root namespace instead. -/"
+    },
+    {
+      "id": "MetricSpace",
+      "source_id": "mathlib",
+      "name": "MetricSpace",
+      "path": "Mathlib/Topology/MetricSpace/Defs.lean",
+      "blob_sha": "48b710022eb9a8d5f48b80b2de9c0875f7071552",
+      "line_start": 70,
+      "line_end": 71,
+      "signature_excerpt": "class MetricSpace (α : Type u) : Type u extends PseudoMetricSpace α where\n  eq_of_dist_eq_zero : ∀ {x y : α}, dist x y = 0 → x = y"
+    },
+    {
+      "id": "Continuous",
+      "source_id": "mathlib",
+      "name": "Continuous",
+      "path": "Mathlib/Topology/Defs/Basic.lean",
+      "blob_sha": "ffea343c7ce3447088fa76bb660c36170476bd4a",
+      "line_start": 158,
+      "line_end": 159,
+      "signature_excerpt": "structure Continuous (f : X → Y) : Prop where\n  /-- The preimage of an open set under a continuous function is an open set. Use `IsOpen.preimage`"
+    },
+    {
+      "id": "ContinuousAt",
+      "source_id": "mathlib",
+      "name": "ContinuousAt",
+      "path": "Mathlib/Topology/Defs/Filter.lean",
+      "blob_sha": "512710f0fce3b832368644339f88babd34c86e82",
+      "line_start": 182,
+      "line_end": 183,
+      "signature_excerpt": "def ContinuousAt (f : X → Y) (x : X) :=\n  Tendsto f (𝓝 x) (𝓝 (f x))"
+    },
+    {
+      "id": "ContinuousOn",
+      "source_id": "mathlib",
+      "name": "ContinuousOn",
+      "path": "Mathlib/Topology/Defs/Filter.lean",
+      "blob_sha": "512710f0fce3b832368644339f88babd34c86e82",
+      "line_start": 194,
+      "line_end": 195,
+      "signature_excerpt": "def ContinuousOn (f : X → Y) (s : Set X) : Prop :=\n  ∀ x ∈ s, ContinuousWithinAt f s x"
+    },
+    {
+      "id": "IsCompact",
+      "source_id": "mathlib",
+      "name": "IsCompact",
+      "path": "Mathlib/Topology/Defs/Filter.lean",
+      "blob_sha": "512710f0fce3b832368644339f88babd34c86e82",
+      "line_start": 294,
+      "line_end": 295,
+      "signature_excerpt": "def IsCompact (s : Set X) :=\n  ∀ ⦃f⦄ [NeBot f], f ≤ 𝓟 s → ∃ x ∈ s, ClusterPt x f"
+    },
+    {
+      "id": "CompactSpace",
+      "source_id": "mathlib",
+      "name": "CompactSpace",
+      "path": "Mathlib/Topology/Defs/Filter.lean",
+      "blob_sha": "512710f0fce3b832368644339f88babd34c86e82",
+      "line_start": 301,
+      "line_end": 302,
+      "signature_excerpt": "class CompactSpace : Prop where\n  /-- In a compact space, `Set.univ` is a compact set. -/"
+    },
+    {
+      "id": "HasDerivAt",
+      "source_id": "mathlib",
+      "name": "HasDerivAt",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Basic.lean",
+      "blob_sha": "5241dddf0e7e796054b3b3ae4a28dafcc331e584",
+      "line_start": 131,
+      "line_end": 132,
+      "signature_excerpt": "def HasDerivAt (f : 𝕜 → F) (f' : F) (x : 𝕜) :=\n  HasDerivAtFilter f f' (𝓝 x ×ˢ pure x)"
+    },
+    {
+      "id": "deriv",
+      "source_id": "mathlib",
+      "name": "deriv",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Basic.lean",
+      "blob_sha": "5241dddf0e7e796054b3b3ae4a28dafcc331e584",
+      "line_start": 154,
+      "line_end": 155,
+      "signature_excerpt": "def deriv (f : 𝕜 → F) (x : 𝕜) :=\n  fderiv 𝕜 f x 1"
+    },
+    {
+      "id": "HasDerivAt.comp",
+      "source_id": "mathlib",
+      "name": "HasDerivAt.comp",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Comp.lean",
+      "blob_sha": "3d6cb1a2031a8745b122acae3c3b9b7ddcb4a73f",
+      "line_start": 244,
+      "line_end": 246,
+      "signature_excerpt": "theorem HasDerivAt.comp (hh₂ : HasDerivAt h₂ h₂' (h x)) (hh : HasDerivAt h h' x) :\n    HasDerivAt (h₂ ∘ h) (h₂' * h') x :=\n  HasDerivAtFilter.comp hh₂ hh <| hh.continuousAt.tendsto.prodMap <| tendsto_pure_pure _ _"
+    },
+    {
+      "id": "deriv_comp",
+      "source_id": "mathlib",
+      "name": "deriv_comp",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Comp.lean",
+      "blob_sha": "3d6cb1a2031a8745b122acae3c3b9b7ddcb4a73f",
+      "line_start": 299,
+      "line_end": 301,
+      "signature_excerpt": "theorem deriv_comp (hh₂ : DifferentiableAt 𝕜' h₂ (h x)) (hh : DifferentiableAt 𝕜 h x) :\n    deriv (h₂ ∘ h) x = deriv h₂ (h x) * deriv h x :=\n  (hh₂.hasDerivAt.comp x hh.hasDerivAt).deriv"
+    },
+    {
+      "id": "MeasurableSpace",
+      "source_id": "mathlib",
+      "name": "MeasurableSpace",
+      "path": "Mathlib/MeasureTheory/MeasurableSpace/Defs.lean",
+      "blob_sha": "90ddc339d0c180b1098f2abfcd9af20453d77018",
+      "line_start": 47,
+      "line_end": 48,
+      "signature_excerpt": "@[class, wikidata Q3058218] structure MeasurableSpace (α : Type*) where\n  /-- Predicate saying that a given set is measurable. Use `MeasurableSet` in the root namespace"
+    },
+    {
+      "id": "MeasureTheory.Measure",
+      "source_id": "mathlib",
+      "name": "MeasureTheory.Measure",
+      "path": "Mathlib/MeasureTheory/Measure/MeasureSpaceDef.lean",
+      "blob_sha": "29740b54a6328f8e17cd98a66433aa12851b2c4f",
+      "line_start": 77,
+      "line_end": 79,
+      "signature_excerpt": "structure Measure (α : Type*) [MeasurableSpace α] extends OuterMeasure α where\n  m_iUnion ⦃f : ℕ → Set α⦄ : (∀ i, MeasurableSet (f i)) → Pairwise (Disjoint on f) →\n    toOuterMeasure (⋃ i, f i) = ∑' i, toOuterMeasure (f i)"
+    },
+    {
+      "id": "Measurable",
+      "source_id": "mathlib",
+      "name": "Measurable",
+      "path": "Mathlib/MeasureTheory/MeasurableSpace/Defs.lean",
+      "blob_sha": "90ddc339d0c180b1098f2abfcd9af20453d77018",
+      "line_start": 492,
+      "line_end": 493,
+      "signature_excerpt": "def Measurable [MeasurableSpace α] [MeasurableSpace β] (f : α → β) : Prop :=\n  ∀ ⦃t : Set β⦄, MeasurableSet t → MeasurableSet (f ⁻¹' t)"
+    },
+    {
+      "id": "MeasureTheory.IsProbabilityMeasure",
+      "source_id": "mathlib",
+      "name": "MeasureTheory.IsProbabilityMeasure",
+      "path": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+      "blob_sha": "aac6d4b8228135ee34c23887e3407a479ece5b76",
+      "line_start": 64,
+      "line_end": 65,
+      "signature_excerpt": "class IsProbabilityMeasure (μ : Measure α) : Prop where\n  measure_univ : μ univ = 1"
+    }
+  ]
+}

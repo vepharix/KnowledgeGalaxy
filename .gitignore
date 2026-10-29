@@ -12,3 +12,5 @@ dist/
 coverage/
 __pycache__/
 *.py[cod]
+/work/
+/outputs/

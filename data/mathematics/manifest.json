@@ -1,0 +1,11 @@
+{
+  "schema_version": "knowledge-galaxy.math-alignment.1",
+  "sources": [
+    {
+      "id": "mathlib",
+      "repository": "https://github.com/leanprover-community/mathlib4",
+      "revision": "9bb5e306206014ecee5f033738bb5a6a8490d5c9",
+      "toolchain": "leanprover/lean4:v4.36.0-rc2"
+    }
+  ]
+}

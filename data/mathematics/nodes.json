@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "id": "algebra",
+      "name": "Algebra",
+      "name_zh": "代数",
+      "kind": "field",
+      "description": "研究代数运算及其结构的数学领域。",
+      "scope_note": "知识范围节点，不声称存在与整个代数领域等价的 Lean 声明。"
+    },
+    {
+      "id": "linear_algebra",
+      "name": "Linear Algebra",
+      "name_zh": "线性代数",
+      "kind": "field",
+      "description": "研究向量空间、线性映射与矩阵的数学领域。",
+      "scope_note": "首批侧重域上的向量空间；不覆盖所有半模和半线性理论。"
+    },
+    {
+      "id": "analysis",
+      "name": "Analysis",
+      "name_zh": "分析学",
+      "kind": "field",
+      "description": "研究极限、连续性、微分及测度等的数学领域。",
+      "scope_note": "本切片仅选连续、微分与测度的少量基础主题。"
+    },
+    {
+      "id": "topology",
+      "name": "Topology",
+      "name_zh": "拓扑学",
+      "kind": "field",
+      "description": "研究空间的拓扑结构、连续性及紧致性等的数学领域。",
+      "scope_note": "H 表示知识范围归属，不是 Lean 类型类继承。"
+    },
+    {
+      "id": "probability",
+      "name": "Probability Theory",
+      "name_zh": "概率论",
+      "kind": "field",
+      "description": "研究概率空间与随机现象的数学领域。",
+      "scope_note": "以测度论表述为本切片的明确约定，不表示唯一教学路径。"
+    },
+    {
+      "id": "group",
+      "name": "Group",
+      "name_zh": "群",
+      "kind": "concept",
+      "description": "带结合乘法、单位元与逆元的代数结构。",
+      "scope_note": "同时登记加法记号的版本；不把加法交换群与任意群混为一谈。"
+    },
+    {
+      "id": "field",
+      "name": "Field",
+      "name_zh": "域",
+      "kind": "concept",
+      "description": "每个非零元素都有乘法逆元的非平凡交换环。",
+      "scope_note": "采用 mathlib 的含单位域约定，排除零环。"
+    },
+    {
+      "id": "module",
+      "name": "Module",
+      "name_zh": "模",
+      "kind": "concept",
+      "description": "环在加法交换群上的相容标量作用。",
+      "scope_note": "这里的模采用环和加法交换群假设；不将一般半模全部收进本节点。"
+    },
+    {
+      "id": "vector_space",
+      "name": "Vector Space",
+      "name_zh": "向量空间",
+      "kind": "concept",
+      "description": "域在加法交换群上的相容标量作用。",
+      "scope_note": "与模共享 Module 声明，但标量假设更强，保持独立节点。"
+    },
+    {
+      "id": "linear_map",
+      "name": "Linear Map",
+      "name_zh": "线性映射",
+      "kind": "concept",
+      "description": "同一域上两个向量空间之间保持加法与标量乘法的映射。",
+      "scope_note": "此处选普通线性映射，排除非恒等标量同态对应的半线性映射。"
+    },
+    {
+      "id": "matrix",
+      "name": "Matrix",
+      "name_zh": "矩阵",
+      "kind": "concept",
+      "description": "域上由有限行、列索引排列的元素阵列。",
+      "scope_note": "第一版使用有限维矩阵；Lean 的 Matrix 本身允许任意索引与元素类型。"
+    },
+    {
+      "id": "topological_space",
+      "name": "Topological Space",
+      "name_zh": "拓扑空间",
+      "kind": "concept",
+      "description": "由满足公理的开集族赋予拓扑结构的空间。",
+      "scope_note": "不预设可度量、Hausdorff 或紧致。"
+    },
+    {
+      "id": "metric_space",
+      "name": "Metric Space",
+      "name_zh": "度量空间",
+      "kind": "concept",
+      "description": "带满足正定性、对称性与三角不等式的实值距离的空间。",
+      "scope_note": "不把伪度量空间与度量空间合并；类型类中携带的拓扑是实现细节。"
+    },
+    {
+      "id": "continuity",
+      "name": "Continuity",
+      "name_zh": "连续性",
+      "kind": "concept",
+      "description": "函数在指定拓扑意义下保持趋近关系的性质。",
+      "scope_note": "主题聚合节点，分别保留整体、点处和集合上连续的形式。"
+    },
+    {
+      "id": "compactness",
+      "name": "Compactness",
+      "name_zh": "紧致性",
+      "kind": "concept",
+      "description": "拓扑空间或其子集满足每个开覆盖有有限子覆盖的性质。",
+      "scope_note": "一般拓扑紧致，不等同于任意空间中的有界闭集或序列紧致。"
+    },
+    {
+      "id": "derivative",
+      "name": "Derivative",
+      "name_zh": "导数",
+      "kind": "concept",
+      "description": "函数在一点的一阶局部变化，由线性近似给出。",
+      "scope_note": "首版选择实变量实值函数；区分导数命题与默认补零的取值算子。"
+    },
+    {
+      "id": "chain_rule",
+      "name": "Chain Rule",
+      "name_zh": "链式法则",
+      "kind": "result",
+      "description": "复合函数的导数由内外函数的导数相乘给出。",
+      "scope_note": "首版选实变量实值、点处可微的版本；不穷举 Fréchet 导数版本。"
+    },
+    {
+      "id": "measurable_space",
+      "name": "Measurable Space",
+      "name_zh": "可测空间",
+      "kind": "concept",
+      "description": "集合与其上的一个 σ-代数组成的空间。",
+      "scope_note": "可测空间本身不包含测度，也不自动带拓扑。"
+    },
+    {
+      "id": "measure",
+      "name": "Measure",
+      "name_zh": "测度",
+      "kind": "concept",
+      "description": "对 σ-代数中的集合赋予可数可加的非负扩展实数值。",
+      "scope_note": "Lean 用规范外测度扩张实现对任意集合的取值；一般测度不要求总质量为一。"
+    },
+    {
+      "id": "random_variable",
+      "name": "Random Variable",
+      "name_zh": "随机变量",
+      "kind": "concept",
+      "description": "从概率空间到可测空间的可测函数。",
+      "scope_note": "明确采用处处可测的版本；不把 AEMeasurable 或任意函数视为同一概念。"
+    }
+  ]
+}

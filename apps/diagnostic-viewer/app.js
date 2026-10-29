@@ -225,6 +225,7 @@
       <dt>connectivity</dt><dd>${format(node.connectivityRaw)} (${format(node.connectivityNormalized)})</dd>
       <dt>H color families</dt><dd>${families.length ? families.map(escapeHtml).join(", ") : "none"}</dd>
     </dl>`;
+    if (window.showFormalEvidence) window.showFormalEvidence(details, node, snapshot);
   }
 
   function escapeHtml(value) {

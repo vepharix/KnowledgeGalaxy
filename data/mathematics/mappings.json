@@ -1,0 +1,380 @@
+{
+  "mappings": [
+    {
+      "id": "group:Group",
+      "node_id": "group",
+      "declaration_id": "Group",
+      "role": "defining_expression",
+      "expression": "Group G",
+      "conditions": [
+        "G : Type*；乘法记号"
+      ],
+      "caveats": [
+        "不附加交换性。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "group:AddGroup",
+      "node_id": "group",
+      "declaration_id": "AddGroup",
+      "role": "variant",
+      "expression": "AddGroup G",
+      "conditions": [
+        "G : Type*；加法记号"
+      ],
+      "caveats": [
+        "这是加法记号版本，不表示所有群都是交换群。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "field:Field",
+      "node_id": "field",
+      "declaration_id": "Field",
+      "role": "defining_expression",
+      "expression": "Field K",
+      "conditions": [
+        "K : Type*"
+      ],
+      "caveats": [
+        "mathlib 中 Field 包含非平凡性，0 与 1 不相等。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "module:Module",
+      "node_id": "module",
+      "declaration_id": "Module",
+      "role": "defining_expression",
+      "expression": "Module R M",
+      "conditions": [
+        "R : Type*；[Ring R]",
+        "M : Type*；[AddCommGroup M]"
+      ],
+      "caveats": [
+        "若仅有 Semiring R 和 AddCommMonoid M，表达的是更一般的半模。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "vector_space:Module",
+      "node_id": "vector_space",
+      "declaration_id": "Module",
+      "role": "defining_expression",
+      "expression": "Module K V",
+      "conditions": [
+        "K : Type*；[Field K]",
+        "V : Type*；[AddCommGroup V]"
+      ],
+      "caveats": [
+        "不能只凭声明名 Module 把所有半模或模归入向量空间。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "linear_map:LinearMap",
+      "node_id": "linear_map",
+      "declaration_id": "LinearMap",
+      "role": "defining_expression",
+      "expression": "V →ₗ[K] W",
+      "conditions": [
+        "[Field K]",
+        "[AddCommGroup V]；[AddCommGroup W]",
+        "[Module K V]；[Module K W]",
+        "标量同态固定为 RingHom.id K"
+      ],
+      "caveats": [
+        "原始 LinearMap σ V W 支持半线性；普通线性要求 σ 为恒等。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "matrix:Matrix",
+      "node_id": "matrix",
+      "declaration_id": "Matrix",
+      "role": "defining_expression",
+      "expression": "Matrix (Fin m) (Fin n) K",
+      "conditions": [
+        "m n : ℕ",
+        "[Field K]"
+      ],
+      "caveats": [
+        "Lean 声明允许无限索引；本节点只选有限索引。",
+        "矩阵与线性映射之间的具体对应依赖基的选择。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "topological_space:TopologicalSpace",
+      "node_id": "topological_space",
+      "declaration_id": "TopologicalSpace",
+      "role": "defining_expression",
+      "expression": "TopologicalSpace X",
+      "conditions": [
+        "X : Type*"
+      ],
+      "caveats": [
+        "不附加任何分离性、度量或紧致假设。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "metric_space:MetricSpace",
+      "node_id": "metric_space",
+      "declaration_id": "MetricSpace",
+      "role": "defining_expression",
+      "expression": "MetricSpace X",
+      "conditions": [
+        "X : Type*"
+      ],
+      "caveats": [
+        "声明继承 PseudoMetricSpace 并补充距离为零蕴含相等；不能照搬继承关系生成 H。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "continuity:Continuous",
+      "node_id": "continuity",
+      "declaration_id": "Continuous",
+      "role": "variant",
+      "expression": "Continuous f",
+      "conditions": [
+        "[TopologicalSpace X]；[TopologicalSpace Y]",
+        "f : X → Y"
+      ],
+      "caveats": [
+        "这是整体连续，不能与只在一个点连续无条件等同。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "continuity:ContinuousAt",
+      "node_id": "continuity",
+      "declaration_id": "ContinuousAt",
+      "role": "variant",
+      "expression": "ContinuousAt f x",
+      "conditions": [
+        "[TopologicalSpace X]；[TopologicalSpace Y]",
+        "f : X → Y",
+        "x : X"
+      ],
+      "caveats": [
+        "只在指定点断言连续。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "continuity:ContinuousOn",
+      "node_id": "continuity",
+      "declaration_id": "ContinuousOn",
+      "role": "variant",
+      "expression": "ContinuousOn f s",
+      "conditions": [
+        "[TopologicalSpace X]；[TopologicalSpace Y]",
+        "f : X → Y",
+        "s : Set X"
+      ],
+      "caveats": [
+        "集合上连续按 within 的相对趋近表达。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "compactness:IsCompact",
+      "node_id": "compactness",
+      "declaration_id": "IsCompact",
+      "role": "variant",
+      "expression": "IsCompact s",
+      "conditions": [
+        "[TopologicalSpace X]",
+        "s : Set X"
+      ],
+      "caveats": [
+        "集合层面的紧致性；源码用滤子刻画。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "compactness:CompactSpace",
+      "node_id": "compactness",
+      "declaration_id": "CompactSpace",
+      "role": "variant",
+      "expression": "CompactSpace X",
+      "conditions": [
+        "[TopologicalSpace X]"
+      ],
+      "caveats": [
+        "整个空间的紧致性，相当于 IsCompact univ 的类型类形式。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "derivative:HasDerivAt",
+      "node_id": "derivative",
+      "declaration_id": "HasDerivAt",
+      "role": "variant",
+      "expression": "HasDerivAt f f' x",
+      "conditions": [
+        "f : ℝ → ℝ",
+        "x : ℝ",
+        "f' : ℝ"
+      ],
+      "caveats": [
+        "这里明确限制为实变量实值；Lean 声明更一般。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "derivative:deriv",
+      "node_id": "derivative",
+      "declaration_id": "deriv",
+      "role": "value_operator",
+      "expression": "deriv f x",
+      "conditions": [
+        "f : ℝ → ℝ",
+        "x : ℝ"
+      ],
+      "caveats": [
+        "不可微时按约定返回零；结果为零不蕴含导数存在。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "chain_rule:HasDerivAt.comp",
+      "node_id": "chain_rule",
+      "declaration_id": "HasDerivAt.comp",
+      "role": "related_result",
+      "expression": "HasDerivAt (g ∘ f) (a * b) x",
+      "conditions": [
+        "f g : ℝ → ℝ；x a b : ℝ",
+        "HasDerivAt g a (f x)",
+        "HasDerivAt f b x"
+      ],
+      "caveats": [
+        "本节点是定理结果；该声明不是导数概念的定义。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "chain_rule:deriv_comp",
+      "node_id": "chain_rule",
+      "declaration_id": "deriv_comp",
+      "role": "related_result",
+      "expression": "deriv (g ∘ f) x = deriv g (f x) * deriv f x",
+      "conditions": [
+        "f g : ℝ → ℝ；x : ℝ",
+        "DifferentiableAt ℝ g (f x)",
+        "DifferentiableAt ℝ f x"
+      ],
+      "caveats": [
+        "不能省略可微性前提，再用默认补零的 deriv 断言无条件链式法则。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "measurable_space:MeasurableSpace",
+      "node_id": "measurable_space",
+      "declaration_id": "MeasurableSpace",
+      "role": "defining_expression",
+      "expression": "MeasurableSpace Ω",
+      "conditions": [
+        "Ω : Type*"
+      ],
+      "caveats": [
+        "仅包含 σ-代数，不包含概率测度。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "measure:MeasureTheory.Measure",
+      "node_id": "measure",
+      "declaration_id": "MeasureTheory.Measure",
+      "role": "defining_expression",
+      "expression": "MeasureTheory.Measure Ω",
+      "conditions": [
+        "Ω : Type*；[MeasurableSpace Ω]"
+      ],
+      "caveats": [
+        "值域为扩展非负实数；通过规范外测度扩张实现，并非任意实值集合函数。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "random_variable:Measurable",
+      "node_id": "random_variable",
+      "declaration_id": "Measurable",
+      "role": "defining_expression",
+      "expression": "Measurable X",
+      "conditions": [
+        "[MeasurableSpace Ω]；[MeasurableSpace E]",
+        "μ : MeasureTheory.Measure Ω；[MeasureTheory.IsProbabilityMeasure μ]",
+        "X : Ω → E"
+      ],
+      "caveats": [
+        "Measurable 本身不提及概率测度；只有附上这里的概率空间上下文才表达所选随机变量。",
+        "不将几乎处处可测自动视为处处可测。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    },
+    {
+      "id": "random_variable:MeasureTheory.IsProbabilityMeasure",
+      "node_id": "random_variable",
+      "declaration_id": "MeasureTheory.IsProbabilityMeasure",
+      "role": "context",
+      "expression": "MeasureTheory.IsProbabilityMeasure μ",
+      "conditions": [
+        "[MeasurableSpace Ω]",
+        "μ : MeasureTheory.Measure Ω"
+      ],
+      "caveats": [
+        "这是源空间上测度总质量为一的条件，单独不能定义一个随机变量。"
+      ],
+      "review_status": "semantic_assessed",
+      "reviewer": "codex-assisted-curation",
+      "review_note": "已核对固定提交的源码与此处限定的数学含义；未运行 Lean，未获数学专家复核。表达式是带上下文的记录，不是独立可编译文件。"
+    }
+  ]
+}

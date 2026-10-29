@@ -32,6 +32,9 @@ def snapshot_to_dict(snapshot: GraphSnapshot) -> dict[str, Any]:
                 "connectivityNormalized": metrics.connectivity.normalized,
             }
         )
+        node_kinds = source.metadata.get("nodeKinds", {})
+        if field.id in node_kinds:
+            nodes[-1]["semanticKind"] = node_kinds[field.id]
 
     return {
         "schemaVersion": "knowledge-galaxy.graph.1.0",
@@ -39,7 +42,7 @@ def snapshot_to_dict(snapshot: GraphSnapshot) -> dict[str, Any]:
         "metadata": source.metadata,
         "configuration": snapshot.configuration.to_dict(),
         "interpretationBoundary": {
-            "entity": "Every visible node is a ResearchField.",
+            "entity": source.metadata.get("entityInterpretation", "Every visible node is a ResearchField."),
             "coordinates": "Coordinates are derived layout output and cannot establish H, D or R.",
             "hierarchy": "H affects membership, Scope and post-layout regions, never coordinates or node size.",
             "dependency": "D affects dependency depth, target radius and connectivity, never pair distance.",

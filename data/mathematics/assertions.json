@@ -1,0 +1,991 @@
+{
+  "assertions": [
+    {
+      "id": "H:algebra:linear_algebra:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "linear_algebra",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:group:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "group",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:field:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "field",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:algebra:module:relation",
+      "kind": "H",
+      "source": "algebra",
+      "target": "module",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:vector_space:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "vector_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:linear_map:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "linear_map",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:linear_algebra:matrix:relation",
+      "kind": "H",
+      "source": "linear_algebra",
+      "target": "matrix",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:continuity:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:derivative:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "derivative",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:chain_rule:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "chain_rule",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:analysis:measure:relation",
+      "kind": "H",
+      "source": "analysis",
+      "target": "measure",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:topological_space:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "topological_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:metric_space:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "metric_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:continuity:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:topology:compactness:relation",
+      "kind": "H",
+      "source": "topology",
+      "target": "compactness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:measurable_space:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "measurable_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "H:probability:random_variable:relation",
+      "kind": "H",
+      "source": "probability",
+      "target": "random_variable",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "manual_classification",
+      "declaration_ids": [],
+      "rationale": "人工知识范围分类：该主题属于此领域的研究内容；非类型继承、集合包含或文件目录推断。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "D:group:module:direct",
+      "kind": "D",
+      "source": "group",
+      "target": "module",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "AddGroup",
+        "Module"
+      ],
+      "rationale": "本节点模的载体是加法交换群；群的基础概念是所选学习路径的前置知识，不声称任意群结构可直接当作模。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:field:vector_space:direct",
+      "kind": "D",
+      "source": "field",
+      "target": "vector_space",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "Field",
+        "Module"
+      ],
+      "rationale": "所选向量空间的标量要求为域。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:module:vector_space:direct",
+      "kind": "D",
+      "source": "module",
+      "target": "vector_space",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Module"
+      ],
+      "rationale": "按一般模到域上模的概念组织；这不是唯一教学路径，也不是必须先学习模才能学习向量空间。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:vector_space:linear_map:direct",
+      "kind": "D",
+      "source": "vector_space",
+      "target": "linear_map",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "Module",
+        "LinearMap"
+      ],
+      "rationale": "本切片的线性映射有两个同一域上的向量空间作为源与目标。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:field:matrix:direct",
+      "kind": "D",
+      "source": "field",
+      "target": "matrix",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "Field",
+        "Matrix"
+      ],
+      "rationale": "本切片选有限的域值矩阵；不主张所有 Matrix 的元素类型都必须是域。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:continuity:direct",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "continuity",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "TopologicalSpace",
+        "Continuous"
+      ],
+      "rationale": "整体连续性引用源与目标拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:compactness:direct",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "compactness",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "TopologicalSpace",
+        "IsCompact"
+      ],
+      "rationale": "本节点为一般拓扑紧致性，必须指定空间拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:continuity:derivative:direct",
+      "kind": "D",
+      "source": "continuity",
+      "target": "derivative",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "ContinuousAt",
+        "HasDerivAt"
+      ],
+      "rationale": "连续性作为常见微积分学习路径中的先修概念；不宣称连续性本身足以保证可微。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:derivative:chain_rule:direct",
+      "kind": "D",
+      "source": "derivative",
+      "target": "chain_rule",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "HasDerivAt",
+        "HasDerivAt.comp"
+      ],
+      "rationale": "链式法则的类型直接表达两个导数假设和复合函数导数结论。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:measurable_space:measure:direct",
+      "kind": "D",
+      "source": "measurable_space",
+      "target": "measure",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "Measure 的类型明确带 MeasurableSpace 参数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:measure:random_variable:direct",
+      "kind": "D",
+      "source": "measure",
+      "target": "random_variable",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [
+        "MeasureTheory.Measure",
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure"
+      ],
+      "rationale": "本节点采用概率空间上的可测函数；概率测度是该选定上下文的一部分。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:derivative:indirect",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "derivative",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "curriculum_prerequisite",
+      "declaration_ids": [],
+      "rationale": "保留拓扑到连续到导数的间接解释路径，不另加一个目标层差为一的约束。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "indirect"
+    },
+    {
+      "id": "D:measurable_space:random_variable:direct",
+      "kind": "D",
+      "source": "measurable_space",
+      "target": "random_variable",
+      "value": 0.95,
+      "status": "candidate",
+      "evidence_kind": "definition_reference",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "Measurable"
+      ],
+      "rationale": "可测空间是重要形式条件，但本首批深度骨架已通过测度连接；这条额外约束需评估层差冲突，先作候选保留。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "direct"
+    },
+    {
+      "id": "D:topological_space:metric_space:unspecified",
+      "kind": "D",
+      "source": "topological_space",
+      "target": "metric_space",
+      "value": null,
+      "status": "candidate",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "Lean 类型结构携带拓扑不决定人类学习顺序；先度量后拓扑也合理，本阶段不裁定方向。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": "unspecified"
+    },
+    {
+      "id": "R:group:random_variable:relation",
+      "kind": "R",
+      "source": "group",
+      "target": "random_variable",
+      "value": null,
+      "status": "candidate",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "尚未评估；未知不等于零。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:linear_algebra:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "linear_algebra",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。有大量结构和工具交叉。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:group:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "group",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。群论是代数的重要研究内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:field:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "field",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。域论是代数的重要研究内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:algebra:module:relation",
+      "kind": "R",
+      "source": "algebra",
+      "target": "module",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。模论使用代数结构。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:vector_space:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "vector_space",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。向量空间是线性代数的主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:linear_map:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "linear_map",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。线性映射是线性代数的主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:linear_algebra:matrix:relation",
+      "kind": "R",
+      "source": "linear_algebra",
+      "target": "matrix",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。有限矩阵是线性代数的常用工具。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:group:module:relation",
+      "kind": "R",
+      "source": "group",
+      "target": "module",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "AddGroup",
+        "Module"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。模的加法结构涉及交换群。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:field:module:relation",
+      "kind": "R",
+      "source": "field",
+      "target": "module",
+      "value": 0.65,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Field",
+        "Module"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。域上的模是两者交叉的具体情形。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:field:vector_space:relation",
+      "kind": "R",
+      "source": "field",
+      "target": "vector_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Field",
+        "Module"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。标量域与向量空间的直接联系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:module:vector_space:relation",
+      "kind": "R",
+      "source": "module",
+      "target": "vector_space",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。共享 Module 表达，但条件不同；仍为两个概念邻居。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:vector_space:linear_map:relation",
+      "kind": "R",
+      "source": "vector_space",
+      "target": "linear_map",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Module",
+        "LinearMap"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。线性映射以向量空间为源和目标。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:field:matrix:relation",
+      "kind": "R",
+      "source": "field",
+      "target": "matrix",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Field",
+        "Matrix"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。此处选取域值矩阵。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:matrix:linear_map:relation",
+      "kind": "R",
+      "source": "matrix",
+      "target": "linear_map",
+      "value": 0.92,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。选基后有限维线性映射可以用矩阵表示；这里是策展判断，尚未提取相应表示定理。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:matrix:vector_space:relation",
+      "kind": "R",
+      "source": "matrix",
+      "target": "vector_space",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。有限域值矩阵组成向量空间，并作用于坐标向量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:topological_space:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "topological_space",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。拓扑空间是该领域的基本对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:metric_space:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "metric_space",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。度量诱导拓扑，但拓扑不一定可度量。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:continuity:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。连续性是拓扑的主要研究关系。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topology:compactness:relation",
+      "kind": "R",
+      "source": "topology",
+      "target": "compactness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。紧致性是拓扑的重要性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topological_space:metric_space:relation",
+      "kind": "R",
+      "source": "topological_space",
+      "target": "metric_space",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MetricSpace",
+        "TopologicalSpace"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。度量结构给出拓扑；不据此建立 H 或学习顺序 D。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topological_space:continuity:relation",
+      "kind": "R",
+      "source": "topological_space",
+      "target": "continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "TopologicalSpace",
+        "Continuous"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。连续性的表达依赖源和目标拓扑。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:topological_space:compactness:relation",
+      "kind": "R",
+      "source": "topological_space",
+      "target": "compactness",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "TopologicalSpace",
+        "IsCompact"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。紧致性是拓扑性质。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:metric_space:continuity:relation",
+      "kind": "R",
+      "source": "metric_space",
+      "target": "continuity",
+      "value": 0.8,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。度量提供连续性的特殊刻画；这里未自动提取刻画定理。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:continuity:compactness:relation",
+      "kind": "R",
+      "source": "continuity",
+      "target": "compactness",
+      "value": 0.75,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。紧集与连续函数有共同研究结果；尚未自动采集定理。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:continuity:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "continuity",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。分析中经常研究连续性。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:derivative:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "derivative",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。微分是分析的主要内容。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:chain_rule:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "chain_rule",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。链式法则是微分计算的重要结果。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:measure:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "measure",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。测度是现代分析中的重要工具。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:topology:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "topology",
+      "value": 0.7,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。二者共享连续性与空间结构等主题。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:continuity:derivative:relation",
+      "kind": "R",
+      "source": "continuity",
+      "target": "derivative",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。可微与连续有直接数学联系；本切片未提取完整证明引用。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:derivative:chain_rule:relation",
+      "kind": "R",
+      "source": "derivative",
+      "target": "chain_rule",
+      "value": 0.98,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "HasDerivAt",
+        "HasDerivAt.comp"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。链式法则直接给出复合函数的导数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:measurable_space:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "measurable_space",
+      "value": 0.85,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。σ-代数是测度论概率的基础。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:measure:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "measure",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasureTheory.Measure",
+        "MeasureTheory.IsProbabilityMeasure"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。概率测度是一般测度的特殊条件。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:probability:random_variable:relation",
+      "kind": "R",
+      "source": "probability",
+      "target": "random_variable",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。随机变量是概率论的主要对象。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:measurable_space:measure:relation",
+      "kind": "R",
+      "source": "measurable_space",
+      "target": "measure",
+      "value": 0.95,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "MeasureTheory.Measure"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。测度在选定的可测空间上给出。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:measurable_space:random_variable:relation",
+      "kind": "R",
+      "source": "measurable_space",
+      "target": "random_variable",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "MeasurableSpace",
+        "Measurable"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。随机变量的可测性涉及源与目标的 σ-代数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:measure:random_variable:relation",
+      "kind": "R",
+      "source": "measure",
+      "target": "random_variable",
+      "value": 0.9,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [
+        "Measurable",
+        "MeasureTheory.IsProbabilityMeasure"
+      ],
+      "rationale": "人工关联强度假设，未经统计校准。本节点选择概率空间上的可测函数。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    },
+    {
+      "id": "R:analysis:probability:relation",
+      "kind": "R",
+      "source": "analysis",
+      "target": "probability",
+      "value": 0.65,
+      "status": "curated",
+      "evidence_kind": "semantic_assessment",
+      "declaration_ids": [],
+      "rationale": "人工关联强度假设，未经统计校准。测度、积分和极限工具连接二者；不是由共同底层 Lean 依赖计数得到。",
+      "reviewer": "codex-assisted-curation",
+      "dependency_extent": null
+    }
+  ]
+}
