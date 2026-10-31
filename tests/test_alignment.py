@@ -136,7 +136,7 @@ class AlignmentTests(unittest.TestCase):
                 verify_source_files(dataset, root)
 
     def test_json_loader_rejects_string_conditions_and_obsolete_fields(self):
-        files = {p.name: json.loads(p.read_text()) for p in DATA.glob("*.json")}
+        files = {p.name: json.loads(p.read_text(encoding="utf-8")) for p in DATA.glob("*.json")}
         for mutation in ("conditions", "obsolete"):
             with tempfile.TemporaryDirectory() as temp:
                 changed = copy.deepcopy(files)
@@ -154,13 +154,13 @@ class AlignmentTests(unittest.TestCase):
             snapshot = Path(temp) / "galaxy.json"
             viewer_data = Path(temp) / "galaxy-data.js"
             self.assertEqual(main(["build-math", "--dataset", str(DATA), "--snapshot", str(snapshot), "--viewer-data", str(viewer_data), "--steps", "25"]), 0)
-            payload = json.loads(snapshot.read_text())
+            payload = json.loads(snapshot.read_text(encoding="utf-8"))
             self.assertEqual(len(payload["nodes"]), 80)
             self.assertEqual(payload["metadata"]["dataset"], "mathematics")
             self.assertEqual(len(payload["formalAlignment"]["mappings"]), 80)
             self.assertIn(self.dataset.sources[0].revision, payload["formalAlignment"]["declarations"][0]["url"])
             self.assertIsNone(next(a["value"] for a in payload["formalAlignment"]["assertions"] if a["id"] == "R:group:random_variable:relation"))
-            self.assertIn('window.KNOWLEDGE_GALAXY_SNAPSHOT = ', viewer_data.read_text())
+            self.assertIn('window.KNOWLEDGE_GALAXY_SNAPSHOT = ', viewer_data.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

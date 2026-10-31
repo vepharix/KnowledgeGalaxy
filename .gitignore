@@ -14,3 +14,7 @@ __pycache__/
 *.py[cod]
 /work/
 /outputs/
+/formal/lean/.lake/
+/formal/lean/.reservoir/
+*.olean
+*.ilean

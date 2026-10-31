@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge Galaxy — WebGL Star Map</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, "Noto Sans SC", system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #01040a; color: #e8f4ff; }
+    body::before { content: ""; position: fixed; inset: 0; background: radial-gradient(circle at 42% 48%, rgba(24,73,117,.24), transparent 32%), radial-gradient(circle at 62% 58%, rgba(91,39,120,.14), transparent 28%), radial-gradient(circle at center, #07111f 0%, #02060d 58%, #000207 100%); }
+    canvas { position: fixed; inset: 0; width: 100%; height: 100%; cursor: grab; }
+    canvas.dragging { cursor: grabbing; }
+    .panel { position: fixed; z-index: 3; border: 1px solid rgba(135,189,228,.2); background: rgba(2,8,17,.68); box-shadow: 0 15px 55px rgba(0,0,0,.35); backdrop-filter: blur(12px); }
+    .title { top: 18px; left: 18px; padding: 14px 17px; border-radius: 12px; }
+    .title strong { display: block; letter-spacing: .08em; font-size: 15px; }
+    .title span, .stats, .hint { color: #8eb0ca; font-size: 11px; }
+    .controls { top: 18px; right: 18px; width: 270px; padding: 13px 15px; border-radius: 12px; font-size: 12px; }
+    .controls label { display: block; margin: 8px 0; }
+    .controls input { vertical-align: middle; }
+    .controls button { width: 100%; padding: 6px 9px; color: #dceaf0; background: #10202d; border: 1px solid #2d4b60; border-radius: 6px; cursor: pointer; }
+    .stats { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; margin: 9px 0; font-variant-numeric: tabular-nums; }
+    .selected { left: 18px; bottom: 18px; width: min(370px, calc(100vw - 36px)); padding: 13px 16px; border-radius: 12px; font-size: 12px; line-height: 1.55; }
+    .selected h2 { margin: 0 0 5px; font-size: 16px; }
+    .selected dl { display: grid; grid-template-columns: 130px 1fr; margin: 8px 0 0; }
+    .selected dt { color: #7899b2; }
+    .selected dd { margin: 0; font-variant-numeric: tabular-nums; }
+    #labels { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
+    .star-label { position: absolute; padding: 2px 5px; color: rgba(220,240,255,.82); background: rgba(1,5,12,.48); border-radius: 4px; font-size: 10px; white-space: nowrap; transform: translate(8px,-50%); text-shadow: 0 0 8px #6ebcff; }
+    .benchmark { color: #f3c46c !important; }
+    @media (max-width: 720px) { .controls { top: 86px; width: 220px; } .selected { max-height: 30vh; overflow: auto; } }
+  </style>
+</head>
+<body>
+  <canvas id="galaxy" aria-label="Knowledge Galaxy WebGL star map"></canvas>
+  <div id="labels"></div>
+  <section class="panel title"><strong>KNOWLEDGE GALAXY</strong><span id="mode-label">WebGL star map prototype</span></section>
+  <section class="panel controls">
+    <strong>渲染</strong>
+    <div class="stats"><span>节点</span><b id="node-count">—</b><span>关系线</span><b id="edge-count">—</b><span>标签预算</span><b id="label-count">—</b><span>帧率</span><b id="fps">—</b></div>
+    <label><input id="show-edges" type="checkbox" checked> 显示高强度关系</label>
+    <label><input id="show-labels" type="checkbox" checked> 显示分级名称</label>
+    <label><input id="auto-rotate" type="checkbox" checked> 缓慢旋转</label>
+    <button id="reset-view" type="button">恢复视角</button>
+    <p class="hint">拖动旋转，滚轮缩放；点击星体查看节点。大量节点时自动减少关系线和标签。</p>
+  </section>
+  <section id="selected" class="panel selected"><h2>数学星图</h2><div>点击一颗星查看名称、依赖深度与连接度。颜色和光晕是应用层视觉编码，不产生新的知识关系。</div></section>
+  <script src="../diagnostic-viewer/galaxy-data.js"></script>
+  <script src="./render-policy.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

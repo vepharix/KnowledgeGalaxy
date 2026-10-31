@@ -4,6 +4,7 @@ from ..domain.models import DependencyEdge, HierarchyEdge, KnowledgeGraphInput, 
 from ..domain.validation import validate_knowledge_graph
 from .models import MathDataset
 from .validation import validate_math_dataset
+from .derivation import DERIVATION_SCHEMA
 
 
 def to_graph_input(dataset: MathDataset) -> KnowledgeGraphInput:
@@ -48,3 +49,69 @@ def alignment_report(dataset: MathDataset) -> dict:
         "mappingReview": {status: sum(m.review_status == status for m in dataset.mappings) for status in ("candidate", "source_checked", "semantic_assessed")},
         "formalVerification": "not_run",
     }
+
+
+def derived_candidates_to_graph_input(
+    dataset: MathDataset,
+    report: dict,
+    selected_node_ids: set[str],
+) -> KnowledgeGraphInput:
+    """Create an explicitly experimental graph from Lean-derived candidates."""
+
+    validate_math_dataset(dataset)
+    if report.get("schemaVersion") != DERIVATION_SCHEMA:
+        raise ValueError("unsupported derived relation candidate schema")
+    relations = report.get("relations")
+    if not isinstance(relations, dict) or set(relations) != {"H", "D", "R"}:
+        raise ValueError("derived relation report must contain H, D and R arrays")
+    if relations["H"] != []:
+        raise ValueError("Lean declaration references must not generate hierarchy H")
+    known = {node.id for node in dataset.nodes}
+    if not selected_node_ids or not selected_node_ids <= known:
+        raise ValueError("derived experiment nodes must be a nonempty dataset subset")
+
+    dependencies: list[DependencyEdge] = []
+    relatedness: list[Relatedness] = []
+    for kind, target in (("D", dependencies), ("R", relatedness)):
+        if not isinstance(relations[kind], list):
+            raise ValueError(f"derived {kind} candidates must be an array")
+        for item in relations[kind]:
+            if not isinstance(item, dict) or item.get("kind") != kind or item.get("status") != "candidate":
+                raise ValueError(f"invalid derived {kind} candidate")
+            source, destination, score = item.get("source"), item.get("target"), item.get("score")
+            if source not in selected_node_ids or destination not in selected_node_ids:
+                raise ValueError("derived relation endpoint escapes selected node experiment")
+            if type(score) not in {float, int} or not 0 <= score <= 1:
+                raise ValueError("derived relation score must be in [0, 1]")
+            provenance = (
+                f"lean-derived-candidate:{report.get('experiment', 'unnamed')}; "
+                f"not curated; components={item.get('components', {})}"
+            )
+            if kind == "D":
+                target.append(DependencyEdge(source, destination, score, provenance))
+            else:
+                target.append(Relatedness(source, destination, score, provenance))
+
+    graph = KnowledgeGraphInput(
+        fields=tuple(
+            ResearchField(node.id, node.name, node.description, name_zh=node.name_zh)
+            for node in dataset.nodes if node.id in selected_node_ids
+        ),
+        hierarchy=(),
+        dependencies=tuple(dependencies),
+        relatedness=tuple(relatedness),
+        metadata={
+            "dataset": "mathematics-lean-derived-experiment",
+            "experiment": report.get("experiment"),
+            "nodeKinds": {
+                node.id: node.kind for node in dataset.nodes if node.id in selected_node_ids
+            },
+            "relationPolicy": (
+                "Diagnostic layout from uncurated Lean-derived D/R candidates. "
+                "H is intentionally absent and coordinates are not semantic validation."
+            ),
+            "formalInput": report.get("input", {}),
+        },
+    )
+    validate_knowledge_graph(graph)
+    return graph

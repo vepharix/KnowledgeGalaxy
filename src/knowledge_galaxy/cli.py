@@ -7,7 +7,17 @@ import sys
 from dataclasses import replace
 from pathlib import Path
 
-from .alignment import load_math_dataset, to_graph_input
+from .alignment import (
+    compare_with_curated_baseline,
+    derive_relation_candidates,
+    derived_candidates_to_graph_input,
+    load_dependency_extraction,
+    load_math_dataset,
+    load_node_selection,
+    create_math_release,
+    load_release_manifest,
+    to_graph_input,
+)
 from .alignment.adapter import alignment_report
 from .alignment.export import alignment_to_dict
 from .alignment.audit import audit_math_dataset
@@ -60,6 +70,26 @@ def build_parser() -> argparse.ArgumentParser:
     prepare_math = subparsers.add_parser("prepare-math-sources", help="并行准备映射所引用的固定版本源码并核对哈希")
     prepare_math.add_argument("--dataset", type=Path, default=Path("data/mathematics"))
     prepare_math.add_argument("--destination", type=Path, default=Path("work/formal-sources"))
+    derive_math = subparsers.add_parser("derive-math-relations", help="将 Lean 声明依赖聚合为待审核的 D/R 候选")
+    derive_math.add_argument("--dataset", type=Path, default=Path("data/mathematics"))
+    derive_math.add_argument("--formal-dependencies", type=Path, required=True, help="固定版本 Lean 提取器生成的声明依赖 JSON")
+    derive_math.add_argument("--node-set", type=Path, help="可选：限制候选关系的数学节点实验集")
+    derive_math.add_argument("--output", type=Path, default=Path("outputs/math-derived-relations.json"))
+    build_derived = subparsers.add_parser("build-math-derived", help="用待审核 Lean D/R 候选构建小型诊断图")
+    build_derived.add_argument("--dataset", type=Path, default=Path("data/mathematics"))
+    build_derived.add_argument("--candidates", type=Path, required=True)
+    build_derived.add_argument("--node-set", type=Path, required=True)
+    build_derived.add_argument("--viewer-data", type=Path, default=DEFAULT_VIEWER_DATA)
+    build_derived.add_argument("--snapshot", type=Path, default=Path("outputs/math-derived-galaxy.json"))
+    build_derived.add_argument("--steps", type=int, default=3500)
+    release_math = subparsers.add_parser("release-math", help="生成固定版本的数学星图研究预览、审计和稳定性报告")
+    release_math.add_argument("--dataset", type=Path, default=Path("data/mathematics"))
+    release_math.add_argument("--manifest", type=Path, default=Path("data/mathematics/release-v0.1.json"))
+    release_math.add_argument("--lean-candidates", type=Path, help="可选：附加真实 Lean 引用生成的候选关系报告")
+    release_math.add_argument("--source-root", type=Path, help="可选：核对固定版本源码字节和声明定位")
+    release_math.add_argument("--viewer-data", type=Path, default=DEFAULT_VIEWER_DATA)
+    release_math.add_argument("--snapshot", type=Path, default=Path("outputs/mathematics-galaxy-v0.1.json"))
+    release_math.add_argument("--report", type=Path, default=Path("outputs/mathematics-galaxy-v0.1-report.json"))
     return parser
 
 
@@ -78,6 +108,61 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "prepare-math-sources":
             report = prepare_source_files(load_math_dataset(args.dataset), args.destination)
             print(json.dumps(report, ensure_ascii=False, indent=2))
+            return 0
+        if args.command == "derive-math-relations":
+            dataset = load_math_dataset(args.dataset)
+            extraction = load_dependency_extraction(args.formal_dependencies, dataset)
+            experiment, selected = load_node_selection(args.node_set, dataset) if args.node_set else (None, None)
+            report = derive_relation_candidates(dataset, extraction, selected_node_ids=selected)
+            if selected is not None:
+                report["experiment"] = experiment
+                report["baselineComparison"] = compare_with_curated_baseline(dataset, report, selected)
+            _write_json(args.output, report)
+            print(
+                f"Lean 关系候选已保存：{args.output}；"
+                f"D={len(report['relations']['D'])}，R={len(report['relations']['R'])}；尚未进入布局"
+            )
+            return 0
+        if args.command == "build-math-derived":
+            if args.steps <= 0:
+                raise ValueError("optimization steps must be positive")
+            dataset = load_math_dataset(args.dataset)
+            experiment, selected = load_node_selection(args.node_set, dataset)
+            report = json.loads(args.candidates.read_text(encoding="utf-8"))
+            if report.get("experiment") != experiment:
+                raise ValueError("candidate report and node-set experiment do not match")
+            graph = derived_candidates_to_graph_input(dataset, report, selected)
+            snapshot = build_graph(graph, GraphConfiguration(optimization_steps=args.steps))
+            result = snapshot_to_dict(snapshot)
+            result["formalAlignment"] = alignment_to_dict(dataset)
+            result["derivedRelationExperiment"] = report
+            write_diagnostic_data(args.viewer_data, result)
+            _write_json(args.snapshot, result)
+            print(
+                f"Lean 数学候选诊断图完成：{len(result['nodes'])} 个节点；"
+                f"快照：{args.snapshot}；候选关系尚未审核"
+            )
+            return 0
+        if args.command == "release-math":
+            dataset = load_math_dataset(args.dataset)
+            manifest = load_release_manifest(args.manifest)
+            candidates = json.loads(args.lean_candidates.read_text(encoding="utf-8")) if args.lean_candidates else None
+            verified = verify_source_files(dataset, args.source_root) if args.source_root else None
+            result, report = create_math_release(
+                dataset,
+                manifest,
+                lean_candidates=candidates,
+                source_declarations_verified=verified,
+            )
+            write_diagnostic_data(args.viewer_data, result)
+            _write_json(args.snapshot, result)
+            _write_json(args.report, report)
+            summary = result["release"]["gateSummary"]
+            print(
+                f"数学星图研究预览已生成：{len(result['nodes'])} 个节点；"
+                f"门槛 pass={summary['pass']}、warning={summary['warning']}、"
+                f"pending={summary['pending']}；快照：{args.snapshot}；报告：{args.report}"
+            )
             return 0
         if args.command in {"audit-math", "assess-math"}:
             dataset = load_math_dataset(args.dataset)

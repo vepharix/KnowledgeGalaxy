@@ -1,5 +1,7 @@
-# Knowledge Galaxy Web
+# Knowledge Galaxy WebGL 星图原型
 
-这里保留给最终的 Galaxy Explorer 与 Time Evolution。本次重构不实现正式星图。
+这里开始验证正式星图的视觉与渲染边界。它读取图引擎已经生成的坐标、依赖深度和连接度，但颜色、光晕、背景、标签预算和关系线裁剪都只属于本应用，不回写知识模型，也不与 Diagnostic Viewer 共享视觉配置。
 
-未来的星云颜色、材质、星体亮度、halo 与其他成品视觉配置只属于这个应用，不与 `apps/diagnostic-viewer` 共享调色板或材质。图计算层只输出 H 的归属、成员集合、Scope 和层级密度数据，不输出 RGB、Hex 或材质参数。
+先运行一次数学构建，再直接打开 `index.html`。当前推荐的第二阶段数据命令见根目录 README。页面默认显示真实快照；在地址后附加 `?benchmark=20000` 可生成两万颗明确标为 synthetic 的测试星，仅用于检查浏览器绘制性能，不代表知识数据。
+
+原型使用 WebGL2 point sprites：所有星体在一个 draw call 中绘制，背景星另用一个 draw call。关系线按强度排序并设置数量上限，标签只为少量高连接度节点创建 DOM 元素。这个设计可以把“坐标已经存在后的显示”扩到数万节点，但当前 Python 布局仍包含全节点对排斥，计算复杂度与内存都会先成为瓶颈；完整规模需要近邻图、空间分区或 Barnes–Hut 类近似，不能靠前端优化解决。

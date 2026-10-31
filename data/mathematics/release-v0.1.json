@@ -1,0 +1,34 @@
+{
+  "schema_version": "knowledge-galaxy.math-release-manifest.1",
+  "release_id": "mathematics-galaxy-v0.1",
+  "title": "Mathematics Galaxy v0.1 Research Preview",
+  "status": "research_preview",
+  "dataset_schema": "knowledge-galaxy.math-alignment.1",
+  "source_revisions": {
+    "lean-core": "b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a",
+    "mathlib": "9bb5e306206014ecee5f033738bb5a6a8490d5c9"
+  },
+  "expected_counts": {
+    "nodes": 80,
+    "declarations": 71,
+    "mappings": 80,
+    "H": 84,
+    "D": 78,
+    "R": 209
+  },
+  "layout": {
+    "seed": 20260816,
+    "optimization_steps": 3500
+  },
+  "assessment": {
+    "seeds": [20260816, 42, 7],
+    "steps": 600
+  },
+  "boundaries": [
+    "H, D and R values are project-curated research assumptions rather than objective measurements or independent expert consensus.",
+    "The 30-node Lean-derived experiment supplies candidate evidence for only part of this release and does not replace curated release relations.",
+    "Missing R values are unassessed rather than proven unrelated.",
+    "Coordinates are a deterministic diagnostic projection and do not create knowledge facts.",
+    "Independent mathematical expert review and real-browser visual acceptance remain pending."
+  ]
+}

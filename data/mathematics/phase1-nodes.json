@@ -1,0 +1,19 @@
+{
+  "experiment": "lean-linear-algebra-relations-v1",
+  "purpose": "Validate declaration extraction and concept-level relation candidates before any larger layout experiment.",
+  "nodes": [
+    "field",
+    "module",
+    "vector_space",
+    "linear_map",
+    "matrix",
+    "subspace",
+    "linear_independence",
+    "basis",
+    "dimension",
+    "kernel",
+    "range",
+    "determinant",
+    "linear_equivalence"
+  ]
+}
